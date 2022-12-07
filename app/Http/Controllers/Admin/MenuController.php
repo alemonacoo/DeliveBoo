@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\admin;
 
 use App\Menu;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class MenuController extends Controller
 {
@@ -14,7 +16,9 @@ class MenuController extends Controller
      */
     public function index()
     {
-        //
+         $user_id = Auth::id();
+         $menus = Menu::all()->where('user_id', $user_id);
+         return view('admin.menus.index', compact('menus'));
     }
 
     /**
