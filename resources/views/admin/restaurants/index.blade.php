@@ -1,6 +1,8 @@
 @extends('layouts.dashboard')
 @section('content')
     @foreach ($restaurants as $restaurant)
-    {{$restaurant->name }}
-    @endforeach
+    <a href="{{ route('admin.restaurants.show', $restaurant) }}">
+        {{$restaurant->name }}
+    </a>
+        @endforeach
 @endsection
