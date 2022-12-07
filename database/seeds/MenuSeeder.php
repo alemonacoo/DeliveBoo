@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Menu;
+require 'App/Utilities/slug.php';
 
 class MenuSeeder extends Seeder
 {
@@ -12,5 +14,11 @@ class MenuSeeder extends Seeder
     public function run()
     {
         //
+        for($i = 0; $i<=10; $i++){
+            $menu = new Menu();
+            $menu->name = 'Il vecchio frantoio' . $i;
+
+        }
+
     }
 }
