@@ -77,7 +77,10 @@ class MenuController extends Controller
      */
     public function edit(Menu $menu)
     {
+        $menu = Menu::all();
+        return view('admin.menus.edit', compact('menu'));
         //
+
     }
 
     /**
@@ -90,6 +93,9 @@ class MenuController extends Controller
     public function update(Request $request, Menu $menu)
     {
         //
+        $form_data = $request->all();
+        $menu->update($form_data);
+        return redirect()->route('admin.menus.index');
 
     }
 
@@ -101,6 +107,7 @@ class MenuController extends Controller
      */
     public function destroy(Menu $menu)
     {
-        //
+         $menu->delete();
+         return redirect()->route('admin.menus.index');
     }
 }
