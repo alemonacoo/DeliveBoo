@@ -24,9 +24,9 @@ Route::middleware('auth')
     ->namespace('Admin')
     ->name('admin.')
     ->prefix('admin')
-    ->group(function(){
+    ->group(function () {
         Route::get('/', 'HomeController@index')->name('index');
         Route::resource('restaurants', 'RestaurantController')->parameters(['restaurants' => 'restaurant:slug']);
         // Route::resource('categories', 'CategoryController')->parameters(['categories' => 'category:slug']);
-        // Route::resource('tags', 'TagController')->parameters(['tags' => 'tag:slug']);
-});
+        Route::resource('orders', 'OrderController')->parameters(['orders' => 'order:id']);
+    });
