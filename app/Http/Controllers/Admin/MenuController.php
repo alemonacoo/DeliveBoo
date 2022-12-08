@@ -29,10 +29,17 @@ class MenuController extends Controller
     public function create()
     {
         //
+        // $menus = Menu::all();
+        // return view('admin.menus.create', compact('menus'));
+
+        return view('admin.menus.create');
+
     }
 
     /**
      * Store a newly created resource in storage.
+     *
+     *
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -40,6 +47,14 @@ class MenuController extends Controller
     public function store(Request $request)
     {
         //
+        $form_data = $request->all();
+        $menu = new Menu();
+        $menu->fill($form_data);
+
+
+        $menu->save();
+        return redirect()->route('admin.menus.index');
+
     }
 
     /**
@@ -50,7 +65,9 @@ class MenuController extends Controller
      */
     public function show(Menu $menu)
     {
-        //
+         @dd($menu);
+         return view('admin.menus.show', compact('menu'));
+
     }
 
     /**
@@ -74,6 +91,7 @@ class MenuController extends Controller
     public function update(Request $request, Menu $menu)
     {
         //
+
     }
 
     /**
