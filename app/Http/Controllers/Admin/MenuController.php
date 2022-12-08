@@ -77,7 +77,6 @@ class MenuController extends Controller
      */
     public function edit(Menu $menu)
     {
-        $menu = Menu::all();
         return view('admin.menus.edit', compact('menu'));
         //
 
