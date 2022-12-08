@@ -75,6 +75,7 @@ class RestaurantController extends Controller
     public function edit(Restaurant $restaurant)
     {
         //
+        return view('admin.restaurants.edit', compact($restaurant));
     }
 
     /**
@@ -98,6 +99,8 @@ class RestaurantController extends Controller
     public function destroy(Restaurant $restaurant)
     {
         //
+        $restaurant->delete();
+        return redirect()->route('admin.restaurants.index');
     }
 
     private function validator(Request $request){

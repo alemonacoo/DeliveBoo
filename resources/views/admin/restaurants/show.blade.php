@@ -9,5 +9,15 @@
     <p>{{ $restaurant->p_iva }}</p>
     
     <a href="../"><button>Indietro</button></a>
-    <a href="../"><button>Modifica</button></a>
+    
+    <a href="{{ route('admin.restaurants.edit', $restaurant->slug) }}"><button>Modifica</button></a>
+
+    {{-- Delete Button --}}
+    <form action="{{ route('admin.restaurants.destroy', $restaurant->slug) }}" method="POST">
+        @csrf
+        @method('DELETE')
+        <a type="submit" value="delete"><button>CANCELLA</button></a>
+    </form>
+
+
 @endsection
