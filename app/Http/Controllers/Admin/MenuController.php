@@ -65,7 +65,6 @@ class MenuController extends Controller
      */
     public function show(Menu $menu)
     {
-         @dd($menu);
          return view('admin.menus.show', compact('menu'));
 
     }

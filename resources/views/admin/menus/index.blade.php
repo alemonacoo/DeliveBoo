@@ -2,7 +2,7 @@
 @section('content')
 <h1>Il nostro Menu</h1>
     @foreach ($menus as $menu)
-     <a href="{{route('admin.menus.show', $menu)}}">
+     <a href="{{route('admin.menus.show', $menu->slug)}}">
         <p> {{$menu->name}}</p>
     </a>
     @endforeach
