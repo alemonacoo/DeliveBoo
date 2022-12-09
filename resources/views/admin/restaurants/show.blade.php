@@ -20,11 +20,7 @@
     </form>
 
     {{-- Show Menu --}}
-    <form action="{{ route('admin.menus.newindex', $restaurant->slug) }}" method="POST">
-        @csrf
-        @method('POST')
-        <a type="submit"><button>MOSTRA MENU</button></a>
-    </form>
+    <a href="{{ route('admin.restaurants.menus.index', $restaurant) }}"><button>Vedi Menu</button></a>
 
 
 @endsection
