@@ -1,8 +1,11 @@
 @extends('layouts.dashboard')
+
 @section('content')
-    @foreach ($orders as $order)
-        {{ $order->total }}
-        {{ $order->address }}
-        {{ $order->date_time }}
-    @endforeach
+    <div class="row">
+        @foreach ($orders as $order)
+            <div class="col-12">
+                <a href="{{ route('admin.orders.show', $order->id) }}">{{ $order->id }}</a>
+            </div>
+        @endforeach
+    </div>
 @endsection

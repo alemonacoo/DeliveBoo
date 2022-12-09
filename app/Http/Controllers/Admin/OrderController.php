@@ -53,6 +53,7 @@ class OrderController extends Controller
     public function show(Order $order)
     {
         //
+        return view('admin.orders.show', compact('order'));
     }
 
     /**
@@ -87,5 +88,7 @@ class OrderController extends Controller
     public function destroy(Order $order)
     {
         //
+        $order->delete();
+        return redirect()->route('admin.orders.index');
     }
 }
