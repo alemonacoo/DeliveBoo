@@ -15,21 +15,11 @@ class MenuController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Restaurant $restaurant)
+
+    public function newindex($slug)
     {
-
-        dd($restaurant);
-        //  $menus = Menu::find()->restaurant($id);
-         return view('admin.menus.index', compact('menus'));
-    }
-
-
-    public function newindex(Restaurant $restaurant)
-    {
-
-        dd($restaurant);
-        //  $menus = Menu::find()->restaurant($id);
-         return view('admin.menus.index', compact('menus'));
+        $menus = Menu::all()->where('restaurant_slug', $slug);
+        return view('admin.menus.index', compact('menus'));
     }
 
     /**
