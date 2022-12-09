@@ -15,8 +15,8 @@ class AddForeignMenusUsersTable extends Migration
     {
         //
          Schema::table('menus', function (Blueprint $table) {
-            $table->unsignedBigInteger('user_id')->nullable()->after('slug');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
+            $table->unsignedBigInteger('restaurant_id')->nullable()->after('slug');
+            $table->foreign('restaurant_id')->references('id')->on('restaurants')->onDelete('set null');
         });
 
     }
@@ -29,9 +29,9 @@ class AddForeignMenusUsersTable extends Migration
     public function down()
     {
         //
-         Schema::table('restaurants', function (Blueprint $table) {
-            $table->dropColumn('user_id');
-            $table->dropForeign('restaurants_user_id_foreign');
+         Schema::table('menus', function (Blueprint $table) {
+            $table->dropColumn('restaurant_id');
+            $table->dropForeign('menus_restaurant_id_foreign');
         });
     }
 }
