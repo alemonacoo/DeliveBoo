@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Category;
 use Illuminate\Database\Eloquent\Model;
 
 class Restaurant extends Model
@@ -11,5 +12,9 @@ class Restaurant extends Model
 
     public function user(){
         return $this->belongsTo('App\User');
+    }
+
+    public function category(){
+        return $this->belongstoMany(Category::class, 'categories_restaurants', 'restaurant_id', 'category_id');
     }
 }
