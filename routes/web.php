@@ -27,7 +27,9 @@ Route::middleware('auth')
     ->group(function(){
         Route::get('/', 'HomeController@index')->name('index');
         Route::resource('restaurants', 'RestaurantController')->parameters(['restaurants' => 'restaurant:slug']);
-        Route::resource('menus', 'MenuController')->parameters(['menus' => 'menu:slug']);
+        Route::post('menus/{restaurant}', 'MenuController@newindex')->name('menus.newindex');
+        Route::resource('menus', 'MenuController')->parameters(['menus' => 'menu:slug', 'restaurants' => 'restaurant:id']);
+        // 'restaurants' => 'restaurant:slug']
         // Route::resource('categories', 'CategoryController')->parameters(['categories' => 'category:slug']);
         // Route::resource('tags', 'TagController')->parameters(['tags' => 'tag:slug']);
 });

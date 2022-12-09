@@ -19,5 +19,12 @@
         <a type="submit" value="delete"><button>CANCELLA</button></a>
     </form>
 
+    {{-- Show Menu --}}
+    <form action="{{ route('admin.menus.newindex', $restaurant) }}" method="POST">
+        @csrf
+        @method('POST')
+        <a type="submit"><button>MOSTRA MENU</button></a>
+    </form>
+
 
 @endsection

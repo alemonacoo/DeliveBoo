@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Menu;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Restaurant;
 use Illuminate\Support\Facades\Auth;
 
 class MenuController extends Controller
@@ -14,10 +15,20 @@ class MenuController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Restaurant $restaurant)
     {
-         $user_id = Auth::id();
-         $menus = Menu::all()->where('user_id', $user_id);
+
+        dd($restaurant);
+        //  $menus = Menu::find()->restaurant($id);
+         return view('admin.menus.index', compact('menus'));
+    }
+
+
+    public function newindex(Restaurant $restaurant)
+    {
+
+        dd($restaurant);
+        //  $menus = Menu::find()->restaurant($id);
          return view('admin.menus.index', compact('menus'));
     }
 
