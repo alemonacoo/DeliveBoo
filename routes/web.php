@@ -28,7 +28,6 @@ Route::middleware('auth')
         Route::get('/', 'HomeController@index')->name('index');
         Route::resource('restaurants', 'RestaurantController')->parameters(['restaurants' => 'restaurant:slug']);
         Route::resource('menus', 'MenuController')->parameters(['menus' => 'menu:slug']);
-
-
+        // Route::resource('categories', 'CategoryController')->parameters(['categories' => 'category:slug']);
         // Route::resource('tags', 'TagController')->parameters(['tags' => 'tag:slug']);
 });

@@ -6,6 +6,8 @@ use App\Restaurant;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+include (app_path() . '/Utilities/slug.php');
+
 
 class RestaurantController extends Controller
 {
@@ -30,6 +32,7 @@ class RestaurantController extends Controller
     public function create()
     {
         //
+        return view('admin.restaurants.create');
     }
 
     /**
@@ -41,6 +44,14 @@ class RestaurantController extends Controller
     public function store(Request $request)
     {
         //
+        $this->validator($request);
+        $form_data = $request->all();
+        $restaurant = new Restaurant();
+        $restaurant->fill($form_data);
+        $restaurant->slug = getSlugForTable($form_data['name'], 'restaurants');
+        $restaurant->user_id = Auth::id();
+        $restaurant->save();
+        return redirect()->route('admin.restaurants.show', $restaurant->slug);
     }
 
     /**
@@ -52,6 +63,7 @@ class RestaurantController extends Controller
     public function show(Restaurant $restaurant)
     {
         //
+        return view('admin.restaurants.show', compact('restaurant'));
     }
 
     /**
@@ -63,6 +75,7 @@ class RestaurantController extends Controller
     public function edit(Restaurant $restaurant)
     {
         //
+        return view('admin.restaurants.edit', compact('restaurant'));
     }
 
     /**
@@ -86,5 +99,18 @@ class RestaurantController extends Controller
     public function destroy(Restaurant $restaurant)
     {
         //
+        $restaurant->delete();
+        return redirect()->route('admin.restaurants.index');
+    }
+
+    private function validator(Request $request){
+        $request->validate([
+            'name' => 'required|max:255',
+            'p_iva' => 'required|max:11',
+            'address' => 'required|max:255',
+        ],[
+            'required' => 'il campo è obbligatorio',
+            'max' => 'lunghezza massima di :max caratteri'
+        ]);
     }
 }
