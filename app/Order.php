@@ -9,7 +9,8 @@ class Order extends Model
     //
     protected $fillable = ['total', 'address'];
 
-    // public function menu(){
-    //     return $this->
-    // }
+    public function menu()
+    {
+        return $this->belongsToMany('App\menu');
+    }
 }
