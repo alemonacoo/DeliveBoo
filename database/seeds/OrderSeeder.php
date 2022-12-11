@@ -20,7 +20,6 @@ class OrderSeeder extends Seeder
             $order = new Order();
             $order->total = rand(100, 1000) / 10;
             $order->address = 'Via dei Cento n.' . $i;
-            $order->date_time = date('Y-m-d H:i:s');
             $order->save();
         }
     }

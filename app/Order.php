@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     //
-    protected $fillable = ['total', 'address', 'date_time'];
+    protected $fillable = ['total', 'address'];
 
     // public function menu(){
     //     return $this->

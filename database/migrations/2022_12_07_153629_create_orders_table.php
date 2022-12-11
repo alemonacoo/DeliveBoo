@@ -17,7 +17,6 @@ class CreateOrdersTable extends Migration
             $table->id();
             $table->float('total', 7, 2)->nullable(false);
             $table->string('address')->nullable(false);
-            $table->dateTime('date_time')->nullable(false);
             $table->timestamps();
         });
     }
