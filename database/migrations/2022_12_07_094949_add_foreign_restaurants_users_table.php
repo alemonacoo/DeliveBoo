@@ -28,9 +28,9 @@ class AddForeignRestaurantsUsersTable extends Migration
     public function down()
     {
         //
-        Schema::table('restaurants', function (Blueprint $table) {
+        Schema::table('menus', function (Blueprint $table) {
             $table->dropColumn('user_id');
-            $table->dropForeign('restaurants_user_id_foreign');
+            $table->dropForeign('menus_user_id_foreign');
         });
     }
 }
