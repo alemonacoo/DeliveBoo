@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Menu extends Model
 {
     //
-     protected $fillable = ['name', 'description', 'slug', 'price', 'image', 'visibility', 'menu_id'];
+     protected $fillable = ['name', 'description', 'slug', 'price', 'image', 'visibility', 'restaurant_slug'];
 
-    public function user(){
+    public function restaurant(){
         return $this->belongsTo('App\Restaurant');
     }
 }

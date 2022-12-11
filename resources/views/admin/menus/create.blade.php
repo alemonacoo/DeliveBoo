@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('content')
-<form action="{{ route('admin.menus.store') }}" method="post">
+<form action="{{ route('admin.restaurants.menus.store', $restaurant_slug) }}" method="post">
     @csrf
     <div>
         <label for="name">Name:</label>
