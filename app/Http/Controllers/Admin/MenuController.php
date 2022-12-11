@@ -34,7 +34,6 @@ class MenuController extends Controller
         // return view('admin.menus.create', compact('menus'));
 
         return view('admin.menus.create', compact('restaurant_slug'));
-
     }
 
     /**
@@ -56,7 +55,6 @@ class MenuController extends Controller
 
         $menu->save();
         return redirect()->route('admin.restaurants.menus.index', $restaurant_slug);
-
     }
 
     /**
@@ -68,8 +66,7 @@ class MenuController extends Controller
     public function show($restaurant_slug, Menu $menu)
     {
         // dd('sono nella show di', $menu);
-         return view('admin.menus.show', compact('menu', 'restaurant_slug'));
-
+        return view('admin.menus.show', compact('menu', 'restaurant_slug'));
     }
 
     /**
@@ -98,7 +95,6 @@ class MenuController extends Controller
         $form_data = $request->all();
         $menu->update($form_data);
         return redirect()->route('admin.restaurants.menus.index', $restaurant_slug);
-
     }
 
     /**
@@ -109,7 +105,8 @@ class MenuController extends Controller
      */
     public function destroy($restaurant_slug, Menu $menu)
     {
-         $menu->delete();
-         return redirect()->route('admin.restaurants.menus.index', compact('restaurant_slug'));
+        $menu->order()->sync([]);
+        $menu->delete();
+        return redirect()->route('admin.restaurants.menus.index', compact('restaurant_slug'));
     }
 }

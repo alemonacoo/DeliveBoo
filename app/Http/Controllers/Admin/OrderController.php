@@ -88,6 +88,7 @@ class OrderController extends Controller
     public function destroy(Order $order)
     {
         //
+        $order->menu()->sync([]);
         $order->delete();
         return redirect()->route('admin.orders.index');
     }
