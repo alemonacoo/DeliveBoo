@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Category;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Str;
+
 
 class CategoryController extends Controller
 {
@@ -15,6 +18,9 @@ class CategoryController extends Controller
     public function index()
     {
         //
+        $categories = Category::all();
+        return view('admin.categories.index', compact('categories'));
+
     }
 
     /**
@@ -25,6 +31,8 @@ class CategoryController extends Controller
     public function create()
     {
         //
+        return view('admin.categories.create');
+
     }
 
     /**
@@ -35,7 +43,25 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $request->validate([
+            'name' =>'required|unique:categories,name'
+        ],
+        [
+            'required' => ':attribute is required',
+            'unique' => ':attribute has already been taken'
+        ]);
+
+        $form_data = $request->all();
+        $category = new Category();
+        $category->fill($form_data);
+        $slug = $this->getSlug($category->name);
+        $category->slug = $slug;
+        $category->save();
+
+        return redirect()->route('admin.categories.show', $category->slug);
+
+
     }
 
     /**
@@ -47,6 +73,8 @@ class CategoryController extends Controller
     public function show(Category $category)
     {
         //
+        return view('admin.categories.show', compact('category'));
+
     }
 
     /**
@@ -58,6 +86,8 @@ class CategoryController extends Controller
     public function edit(Category $category)
     {
         //
+        return view('admin.categories.edit', compact('category'));
+
     }
 
     /**
@@ -70,6 +100,28 @@ class CategoryController extends Controller
     public function update(Request $request, Category $category)
     {
         //
+        $request->validate([
+            'name' =>'required|unique:categories,name'
+        ],
+        [
+            'required' => ':attribute is required',
+            'unique' => ':attribute has already been taken'
+        ]);
+
+        $form_data = $request->all();
+        if($category->name != $form_data['name']){
+            $slug = $this->getSlug($form_data['name']);
+            $form_data['slug'] = $slug;
+        }
+
+        $category->update($form_data);
+        // $category->restaurant()->sync([]);
+
+        return redirect()->route('admin.categories.show', $category->slug);
+
+        // $category = Category::find(1);
+
+
     }
 
     /**
@@ -81,5 +133,22 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         //
+        $category->delete();
+        return redirect()->route('admin.categories.index');
+
+    }
+
+    private function getSlug($name){
+        $slug = Str::slug($name);
+        $slug_base = $slug;
+
+        $existingRestaurant = Category::where('slug', $slug)->first();
+        $counter = 1;
+        while($existingRestaurant){
+            $slug = $slug_base . '_' . $counter;
+            $counter++;
+            $existingRestaurant = Category::where('slug', $slug)->first();
+        }
+        return $slug;
     }
 }
