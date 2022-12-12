@@ -6,7 +6,8 @@ use App\Restaurant;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-include (app_path() . '/Utilities/slug.php');
+
+include(app_path() . '/Utilities/slug.php');
 
 
 class RestaurantController extends Controller
@@ -103,12 +104,13 @@ class RestaurantController extends Controller
         return redirect()->route('admin.restaurants.index');
     }
 
-    private function validator(Request $request){
+    private function validator(Request $request)
+    {
         $request->validate([
             'name' => 'required|max:255',
             'p_iva' => 'required|max:11',
             'address' => 'required|max:255',
-        ],[
+        ], [
             'required' => 'il campo è obbligatorio',
             'max' => 'lunghezza massima di :max caratteri'
         ]);

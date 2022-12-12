@@ -28,5 +28,6 @@ Route::middleware('auth')
         Route::get('/', 'HomeController@index')->name('index');
         Route::resource('restaurants', 'RestaurantController')->parameters(['restaurants' => 'restaurant:slug']);
         Route::resource('restaurants.menus', 'MenuController')->parameters(['restaurants' => 'restaurant:slug', 'menus' => 'menu:slug']);
+        Route::resource('restaurants.orders', 'OrderController')->parameters(['restaurants' => 'restaurant:slug']);
         Route::resource('orders', 'OrderController');
     });

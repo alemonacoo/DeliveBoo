@@ -6,7 +6,8 @@ use App\Order;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-
+use App\Menu;
+use App\Restaurant;
 
 class OrderController extends Controller
 {
@@ -15,12 +16,19 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($restaurant_slug)
     {
-        $orders = Order::all();
         // $user_id = Auth::id();
-        // $restaurants = Order::all()->where('user_id', $user_id);
-        return view('admin.orders.index', compact('orders'));
+        // $restaurant = Restaurant::all()->where('user_id', $user_id);
+        // $orders = Order::all();
+        // $menu_items = Menu::all()->where('restaurant_slug', $restaurant->slug);
+
+        // $orders = Order::all()->where('menu');
+        $orders = Order::all()->where('restaurant_slug', $restaurant_slug);
+        dd($orders);
+
+
+        return view('admin.orders.index', compact('orders', 'restaurant_slug'));
     }
 
     /**
@@ -88,8 +96,5 @@ class OrderController extends Controller
     public function destroy(Order $order)
     {
         //
-        $order->menu()->sync([]);
-        $order->delete();
-        return redirect()->route('admin.orders.index');
     }
 }
