@@ -100,6 +100,7 @@ class RestaurantController extends Controller
     {
         //
         $restaurant->delete();
+        $restaurant->menu()->sync([]);
         return redirect()->route('admin.restaurants.index');
     }
 
