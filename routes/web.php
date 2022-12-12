@@ -31,5 +31,5 @@ Route::middleware('auth')
         // Route::resource('tags', 'TagController')->parameters(['tags' => 'tag:slug']);
         Route::resource('restaurants.menus', 'MenuController')->parameters(['restaurants' => 'restaurant:slug', 'menus' => 'menu:slug']);
         Route::resource('restaurants.orders', 'OrderController')->parameters(['restaurants' => 'restaurant:slug']);
-        Route::resource('orders', 'OrderController');
+        Route::get('orders/{restaurant_slug}', 'OrderController@index');
     });

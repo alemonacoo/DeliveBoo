@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Order;
 use Illuminate\Database\Eloquent\Model;
 
 class Menu extends Model
@@ -16,6 +17,6 @@ class Menu extends Model
 
     public function order()
     {
-        return $this->belongsToMany('App\Order');
+        return $this->belongsToMany(Order::class, 'orders_menus', 'order_id', 'menu_id');
     }
 }
