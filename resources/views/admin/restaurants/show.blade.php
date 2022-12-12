@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 @section('content')
-    <h1>{{$restaurant->name }}</h1>
+    <h1>{{ $restaurant->name }}</h1>
 
     <h3>Indirizzo:</h3>
     <p>{{ $restaurant->address }}</p>
@@ -12,9 +12,9 @@
     @foreach ($categories as $category)
         <p>{{ $category->name }}</p>
     @endforeach
-    
+
     <a href="../"><button>Indietro</button></a>
-    
+
     <a href="{{ route('admin.restaurants.edit', $restaurant->slug) }}"><button>Modifica</button></a>
 
     {{-- Delete Button --}}
@@ -27,5 +27,6 @@
     {{-- Show Menu --}}
     <a href="{{ route('admin.restaurants.menus.index', $restaurant) }}"><button>Vedi Menu</button></a>
 
-
+    {{-- Show Orders --}}
+    <a href="{{ route('admin.restaurants.orders.index', $restaurant) }}"><button>Vedi Ordini</button></a>
 @endsection
