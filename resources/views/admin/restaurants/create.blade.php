@@ -23,6 +23,16 @@
         <label for="p_iva">Partita Iva:</label>
         <input type="text" name="p_iva" required maxlength="255" value="{{old('p_iva', ' ')}}">
     </div>
+
+    
+    {{-- Categories --}}
+    <ul>
+        @foreach ($categories as $category)
+        <label for="categories">{{ $category->name }}</label>
+        <input type="checkbox" name="category[]" value="{{ $category->id }}" {{ in_array($category->id, old('category', [])) ? 'checked' : ''}}>
+        @endforeach
+    </ul>
+
     
     <button type="submit">Crea</button>
     </form>

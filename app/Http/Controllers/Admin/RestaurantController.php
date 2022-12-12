@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Category;
 use App\Restaurant;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -32,7 +33,8 @@ class RestaurantController extends Controller
     public function create()
     {
         //
-        return view('admin.restaurants.create');
+        $categories = Category::all();
+        return view('admin.restaurants.create', compact('categories'));
     }
 
     /**
@@ -51,6 +53,11 @@ class RestaurantController extends Controller
         $restaurant->slug = getSlugForTable($form_data['name'], 'restaurants');
         $restaurant->user_id = Auth::id();
         $restaurant->save();
+
+        if(array_key_exists('category', $form_data)){
+            $restaurant->category()->sync($form_data['category']);
+        }
+
         return redirect()->route('admin.restaurants.show', $restaurant->slug);
     }
 
@@ -63,7 +70,9 @@ class RestaurantController extends Controller
     public function show(Restaurant $restaurant)
     {
         //
-        return view('admin.restaurants.show', compact('restaurant'));
+
+        $categories = $restaurant->category;
+        return view('admin.restaurants.show', compact('restaurant', 'categories'));
     }
 
     /**
