@@ -71,7 +71,9 @@ class RestaurantController extends Controller
     public function show(Restaurant $restaurant)
     {
         //
-
+        if ($restaurant->user_id !== Auth::id() ) {
+            abort(404);
+        }
         $categories = $restaurant->category;
         return view('admin.restaurants.show', compact('restaurant', 'categories'));
     }
@@ -85,6 +87,9 @@ class RestaurantController extends Controller
     public function edit(Restaurant $restaurant)
     {
         //
+        if ($restaurant->user_id !== Auth::id() ) {
+            abort(404);
+        }
         return view('admin.restaurants.edit', compact('restaurant'));
     }
 
@@ -109,8 +114,8 @@ class RestaurantController extends Controller
     public function destroy(Restaurant $restaurant)
     {
         //
+        $restaurant->category()->sync([]);
         $restaurant->delete();
-        $restaurant->menu()->sync([]);
         return redirect()->route('admin.restaurants.index');
     }
 
@@ -125,4 +130,7 @@ class RestaurantController extends Controller
             'max' => 'lunghezza massima di :max caratteri'
         ]);
     }
+
+    
+
 }
