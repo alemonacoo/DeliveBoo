@@ -8,6 +8,11 @@
     <h3>Partita Iva</h3>
     <p>{{ $restaurant->p_iva }}</p>
 
+    <h3>Categorie</h3>
+    @foreach ($categories as $category)
+        <p>{{ $category->name }}</p>
+    @endforeach
+
     <a href="../"><button>Indietro</button></a>
 
     <a href="{{ route('admin.restaurants.edit', $restaurant->slug) }}"><button>Modifica</button></a>
