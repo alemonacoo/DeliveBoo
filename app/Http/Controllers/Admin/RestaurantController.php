@@ -123,7 +123,7 @@ class RestaurantController extends Controller
     {
         $request->validate([
             'name' => 'required|max:255',
-            'p_iva' => 'required|max:11',
+            'p_iva' => 'required|max:11|unique',
             'address' => 'required|max:255',
         ], [
             'required' => 'il campo è obbligatorio',
