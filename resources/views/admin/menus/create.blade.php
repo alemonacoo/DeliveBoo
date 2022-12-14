@@ -41,15 +41,7 @@
         @enderror
     </div>
 
-    <div>
-        <label for="visible">Slug:</label>
-        <input  type="text" name="slug" value="{{ old('slug', '') }}">
-        @error('visible')
-            <div class="my-2 bg-danger text-white">
-                {{ $message }}
-            </div>
-        @enderror
-    </div>
+
 
     <div>
         <label for="image">Image:</label>
