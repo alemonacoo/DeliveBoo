@@ -10,11 +10,18 @@ class Restaurant extends Model
     //
     protected $fillable = ['name', 'p_iva', 'slug', 'address', 'image', 'user_id'];
 
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo('App\User');
     }
 
-    public function category(){
+    public function order()
+    {
+        return $this->hasManyThrough(Order::class, Menu::class);
+    }
+
+    public function category()
+    {
         return $this->belongstoMany(Category::class, 'categories_restaurants', 'restaurant_id', 'category_id');
     }
 }

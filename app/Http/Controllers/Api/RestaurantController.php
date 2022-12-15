@@ -1,27 +1,39 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Api;
 
-use App\Order;
-use Illuminate\Http\Request;
+use App\Category;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
-use App\Menu;
+use Illuminate\Http\Request;
 use App\Restaurant;
+use Error;
 
-class OrderController extends Controller
+class RestaurantController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($restaurant_slug)
+    public function index($category_id)
     {
-        $menu = Menu::all()->where('restaurant_slug', $restaurant_slug);
-        $orders = Order::where('')
+        //
 
-        return view('admin.orders.index', compact('orders', 'restaurant_slug'));
+        try {
+            $category = Category::where('id', $category_id)->get()->first();
+            $restaurants = $category->Restaurant;
+            $data = [
+                'results' => $restaurants,
+                'success' => true
+            ];
+        } catch (Error $e) {
+            $data = [
+                'error' => $e->message,
+                'success' => false
+            ];
+        }
+
+        return response()->json($data);
     }
 
     /**
@@ -48,22 +60,27 @@ class OrderController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Order  $order
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Order $order)
+    public function show(Restaurant $restaurant)
     {
         //
-        return view('admin.orders.show', compact('order'));
+        $data = [
+            'results' => $restaurant,
+            'success' => true
+        ];
+
+        return response()->json($data);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Order  $order
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Order $order)
+    public function edit($id)
     {
         //
     }
@@ -72,10 +89,10 @@ class OrderController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Order  $order
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Order $order)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -83,10 +100,10 @@ class OrderController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Order  $order
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Order $order)
+    public function destroy($id)
     {
         //
     }
