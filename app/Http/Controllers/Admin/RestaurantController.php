@@ -7,6 +7,7 @@ use App\Restaurant;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rule;
 
 include(app_path() . '/Utilities/slug.php');
 
@@ -45,6 +46,7 @@ class RestaurantController extends Controller
     public function store(Request $request)
     {
         $this->validator($request);
+        $request->validate(['p_iva' => ['required', 'max:11', 'unique:restaurants']]);
         $form_data = $request->all();
         $restaurant = new Restaurant();
         $restaurant->fill($form_data);
@@ -94,9 +96,11 @@ class RestaurantController extends Controller
      */
     public function update(Request $request, Restaurant $restaurant)
     {
-        // $this->validator($request);
+        $this->validator($request);
+        $request->validate([
+            'p_iva' => ['required', 'max:11', Rule::unique('restaurants', 'p_iva')->ignore($request->p_iva, 'p_iva')],
+        ]);
         $form_data = $request->all();
-
         if ($restaurant->name != $form_data['name']) {
             $form_data['slug'] = getSlugForTable($form_data['name'], 'restaurants');
         }
@@ -128,12 +132,12 @@ class RestaurantController extends Controller
     {
         $request->validate([
             'name' => 'required|max:255',
-            'p_iva' => 'required|max:11|unique:restaurants',
             'address' => 'required|max:255',
-            'category' => 'required'
+            'category' => 'required|max:2'
         ], [
             'required' => 'il campo è obbligatorio',
-            'max' => 'lunghezza massima di :max caratteri'
+            'max' => 'lunghezza massima di :max caratteri',
+            'category.max' => 'massimo 2 categorie'
         ]);
     }
 }
