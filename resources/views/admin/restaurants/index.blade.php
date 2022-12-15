@@ -1,4 +1,5 @@
-@extends('layouts.dashboard')
+@extends('layouts.backoffice.dashboard')
+
 @section('content')
 
     <a href="{{ route('admin.restaurants.create') }}"><button>Nuovo</button></a>

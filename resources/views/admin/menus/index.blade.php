@@ -1,4 +1,5 @@
-@extends('layouts.dashboard')
+@extends('layouts.backoffice.dashboard')
+
 @section('content')
 <h1>Il nostro Menu</h1>
     @foreach ($menus as $menu)

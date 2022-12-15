@@ -1,4 +1,5 @@
-@extends('layouts.dashboard')
+@extends('layouts.backoffice.dashboard')
+
 @section('content')
     <h1>{{ $restaurant->name }}</h1>
 

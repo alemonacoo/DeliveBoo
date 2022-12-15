@@ -1,6 +1,6 @@
-@extends('layouts.app')
-@section('content')
+@extends('layouts.backoffice.dashboard')
 
+@section('content')
   <form action="{{ route('admin.restaurants.menus.update', [$restaurant_slug, $menu->slug]) }}" method="post">
     @csrf
      @method('PATCH')

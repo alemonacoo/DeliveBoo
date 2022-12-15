@@ -1,4 +1,4 @@
-@extends('layouts.dashboard')
+@extends('layouts.backoffice.dashboard')
 
 @section('content')
 <form action="{{ route('admin.restaurants.menus.store', $restaurant_slug) }}" method="post">

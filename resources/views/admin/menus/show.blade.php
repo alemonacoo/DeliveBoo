@@ -1,4 +1,5 @@
-@extends('layouts.dashboard')
+@extends('layouts.backoffice.dashboard')
+
 @section('content')
 
  <p>Descrizione Piatto: {{$menu->description}}</p>
