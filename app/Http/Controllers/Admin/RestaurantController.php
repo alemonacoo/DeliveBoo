@@ -20,7 +20,6 @@ class RestaurantController extends Controller
      */
     public function index()
     {
-        //
         $user_id = Auth::id();
         $restaurants = Restaurant::all()->where('user_id', $user_id);
         return view('admin.restaurants.index', compact('restaurants'));
@@ -33,7 +32,6 @@ class RestaurantController extends Controller
      */
     public function create()
     {
-        //
         $categories = Category::all();
         return view('admin.restaurants.create', compact('categories'));
     }
@@ -46,7 +44,6 @@ class RestaurantController extends Controller
      */
     public function store(Request $request)
     {
-        //
         $this->validator($request);
         $form_data = $request->all();
         $restaurant = new Restaurant();
@@ -54,11 +51,7 @@ class RestaurantController extends Controller
         $restaurant->slug = getSlugForTable($form_data['name'], 'restaurants');
         $restaurant->user_id = Auth::id();
         $restaurant->save();
-
-        if(array_key_exists('category', $form_data)){
-            $restaurant->category()->sync($form_data['category']);
-        }
-
+        $restaurant->category()->sync($form_data['category']);
         return redirect()->route('admin.restaurants.show', $restaurant->slug);
     }
 
@@ -70,8 +63,7 @@ class RestaurantController extends Controller
      */
     public function show(Restaurant $restaurant)
     {
-        //
-        if ($restaurant->user_id !== Auth::id() ) {
+        if ($restaurant->user_id !== Auth::id()) {
             abort(404);
         }
         $categories = $restaurant->category;
@@ -86,11 +78,11 @@ class RestaurantController extends Controller
      */
     public function edit(Restaurant $restaurant)
     {
-        //
-        if ($restaurant->user_id !== Auth::id() ) {
+        if ($restaurant->user_id !== Auth::id()) {
             abort(404);
         }
-        return view('admin.restaurants.edit', compact('restaurant'));
+        $categories = Category::all();
+        return view('admin.restaurants.edit', compact('restaurant', 'categories'));
     }
 
     /**
@@ -102,7 +94,20 @@ class RestaurantController extends Controller
      */
     public function update(Request $request, Restaurant $restaurant)
     {
-        //
+        // $this->validator($request);
+        $form_data = $request->all();
+
+        if ($restaurant->name != $form_data['name']) {
+            $form_data['slug'] = getSlugForTable($form_data['name'], 'restaurants');
+        }
+        $restaurant->update($form_data);
+
+        $restaurant->category()->sync($form_data['category']);
+
+
+        $slug = $restaurant->slug;
+
+        return redirect()->route('admin.restaurants.show', $slug);
     }
 
     /**
@@ -123,14 +128,12 @@ class RestaurantController extends Controller
     {
         $request->validate([
             'name' => 'required|max:255',
-            'p_iva' => 'required|max:11|unique',
+            'p_iva' => 'required|max:11|unique:restaurants',
             'address' => 'required|max:255',
+            'category' => 'required'
         ], [
             'required' => 'il campo è obbligatorio',
             'max' => 'lunghezza massima di :max caratteri'
         ]);
     }
-
-    
-
 }
