@@ -9,9 +9,10 @@ class Category extends Model
 {
     //
 
-    protected $fillable = ['name', 'slug'];
+    protected $fillable = ['name', 'image', 'slug'];
 
-    public function restaurant(){
+    public function restaurant()
+    {
         return $this->belongstoMany(Restaurant::class, 'categories_restaurants', 'category_id', 'restaurant_id');
     }
 }
