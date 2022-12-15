@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container my-5">
         <div v-if="categoryRestaurants.length <= 0">
             <div class="row">
                 <div class="col-2 my-3" v-for="category in categories" :key="category.id">
