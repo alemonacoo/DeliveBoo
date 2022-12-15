@@ -18,4 +18,6 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // }); nessuno può registarsi come utente ma solo come admin
 
-Route::resource('restaurants', 'Api\RestaurantController', ['only' => ['index', 'show']]);
+Route::resource('categories', 'Api\CategoriesController', ['only' => ['index']]);
+
+Route::resource('categories.restaurants', 'Api\RestaurantController', ['only' => ['index', 'show']])->parameters(['categories' => 'category:id']);
