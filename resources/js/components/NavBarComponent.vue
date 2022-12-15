@@ -1,6 +1,6 @@
 <template>
     <div class="ac-white">
-        <div class="container d-flex align-items-baseline justify-content-between ">
+        <div class="container-xl d-flex align-items-baseline justify-content-between ">
             <div>
 
                 <img src="../assets/img/deliveroo_2_VV3s7Fj.png" alt="">
@@ -9,13 +9,11 @@
 
             <div>
                 <ul>
-                    <li><a href="">Diventa un rider</a></li>
+                    <li><a href=""> Diventa un rider</a></li>
 
                     <li> <a href="">Accedi</a></li>
 
                     <li><a href="">Aiuto?</a></li>
-
-                    <li>Bandiera</li>
 
                 </ul>
             </div>
@@ -39,6 +37,10 @@ export default {
 .ac-white {
     background-color: white;
 
+}
+
+img {
+    width: 200px;
 }
 
 

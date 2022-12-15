@@ -1,6 +1,7 @@
 <template>
     <div>
         <NavBarComponent />
+        <PictureComponent />
         <CategoriesComponent />
 
     </div>
@@ -8,7 +9,9 @@
 
 <script>
 import NavBarComponent from '../components/NavBarComponent.vue';
+import PictureComponent from '../components/PictureComponent.vue';
 import CategoriesComponent from '../components/CategoriesComponent.vue';
+
 
 
 export default {
@@ -16,6 +19,7 @@ export default {
     components: {
         NavBarComponent,
         CategoriesComponent,
+        PictureComponent
 
     }
 }
