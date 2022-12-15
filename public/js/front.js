@@ -49988,7 +49988,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/Fede/Desktop/Boolean/Progetto/DeliveBoo/resources/js/front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! /Users/davishkahikkaduwa/Desktop/boolean/PHP/DeliveBoo/resources/js/front.js */"./resources/js/front.js");
 
 
 /***/ })
