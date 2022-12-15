@@ -2235,7 +2235,7 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("div", [_c("NavBarComponent"), _vm._v(" "), _c("PictureComponent"), _vm._v(" "), _c("CategoriesComponent"), _vm._v(" "), _c("AppComponent")], 1);
+  return _c("div", [_c("NavBarComponent"), _vm._v(" "), _c("PictureComponent"), _vm._v(" "), _c("AppComponent"), _vm._v(" "), _c("CategoriesComponent")], 1);
 };
 var staticRenderFns = [];
 render._withStripped = true;

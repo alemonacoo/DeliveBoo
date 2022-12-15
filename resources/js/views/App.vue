@@ -2,8 +2,8 @@
     <div>
         <NavBarComponent />
         <PictureComponent />
-        <CategoriesComponent />
         <AppComponent />
+        <CategoriesComponent />
 
     </div>
 </template>
