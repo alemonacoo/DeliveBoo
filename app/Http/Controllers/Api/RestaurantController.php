@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Category;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Restaurant;
@@ -14,11 +15,13 @@ class RestaurantController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($category_id)
     {
         //
+
         try {
-            $restaurants = Restaurant::all();
+            $category = Category::where('id', $category_id)->get()->first();
+            $restaurants = $category->Restaurant;
             $data = [
                 'results' => $restaurants,
                 'success' => true
