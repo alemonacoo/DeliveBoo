@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div v-if="categoryRestaurants.length <= 0">
-            <div class="row py-3">
+            <div class="row">
                 <div class="col-2 my-3" v-for="category in categories" :key="category.id">
                     <div class="card" @click="showCategoryRestaurants(category.id)">
                         <img :src="category.image" class="card-img-top" :alt="category.name">
@@ -12,9 +12,9 @@
                 </div>
             </div>
         </div>
-        <div v-else>
+        <div v-else class="row">
             <RestaurantsComponent :list="categoryRestaurants" />
-            <button @click="categoryRestaurants = []">Categorie</button>
+            <button type="button" class="btn btn-warning" @click="categoryRestaurants = []">Categorie</button>
         </div>
     </div>
 </template>
