@@ -1,7 +1,10 @@
 <template>
-    <div class="container">
+    <div class="container mt-5">
+        <div>
+            <h1>Scegli la tua categoria preferita</h1>
+        </div>
         <div class="row">
-            <div class="col-2" v-for="category in categories" :key="category.id">
+            <div class="col-2 mb-4" v-for="category in categories" :key="category.id">
                 <div class="card" @click="showCategoryRestaurants(category.id)">
                     <img :src="category.image" class="card-img-top" :alt="category.name">
                     <div class="card-body">
@@ -33,5 +36,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+img {
+    height: 100px;
+}
 </style>
