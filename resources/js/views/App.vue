@@ -1,15 +1,17 @@
 <template>
     <div>
-        <RestaurantsComponent />
+        <CategoriesComponent />
     </div>
 </template>
 
 <script>
-import RestaurantsComponent from '../components/RestaurantsComponent.vue';
+import CategoriesComponent from '../components/CategoriesComponent.vue';
 
 export default {
     name: 'App',
-    components: { RestaurantsComponent }
+    components: {
+        CategoriesComponent
+    }
 }
 </script>
 
