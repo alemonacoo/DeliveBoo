@@ -11,7 +11,6 @@ class Order extends Model
 
     public function menu()
     {
-        return $this->belongsToMany('App\Menu')
-            ->withPivot('menu');
+        return $this->belongsToMany('App\Menu', 'restaurant_slug');
     }
 }

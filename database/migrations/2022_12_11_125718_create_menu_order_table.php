@@ -14,7 +14,6 @@ class CreateMenuOrderTable extends Migration
     public function up()
     {
         Schema::create('menu_order', function (Blueprint $table) {
-            $table->id();
             $table->unsignedBigInteger('menu_id');
             $table->foreign('menu_id')->references('id')->on('menus');
 
