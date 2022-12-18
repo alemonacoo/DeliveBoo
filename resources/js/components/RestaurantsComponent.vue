@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-3 my-3 text-center" v-for="restaurant in list" :key="restaurant.id">
-                <div class="card">
+                <div class="card" @click="showRestaurantMenu(restaurant.slug)">
                     <img :src="restaurant.image" class="card-img-top" :alt="restaurant.name">
                     <div class="card-body">
                         <h4>{{ restaurant.name }}</h4>
@@ -10,14 +10,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- <div v-else>
-            <div v-for="restaurant in restaurants" :key="restaurant.id">
-                <div class="card" @click="showRestaurant(restaurant.id)">
-                    <h4>{{ restaurant.name }}</h4>
-                </div>
-            </div>
-        </div> -->
     </div>
 </template>
 
@@ -33,26 +25,15 @@ export default {
             errorMessage: ''
         }
     },
-    // mounted() {
-
-    //     axios.get('/api/restaurants')
-    //         .then(({ data }) => {
-    //             if (data.success) {
-    //                 this.restaurants = data.results;
-    //             } else {
-    //                 this.errorMessage = data.error;
-    //             }
-    //         })
-    // },
-    // methods: {
-    //     showRestaurant(id) {
-    //         console.log(id);
-    //         axios.get('api/restaurants/' + id)
-    //             .then(({ data }) => {
-    //                 console.log(data);
-    //             })
-    //     }
-    // }
+    methods: {
+        showRestaurantMenu(slug) {
+            console.log(slug);
+            axios.get('/api/restaurants/' + slug + '/menus')
+                .then(({ data }) => {
+                    console.log(data);
+                })
+        }
+    }
 }
 </script>
 

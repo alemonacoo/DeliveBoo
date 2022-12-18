@@ -1,20 +1,19 @@
 <template>
     <div class="container my-5">
-        <div v-if="categoryRestaurants.length <= 0">
-            <div class="row">
-                <div class="col-2 my-3" v-for="category in categories" :key="category.id">
-                    <div class="card" @click="showCategoryRestaurants(category.id)">
-                        <img :src="category.image" class="card-img-top" :alt="category.name">
-                        <div class="card-body">
-                            <h5>{{ category.name }}</h5>
-                        </div>
+
+        <div class="row">
+            <div class="col-2 my-3" v-for="category in categories" :key="category.id">
+                <div class="card" @click="showCategoryRestaurants(category.id)">
+                    <img :src="category.image" class="card-img-top" :alt="category.name">
+                    <div class="card-body">
+                        <h5>{{ category.name }}</h5>
                     </div>
                 </div>
             </div>
         </div>
-        <div v-else class="row">
-            <RestaurantsComponent :list="categoryRestaurants" />
-            <button type="button" class="btn btn-warning" @click="categoryRestaurants = []">Categorie</button>
+
+        <div class="row">
+            <RestaurantsComponent :list="restaurants" />
         </div>
     </div>
 </template>
@@ -29,7 +28,7 @@ export default {
     },
     data() {
         return {
-            categoryRestaurants: [],
+            restaurants: [],
         }
     },
     methods: {
@@ -38,9 +37,10 @@ export default {
             axios.get('/api/categories/' + id + '/restaurants/')
                 .then(({ data }) => {
                     console.log(data);
-                    this.categoryRestaurants = data.results;
-                    console.log(categoryRestaurants);
+                    this.restaurants = data.results;
+                    console.log(restaurants);
                 })
+            this.$router.push({ name: 'CategoryRestaurants' });
         }
     },
     components: {
