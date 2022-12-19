@@ -2014,13 +2014,14 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      restaurants: []
+      restaurants: [],
+      activeIndex: ''
     };
   },
   methods: {
     showCategoryRestaurants: function showCategoryRestaurants(id) {
       var _this = this;
-      // this.active_id = id;
+      this.activeIndex = id;
       axios.get('/api/categories/' + id + '/restaurants/').then(function (_ref) {
         var data = _ref.data;
         _this.restaurants = data.results;
@@ -2511,6 +2512,9 @@ var render = function render() {
       staticClass: "col my-3"
     }, [_c("div", {
       staticClass: "card",
+      "class": {
+        active: category.id === _vm.activeIndex
+      },
       on: {
         click: function click($event) {
           return _vm.showCategoryRestaurants(category.id);
@@ -7308,7 +7312,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".card[data-v-f7622972] {\n  height: 100%;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.card .card-body[data-v-f7622972] {\n  text-align: center;\n  padding: 0;\n  padding-top: 0.5rem;\n}\n.card .card-body h5[data-v-f7622972] {\n  font-size: 1rem !important;\n}\n.card img[data-v-f7622972] {\n  height: 4rem;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n}", ""]);
+exports.push([module.i, ".card[data-v-f7622972] {\n  height: 100%;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.card .card-body[data-v-f7622972] {\n  text-align: center;\n  padding: 0;\n  padding-top: 0.5rem;\n}\n.card .card-body h5[data-v-f7622972] {\n  font-size: 1rem !important;\n}\n.card img[data-v-f7622972] {\n  height: 4rem;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n}\n.active[data-v-f7622972] {\n  filter: drop-shadow(2px 4px 6px grey);\n}", ""]);
 
 // exports
 

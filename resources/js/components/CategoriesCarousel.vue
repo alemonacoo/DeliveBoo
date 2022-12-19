@@ -3,7 +3,8 @@
 
         <div class="row">
             <div class="col my-3" v-for="category in categories" :key="category.id">
-                <div class="card " @click="showCategoryRestaurants(category.id)">
+                <div class="card" :class="{ active: category.id === activeIndex }"
+                    @click="showCategoryRestaurants(category.id)">
                     <img :src="category.image" class="card-img-top" :alt="category.name">
                     <div class="card-body px-1">
                         <h5>{{ category.name }}</h5>
@@ -29,11 +30,12 @@ export default {
     data() {
         return {
             restaurants: [],
+            activeIndex: ''
         }
     },
     methods: {
         showCategoryRestaurants(id) {
-            // this.active_id = id;
+            this.activeIndex = id;
             axios.get('/api/categories/' + id + '/restaurants/')
                 .then(({ data }) => {
                     this.restaurants = data.results;
@@ -70,5 +72,9 @@ export default {
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
+}
+
+.active {
+    filter: drop-shadow(2px 4px 6px grey);
 }
 </style>
