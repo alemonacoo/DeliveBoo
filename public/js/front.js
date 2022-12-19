@@ -1928,11 +1928,11 @@ function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyri
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'BasketComponent',
+  name: "BasketComponent",
   data: function data() {
     return {
       showDeliveryMethod: true,
-      address: ''
+      address: ""
     };
   },
   props: {
@@ -1944,15 +1944,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     },
     sendOrder: function sendOrder() {
       var total = this.getTotal();
-      if (this.selectedItems.length > 0 && this.address > 0) {
+      if (this.selectedItems.length > 0 && this.address.length > 0) {
         var json = {
-          'total': total,
-          'address': this.address,
-          'menu_items': this.selectedItems
+          total: total,
+          address: this.address,
+          menu_items: this.selectedItems
         };
-        axios.post('api/orders', json, {
+        axios.post("api/orders", json, {
           headers: {
-            'Content-Type': 'application/json'
+            "Content-Type": "application/json"
           }
         }).then( /*#__PURE__*/function () {
           var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(response) {
@@ -1980,7 +1980,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           return console.log(e);
         });
       } else {
-        console.log('Dati mancanti');
+        console.log("Dati mancanti");
       }
     },
     getTotal: function getTotal() {
@@ -2205,7 +2205,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_BasketComponent_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/BasketComponent.vue */ "./resources/js/components/BasketComponent.vue");
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'RestaurantMenu',
+  name: "RestaurantMenu",
   data: function data() {
     return {
       menu: [],
@@ -2214,9 +2214,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   props: {},
   mounted: function mounted() {
-    console.log('ristorante slug:', this.$route.params.slug);
+    console.log("ristorante slug:", this.$route.params.slug);
     var slug = this.$route.params.slug;
-    this.loadPage('/api/restaurants/' + slug + '/menus');
+    this.loadPage("/api/restaurants/" + slug + "/menus");
   },
   methods: {
     loadPage: function loadPage(url) {
@@ -2420,7 +2420,7 @@ var render = function render() {
     on: {
       click: _vm.sendOrder
     }
-  }, [_vm._v("Vai al\n                pagamento")])])]), _vm._v(" "), _c("div", {
+  }, [_vm._v("Vai al pagamento")])])]), _vm._v(" "), _c("div", {
     staticClass: "row my-4"
   }, [_c("div", {
     staticClass: "col btn-group btn-group-toggle btn-custom my-0 dh-mx"
@@ -2797,14 +2797,14 @@ var render = function render() {
   }, [_vm._m(0), _vm._v(" "), _c("h2", [_vm._v("Il nostro Menu")]), _vm._v(" "), _vm._l(_vm.menu, function (item) {
     return _c("div", {
       key: item.id,
-      staticClass: "ristorante mb-4 text-left"
+      staticClass: "ristorante mb-4 py-2 text-left"
     }, [_c("div", [_c("h2", [_vm._v(_vm._s(item.name))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(item.description))]), _vm._v(" "), _c("p", {
       on: {
         click: function click() {
           return _vm.onSelect(item);
         }
       }
-    }, [_vm._v(" Da\n            " + _vm._s(item.price) + " $")])])]);
+    }, [_vm._v("Da " + _vm._s(item.price) + " $")])])]);
   }), _vm._v(" "), _c("span", [_vm._v(_vm._s(_vm.clickedItems))]), _vm._v(" "), _c("BasketComponent", {
     attrs: {
       selectedItems: _vm.clickedItems
@@ -7403,7 +7403,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".ristorante[data-v-14400205] {\n  border: 1px solid black;\n  width: 600px;\n  border-radius: 10px;\n}\n.tt[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.hh[data-v-14400205] {\n  width: 400px;\n  height: 400px;\n  background-color: gray;\n  border-radius: 15px;\n  text-align: center;\n}", ""]);
+exports.push([module.i, ".ristorante[data-v-14400205] {\n  border: 1px solid black;\n  width: 600px;\n  border-radius: 10px;\n  padding: 10px;\n}\n.tt[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.hh[data-v-14400205] {\n  width: 400px;\n  height: 400px;\n  background-color: gray;\n  border-radius: 15px;\n  text-align: center;\n}", ""]);
 
 // exports
 
@@ -55910,7 +55910,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/Fede/Desktop/Boolean/Progetto/DeliveBoo/resources/js/front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! /Users/alessandromonaco/Desktop/Boolean/Progetto/DeliveBoo/resources/js/front.js */"./resources/js/front.js");
 
 
 /***/ })
