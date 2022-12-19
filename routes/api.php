@@ -21,3 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::resource('categories', 'Api\CategoriesController', ['only' => ['index']]);
 
 Route::resource('categories.restaurants', 'Api\RestaurantController', ['only' => ['index', 'show']])->parameters(['categories' => 'category:id']);
+
+Route::resource('restaurants.menus', 'Api\MenuController', ['only' => ['index', 'show']])->parameters(['restaurants' => 'restaurant:slug']);
+
+Route::post('orders', 'Api\OrderController@store');
