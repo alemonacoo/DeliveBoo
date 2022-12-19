@@ -25,27 +25,28 @@ class OrderController extends Controller
     {
         //
         $order = new Order();
-        $request->validate([
-            'address' => 'required|min:5',
-            'total' => 'required',
-            'menu_items' => 'required|min:1'
-        ]);
-        $order->total = $request['total'];
-        $order->address = $request['address'];
-
-        $order->save();
-
-        $ids_array = [];
-
         try {
-            foreach ($request->menu_items as $menu_item) {
-                array_push($ids_array, $menu_item['id']);
-            }
-            $order->menu()->sync($ids_array);
+            $request->validate([
+                'address' => 'required|min:5',
+                'total' => 'required',
+                'menu_items' => 'required|min:1'
+            ]);
+            $order->total = $request['total'];
+            $order->address = $request['address'];
+
+            $order->save();
         } catch (Exception $e) {
             return response()->json($e->getMessage());
         }
 
-        return response()->json($ids_array);
+        try {
+            foreach ($request->menu_items as $menu_item) {
+                $order->menu()->attach($menu_item['id']);
+            }
+        } catch (Exception $e) {
+            return response()->json($e->getMessage());
+        }
+
+        return response()->json($order);
     }
 }
