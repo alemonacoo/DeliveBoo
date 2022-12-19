@@ -1944,7 +1944,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     },
     sendOrder: function sendOrder() {
       var total = this.getTotal();
-      if (this.selectedItems.length > 0 && this.address.length > 0) {
+      if (this.selectedItems.length > 0 && this.address > 0) {
         var json = {
           'total': total,
           'address': this.address,
