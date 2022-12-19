@@ -21,8 +21,7 @@ export default {
     },
     data() {
         return {
-            restaurants: [],
-            errorMessage: ''
+
         }
     },
     methods: {

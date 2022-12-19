@@ -16,7 +16,7 @@ export default {
     components: {
         PictureComponent,
         CategoriesComponent,
-        AppComponent
+        AppComponent,
     }
 }
 </script>
