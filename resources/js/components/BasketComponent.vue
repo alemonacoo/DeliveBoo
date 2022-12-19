@@ -18,6 +18,11 @@
                 </a>
             </div>
         </div>
+        <div class="row">
+            <div class="col">
+                <input type="text" v-model="address">
+            </div>
+        </div>
         <div class="row my-4">
             <div class="col my-0">
                 <a href="#" id="btn-checkout" class="btn btn-primary btn-lg btn-block" @click="sendOrder">Vai al
@@ -72,6 +77,7 @@ export default {
     data() {
         return {
             showDeliveryMethod: true,
+            address: ''
         };
     },
     props: {
@@ -82,8 +88,10 @@ export default {
             this.showDeliveryMethod = !this.showDeliveryMethod;
         },
         sendOrder() {
+            let total = this.getTotal();
             const json = {
-                'total': 200,
+                'total': total,
+                'address': this.address,
                 'menu_items': this.selectedItems
             }
             axios.post('api/orders', json, {
@@ -94,6 +102,15 @@ export default {
                 console.log(await response.data);
             }
             ).catch(e => console.log(e));
+        },
+        getTotal() {
+            let total = 0;
+            for (let i = 0; i < this.selectedItems.length; i++) {
+                total += this.selectedItems[i].price;
+            }
+            console.log(total);
+            return total;
+
         }
     },
 }

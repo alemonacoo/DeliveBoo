@@ -1931,7 +1931,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   name: 'BasketComponent',
   data: function data() {
     return {
-      showDeliveryMethod: true
+      showDeliveryMethod: true,
+      address: ''
     };
   },
   props: {
@@ -1942,8 +1943,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       this.showDeliveryMethod = !this.showDeliveryMethod;
     },
     sendOrder: function sendOrder() {
+      var total = this.getTotal();
       var json = {
-        'total': 200,
+        'total': total,
+        'address': this.address,
         'menu_items': this.selectedItems
       };
       axios.post('api/orders', json, {
@@ -1975,6 +1978,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }())["catch"](function (e) {
         return console.log(e);
       });
+    },
+    getTotal: function getTotal() {
+      var total = 0;
+      for (var i = 0; i < this.selectedItems.length; i++) {
+        total += this.selectedItems[i].price;
+      }
+      console.log(total);
+      return total;
     }
   }
 });
@@ -2370,6 +2381,29 @@ var render = function render() {
       d: "M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"
     }
   })]), _vm._v("\n                Info sugli allergeni\n            ")])])]), _vm._v(" "), _c("div", {
+    staticClass: "row"
+  }, [_c("div", {
+    staticClass: "col"
+  }, [_c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.address,
+      expression: "address"
+    }],
+    attrs: {
+      type: "text"
+    },
+    domProps: {
+      value: _vm.address
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.address = $event.target.value;
+      }
+    }
+  })])]), _vm._v(" "), _c("div", {
     staticClass: "row my-4"
   }, [_c("div", {
     staticClass: "col my-0"
