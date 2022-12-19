@@ -2336,7 +2336,11 @@ var staticRenderFns = [function () {
       src: __webpack_require__(/*! ../assets/img/apps_promo-wide-je.png */ "./resources/js/assets/img/apps_promo-wide-je.png"),
       alt: ""
     }
-  })]), _vm._v(" "), _c("div", [_c("h1", [_vm._v("Il bello è prenderci gusto")]), _vm._v(" "), _c("p", [_vm._v("Scarica l'app di Just Eat e ordina dove vuoi, qualunque cosa desideri.")]), _vm._v(" "), _c("button", [_vm._v("Scarica su App store")]), _vm._v(" "), _c("button", [_vm._v("Disponibile su Google Play")])])])]);
+  })]), _vm._v(" "), _c("div", [_c("h1", [_vm._v("Il bello è prenderci gusto")]), _vm._v(" "), _c("p", [_vm._v("Scarica l'app di Deliveroo e ordina dove vuoi, qualunque cosa desideri.")]), _vm._v(" "), _c("button", [_c("i", {
+    staticClass: "bi bi-google-play"
+  }), _vm._v(" Disponibile su Google")]), _vm._v(" "), _c("button", [_c("i", {
+    staticClass: "bi bi-apple"
+  }), _vm._v(" Scarica su App Store")])])])]);
 }];
 render._withStripped = true;
 
@@ -2646,7 +2650,7 @@ var staticRenderFns = [function () {
       href: ""
     }
   }, [_c("i", {
-    staticClass: "bi-alarm"
+    staticClass: "bi bi-car-front"
   }), _vm._v(" Diventa un rider")])]), _vm._v(" "), _c("li", [_c("a", {
     attrs: {
       href: ""
@@ -2655,7 +2659,9 @@ var staticRenderFns = [function () {
     attrs: {
       href: ""
     }
-  }, [_vm._v("Aiuto?")])])])])])]);
+  }, [_c("i", {
+    staticClass: "bi bi-question-circle"
+  }), _vm._v(" Aiuto?")])])])])])]);
 }];
 render._withStripped = true;
 
@@ -7305,7 +7311,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".card[data-v-f7622972] {\n  height: 100%;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.card .card-body[data-v-f7622972] {\n  text-align: center;\n  padding: 0;\n  padding-top: 0.5rem;\n}\n.card .card-body h5[data-v-f7622972] {\n  font-size: 1rem !important;\n}\n.card img[data-v-f7622972] {\n  height: 4rem;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n}", ""]);
+exports.push([module.i, ".card[data-v-f7622972] {\n  height: 100%;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.card .card-body[data-v-f7622972] {\n  text-align: center;\n  padding: 0;\n  padding-top: 0.5rem;\n}\n.card .card-body h5[data-v-f7622972] {\n  font-size: 1rem !important;\n}\n.card img[data-v-f7622972] {\n  height: 4rem;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n}\n.card[data-v-f7622972]:hover {\n  position: relative;\n  bottom: 20px;\n}", ""]);
 
 // exports
 
@@ -7343,7 +7349,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".ac-white[data-v-1614d4d2] {\n  background-color: white;\n}\nimg[data-v-1614d4d2] {\n  width: 200px;\n}\nul[data-v-1614d4d2] {\n  display: flex;\n  list-style: none;\n  -moz-column-gap: 10px;\n       column-gap: 10px;\n}\na[data-v-1614d4d2] {\n  text-decoration: none;\n}", ""]);
+exports.push([module.i, ".ac-white[data-v-1614d4d2] {\n  background-color: white;\n}\nimg[data-v-1614d4d2] {\n  width: 200px;\n}\nul[data-v-1614d4d2] {\n  display: flex;\n  list-style: none;\n  -moz-column-gap: 10px;\n       column-gap: 10px;\n}\na[data-v-1614d4d2] {\n  text-decoration: none;\n  color: black;\n}\ni[data-v-1614d4d2] {\n  color: black;\n}\na[data-v-1614d4d2]:hover {\n  background-color: aliceblue;\n  border: 10px solid aliceblue;\n  border-radius: 15px;\n}", ""]);
 
 // exports
 

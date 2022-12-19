@@ -73,4 +73,9 @@ export default {
         border-top-right-radius: 10px;
     }
 }
+
+.card:hover {
+    position: relative;
+    bottom: 20px;
+}
 </style>
