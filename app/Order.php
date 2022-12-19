@@ -12,6 +12,6 @@ class Order extends Model
 
     public function menu()
     {
-        return $this->belongsToMany('App\Menu', 'restaurant_slug');
+        return $this->belongsToMany(Menu::class, 'menu_order', 'order_id', 'menu_id');
     }
 }

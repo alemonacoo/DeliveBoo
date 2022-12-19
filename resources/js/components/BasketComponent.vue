@@ -201,10 +201,6 @@ export default {
     .btn-group {
         padding: 2px !important;
         background-color: rgb(60, 60, 60);
-
-        // padding: 2px;
-        .btn {
-        }
     }
 }
 </style>

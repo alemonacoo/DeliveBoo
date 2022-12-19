@@ -3,25 +3,13 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Order;
+use Error;
+use Exception;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         //
@@ -36,51 +24,28 @@ class OrderController extends Controller
     public function store(Request $request)
     {
         //
-        return response()->json($request);
-    }
+        $order = new Order();
+        $request->validate([
+            'address' => 'required|min:5',
+            'total' => 'required',
+            'menu_items' => 'required|min:1'
+        ]);
+        $order->total = $request['total'];
+        $order->address = $request['address'];
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+        $order->save();
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
+        $ids_array = [];
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+        try {
+            foreach ($request->menu_items as $menu_item) {
+                array_push($ids_array, $menu_item['id']);
+            }
+            $order->menu()->sync($ids_array);
+        } catch (Exception $e) {
+            return response()->json($e->getMessage());
+        }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        return response()->json($ids_array);
     }
 }
