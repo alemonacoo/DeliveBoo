@@ -12,12 +12,12 @@
             </div>
             <div class="row justify-content-between">
                 <div class="col-8">
-                    <div class="ristorante mb-4 text-left p-3" v-for="item in menu" :key="item.id">
+                    <div class="ristorante mb-4 text-left p-3" v-for="item in menu" :key="item.id"
+                        @click="() => onSelect(item)">
                         <div>
                             <h2>{{ item.name }}</h2>
                             <p>{{ item.description }}</p>
-                            <p @click="() => onSelect(item)"> Da
-                                {{ item.price }} $</p>
+                            <p> Da {{ item.price }} $</p>
 
                         </div>
                     </div>
@@ -71,7 +71,7 @@ export default {
 .ristorante {
 
     border: 1px solid black;
-    // width: 600px;
+    cursor: pointer;
     border-radius: 10px;
 }
 

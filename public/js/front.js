@@ -2805,14 +2805,13 @@ var render = function render() {
   }, _vm._l(_vm.menu, function (item) {
     return _c("div", {
       key: item.id,
-      staticClass: "ristorante mb-4 text-left p-3"
-    }, [_c("div", [_c("h2", [_vm._v(_vm._s(item.name))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(item.description))]), _vm._v(" "), _c("p", {
+      staticClass: "ristorante mb-4 text-left p-3",
       on: {
         click: function click() {
           return _vm.onSelect(item);
         }
       }
-    }, [_vm._v(" Da\n                            " + _vm._s(item.price) + " $")])])]);
+    }, [_c("div", [_c("h2", [_vm._v(_vm._s(item.name))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(item.description))]), _vm._v(" "), _c("p", [_vm._v(" Da " + _vm._s(item.price) + " $")])])]);
   }), 0), _vm._v(" "), _c("div", {
     staticClass: "col-4"
   }, [_c("BasketComponent", {
@@ -7422,7 +7421,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".ristorante[data-v-14400205] {\n  border: 1px solid black;\n  border-radius: 10px;\n}\n.tt[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.hh[data-v-14400205] {\n  width: 400px;\n  height: 400px;\n  background-color: gray;\n  border-radius: 15px;\n  text-align: center;\n}", ""]);
+exports.push([module.i, ".ristorante[data-v-14400205] {\n  border: 1px solid black;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.tt[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.hh[data-v-14400205] {\n  width: 400px;\n  height: 400px;\n  background-color: gray;\n  border-radius: 15px;\n  text-align: center;\n}", ""]);
 
 // exports
 
