@@ -2251,7 +2251,7 @@ var render = function render() {
   }, _vm._l(_vm.categories, function (category) {
     return _c("div", {
       key: category.id,
-      staticClass: "col-2 my-3"
+      staticClass: "col my-3"
     }, [_c("div", {
       staticClass: "card",
       on: {
@@ -2266,7 +2266,7 @@ var render = function render() {
         alt: category.name
       }
     }), _vm._v(" "), _c("div", {
-      staticClass: "card-body"
+      staticClass: "card-body px-1"
     }, [_c("h5", [_vm._v(_vm._s(category.name))])])])]);
   }), 0), _vm._v(" "), _c("div", {
     staticClass: "row"
@@ -6964,7 +6964,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".card[data-v-f7622972] {\n  height: 100%;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.card .card-body[data-v-f7622972] {\n  text-align: center;\n  padding: 0;\n  padding-top: 0.5rem;\n}\n.card img[data-v-f7622972] {\n  height: 8rem;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n}", ""]);
+exports.push([module.i, ".card[data-v-f7622972] {\n  height: 100%;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.card .card-body[data-v-f7622972] {\n  text-align: center;\n  padding: 0;\n  padding-top: 0.5rem;\n}\n.card .card-body h5[data-v-f7622972] {\n  font-size: 1rem !important;\n}\n.card img[data-v-f7622972] {\n  height: 4rem;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n}", ""]);
 
 // exports
 
