@@ -2587,30 +2587,24 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "container"
-  }, [_c("div", {
-    staticClass: "row"
-  }, [_vm._m(0), _vm._v(" "), _c("div", {
-    staticClass: "col"
-  }, [_c("h5", [_vm._v("Cucine")]), _vm._v(" "), _c("ul", _vm._l(_vm.categories, function (category) {
-    return _c("li", {
-      key: category.id
-    }, [_vm._v("\n                    " + _vm._s(category.name) + "\n                ")]);
-  }), 0)]), _vm._v(" "), _vm._m(1)])]);
+  return _vm._m(0);
 };
 var staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
+    staticClass: "container text-align-center"
+  }, [_c("div", {
+    staticClass: "row"
+  }, [_c("div", {
     staticClass: "col"
-  }, [_c("h5", [_vm._v("Servizio Clienti")]), _vm._v(" "), _c("ul", [_c("li", [_vm._v("Domande Frequenti")]), _vm._v(" "), _c("li", [_vm._v("Accedi")]), _vm._v(" "), _c("li", [_vm._v("Registrati")])])]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
+  }, [_c("h5", [_vm._v("Servizio Clienti")]), _vm._v(" "), _c("ul", [_c("li", [_vm._v("Domande Frequenti")]), _vm._v(" "), _c("li", [_vm._v("Accedi")]), _vm._v(" "), _c("li", [_vm._v("Registrati")]), _vm._v(" "), _c("li", [_vm._v("Miglior Prezzo Garantito")])])]), _vm._v(" "), _c("div", {
     staticClass: "col"
-  }, [_c("h5", [_vm._v("Città")]), _vm._v(" "), _c("ul", [_c("li", [_vm._v("Milano")]), _vm._v(" "), _c("li", [_vm._v("Roma")]), _vm._v(" "), _c("li", [_vm._v("Firenze")]), _vm._v(" "), _c("li", [_vm._v("Bologna")])])]);
+  }, [_c("h5", [_vm._v("Cucine")]), _vm._v(" "), _c("ul", [_c("li", [_vm._v("Vegetariano")]), _vm._v(" "), _c("li", [_vm._v("Messicano")]), _vm._v(" "), _c("li", [_vm._v("Cinese")]), _vm._v(" "), _c("li", [_vm._v("Indiano")]), _vm._v(" "), _c("li", [_vm._v("Greco")]), _vm._v(" "), _c("li", [_vm._v("Giapponese")]), _vm._v(" "), _c("li", [_vm._v("Italiano")]), _vm._v(" "), _c("li", [_vm._v("Thai")]), _vm._v(" "), _c("li", [_vm._v("Pizza")]), _vm._v(" "), _c("li", [_vm._v("Americano")])])]), _vm._v(" "), _c("div", {
+    staticClass: "col"
+  }, [_c("h5", [_vm._v("Catene")]), _vm._v(" "), _c("ul", [_c("li", [_vm._v("Alice Pizza")]), _vm._v(" "), _c("li", [_vm._v("Burger King")]), _vm._v(" "), _c("li", [_vm._v("Zushi")]), _vm._v(" "), _c("li", [_vm._v("Old Wild West")]), _vm._v(" "), _c("li", [_vm._v("Poke House")]), _vm._v(" "), _c("li", [_vm._v("RoadHouse")]), _vm._v(" "), _c("li", [_vm._v("Sushiko")]), _vm._v(" "), _c("li", [_vm._v("KFC")]), _vm._v(" "), _c("li", [_vm._v("Fratelli La Bufala")]), _vm._v(" "), _c("li", [_vm._v("McDonald's")])])]), _vm._v(" "), _c("div", {
+    staticClass: "col"
+  }, [_c("h5", [_vm._v("Città")]), _vm._v(" "), _c("ul", [_c("li", [_vm._v("Milano")]), _vm._v(" "), _c("li", [_vm._v("Roma")]), _vm._v(" "), _c("li", [_vm._v("Firenze")]), _vm._v(" "), _c("li", [_vm._v("Salerno")]), _vm._v(" "), _c("li", [_vm._v("Padova")]), _vm._v(" "), _c("li", [_vm._v("Parma")]), _vm._v(" "), _c("li", [_vm._v("Ferrara")]), _vm._v(" "), _c("li", [_vm._v("Napoli")]), _vm._v(" "), _c("li", [_vm._v("Udine")]), _vm._v(" "), _c("li", [_vm._v("Campobasso")]), _vm._v(" "), _c("li", [_vm._v("Varese")])])])])]);
 }];
 render._withStripped = true;
 
@@ -7330,7 +7324,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".container[data-v-abfbddf2] {\n  margin-top: 200px;\n  min-width: 100vw;\n  padding: 20px;\n  background: #000;\n  color: rgb(200, 200, 200);\n}\n.container .row .col[data-v-abfbddf2] {\n  margin-top: 20px;\n}\n.container .row .col h5[data-v-abfbddf2] {\n  margin-bottom: 20px;\n}\n.container .row .col ul[data-v-abfbddf2] {\n  list-style: none;\n  padding-left: 0px;\n}\n.container .row .col ul li[data-v-abfbddf2] {\n  margin-bottom: 10px;\n}", ""]);
+exports.push([module.i, ".container[data-v-abfbddf2] {\n  margin-top: 200px;\n  min-width: 100vw;\n  padding: 20px;\n  background: #efedea;\n  color: black;\n}\n.container .row[data-v-abfbddf2] {\n  max-width: 1200px;\n  margin: 0 auto;\n}\n.container .row .col[data-v-abfbddf2] {\n  margin-top: 20px;\n}\n.container .row .col h5[data-v-abfbddf2] {\n  margin-bottom: 20px;\n}\n.container .row .col ul[data-v-abfbddf2] {\n  list-style: none;\n  padding-left: 0px;\n}\n.container .row .col ul li[data-v-abfbddf2] {\n  margin-bottom: 10px;\n}", ""]);
 
 // exports
 
