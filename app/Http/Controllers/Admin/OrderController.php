@@ -24,7 +24,7 @@ class OrderController extends Controller
             abort(404);
         }
         $menu = Menu::all()->where('restaurant_slug', $restaurant_slug)->first();
-        $orders = $menu->order;
+        $orders = $menu->order()->distinct()->get();
         return view('admin.orders.index', compact('orders', 'restaurant_slug'));
     }
 
