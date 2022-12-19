@@ -91,8 +91,8 @@
         <div class="container-sm">
             <div
                 class="row"
-                v-for="selectedItem in selectedItems"
-                :key="selectedItem.id"
+                v-for="(selectedItem, index) in selectedItems"
+                :key="index"
             >
                 <div class="col-8">
                     {{ selectedItem.name }}

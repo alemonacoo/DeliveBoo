@@ -2464,9 +2464,9 @@ var render = function render() {
     }
   })]), _vm._v("\n                Ritiro al locale\n            ")])])]), _vm._v(" "), _c("div", {
     staticClass: "container-sm"
-  }, _vm._l(_vm.selectedItems, function (selectedItem) {
+  }, _vm._l(_vm.selectedItems, function (selectedItem, index) {
     return _c("div", {
-      key: selectedItem.id,
+      key: index,
       staticClass: "row"
     }, [_c("div", {
       staticClass: "col-8"
