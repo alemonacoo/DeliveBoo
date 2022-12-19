@@ -36,7 +36,7 @@ class OrderController extends Controller
     public function store(Request $request)
     {
         //
-        return response()->json(['messagge' => 'store ok']);
+        return response()->json($request);
     }
 
     /**

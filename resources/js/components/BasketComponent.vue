@@ -90,10 +90,10 @@ export default {
                 headers: {
                     'Content-Type': 'application/json'
                 }
-            }).then((response) => {
-                console.log(response);
+            }).then(async (response) => {
+                console.log(await response.data);
             }
-            )
+            ).catch(e => console.log(e));
         }
     },
 }
