@@ -2616,11 +2616,29 @@ var staticRenderFns = [function () {
     staticClass: "row"
   }, [_c("div", {
     staticClass: "col-4"
-  }, [_c("h3", [_vm._v("Scarica l'app")])]), _vm._v(" "), _c("div", {
+  }, [_c("h3", [_vm._v("Scarica l'app")]), _vm._v(" "), _c("div", {
+    staticClass: "d-flex"
+  }, [_c("button", {
+    staticClass: "d-flex align-items-center"
+  }, [_c("i", {
+    staticClass: "bi bi-google-play"
+  }), _vm._v(" Disponibile su\n                    Google")]), _vm._v(" "), _c("button", {
+    staticClass: "d-flex align-items-center"
+  }, [_c("i", {
+    staticClass: "bi bi-apple"
+  }), _vm._v(" Scarica su App Store")])])]), _vm._v(" "), _c("div", {
     staticClass: "col-4"
-  }, [_vm._v("Feedback")]), _vm._v(" "), _c("div", {
+  }, [_c("h3", [_vm._v("Feedback")]), _vm._v(" "), _c("p", [_vm._v("Aiutaci a migliorare il nostro sito")]), _vm._v(" "), _c("p", [_vm._v("Invia feedback")])]), _vm._v(" "), _c("div", {
     staticClass: "col-4"
-  }, [_vm._v("KDJDS")])])]);
+  }, [_c("h3", [_vm._v("Seguici su:")]), _vm._v(" "), _c("div", {
+    staticClass: "d-flex social"
+  }, [_c("p", [_c("i", {
+    staticClass: "bi bi-facebook"
+  })]), _vm._v(" "), _c("p", [_c("i", {
+    staticClass: "bi bi-instagram"
+  })]), _vm._v(" "), _c("p", [_c("i", {
+    staticClass: "bi bi-twitter"
+  })])])])])]);
 }];
 render._withStripped = true;
 
@@ -7380,7 +7398,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".row[data-v-80d9706c] {\n  max-width: 1200px;\n  margin: 0 auto;\n}", ""]);
+exports.push([module.i, ".row[data-v-80d9706c] {\n  max-width: 1200px;\n  margin: 0 auto;\n}\n.col-4[data-v-80d9706c] {\n  display: flex;\n  flex-direction: column;\n}\nbutton[data-v-80d9706c] {\n  border: 0;\n  background-color: black;\n  color: white;\n  width: 150px;\n  margin: 5px;\n}\n.social[data-v-80d9706c] {\n  -moz-column-gap: 50px;\n       column-gap: 50px;\n}\n.social i[data-v-80d9706c] {\n  font-size: 30px;\n}", ""]);
 
 // exports
 
