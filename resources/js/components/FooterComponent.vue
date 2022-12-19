@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid">
+    <div class="container-fluid ">
         <div class="row">
             <div class="col">
                 <h5>Servizio Clienti</h5>
@@ -68,6 +68,19 @@
 
                 </ul>
             </div>
+
+            <div class="col">
+                <h5>Chi Siamo</h5>
+                <ul>
+                    <li>Informazioni su Deliveroo</li>
+                    <li>Diventa partner di Deliveroo</li>
+                    <li>Programma Bug Bounty</li>
+                    <li>Partner Center</li>
+
+
+                </ul>
+            </div>
+
         </div>
     </div>
 </template>
