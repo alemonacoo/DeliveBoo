@@ -2,10 +2,10 @@
     <div class="container my-5">
 
         <div class="row">
-            <div class="col-2 my-3" v-for="category in categories" :key="category.id">
+            <div class="col my-3" v-for="category in categories" :key="category.id">
                 <div class="card " @click="showCategoryRestaurants(category.id)">
                     <img :src="category.image" class="card-img-top" :alt="category.name">
-                    <div class="card-body">
+                    <div class="card-body px-1">
                         <h5>{{ category.name }}</h5>
                     </div>
                 </div>
@@ -60,10 +60,14 @@ export default {
         text-align: center;
         padding: 0;
         padding-top: 0.5rem;
+
+        h5 {
+            font-size: 1rem !important;
+        }
     }
 
     img {
-        height: 8rem;
+        height: 4rem;
         object-fit: cover;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
