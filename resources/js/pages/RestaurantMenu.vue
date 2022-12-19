@@ -1,9 +1,30 @@
 <template>
-    <div>
-        <div v-for="item in menu" :key="item.id">
-            <h5 @click="() => onSelect(item)">
-                {{ item.name }}
-            </h5>
+    <div class="tt">
+
+        <div class="mb-5 hh">
+            <h1>Ristorante 1</h1>
+
+            <p>Corso Vittorio II, Milano 86704</p>
+
+            <hr>
+
+
+
+        </div>
+
+        <h2>Il nostro Menu</h2>
+        <div class="ristorante mb-4 text-left" v-for="item in menu" :key="item.id">
+            <div>
+                <h2>{{ item.name }}</h2>
+                <p>{{ item.description }}</p>
+                <p @click="() => onSelect(item)"> Da
+                {{ item.price }} $</p>
+
+            </div>
+
+
+
+
         </div>
         <span>{{ clickedItems }}</span>
 
@@ -49,8 +70,31 @@ export default {
         BasketComponent,
     },
 }
+
 </script>
 
 <style lang="scss" scoped>
+.ristorante {
 
+    border: 1px solid black;
+    width: 600px;
+    border-radius: 10px;
+
+
+
+}
+
+.tt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hh {
+    width: 400px;
+    height: 400px;
+    background-color: gray;
+    border-radius: 15px;
+    text-align: center
+}
 </style>
