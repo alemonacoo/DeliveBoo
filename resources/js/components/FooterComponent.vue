@@ -1,5 +1,5 @@
 <template>
-    <div class="container text-align-center">
+    <div class="container-fluid">
         <div class="row">
             <div class="col">
                 <h5>Servizio Clienti</h5>
@@ -83,9 +83,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
-    margin-top: 200px;
-    min-width: 100vw;
+.container-fluid {
     padding: 20px;
     background: #efedea;
     color: black;
