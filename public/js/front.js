@@ -1944,40 +1944,44 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     },
     sendOrder: function sendOrder() {
       var total = this.getTotal();
-      var json = {
-        'total': total,
-        'address': this.address,
-        'menu_items': this.selectedItems
-      };
-      axios.post('api/orders', json, {
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      }).then( /*#__PURE__*/function () {
-        var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(response) {
-          return _regeneratorRuntime().wrap(function _callee$(_context) {
-            while (1) {
-              switch (_context.prev = _context.next) {
-                case 0:
-                  _context.t0 = console;
-                  _context.next = 3;
-                  return response.data;
-                case 3:
-                  _context.t1 = _context.sent;
-                  _context.t0.log.call(_context.t0, _context.t1);
-                case 5:
-                case "end":
-                  return _context.stop();
-              }
-            }
-          }, _callee);
-        }));
-        return function (_x) {
-          return _ref.apply(this, arguments);
+      if (this.selectedItems.length > 0 && this.address.length > 0) {
+        var json = {
+          'total': total,
+          'address': this.address,
+          'menu_items': this.selectedItems
         };
-      }())["catch"](function (e) {
-        return console.log(e);
-      });
+        axios.post('api/orders', json, {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }).then( /*#__PURE__*/function () {
+          var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(response) {
+            return _regeneratorRuntime().wrap(function _callee$(_context) {
+              while (1) {
+                switch (_context.prev = _context.next) {
+                  case 0:
+                    _context.t0 = console;
+                    _context.next = 3;
+                    return response.data;
+                  case 3:
+                    _context.t1 = _context.sent;
+                    _context.t0.log.call(_context.t0, _context.t1);
+                  case 5:
+                  case "end":
+                    return _context.stop();
+                }
+              }
+            }, _callee);
+          }));
+          return function (_x) {
+            return _ref.apply(this, arguments);
+          };
+        }())["catch"](function (e) {
+          return console.log(e);
+        });
+      } else {
+        console.log('Dati mancanti');
+      }
     },
     getTotal: function getTotal() {
       var total = 0;

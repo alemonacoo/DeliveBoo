@@ -89,19 +89,25 @@ export default {
         },
         sendOrder() {
             let total = this.getTotal();
-            const json = {
-                'total': total,
-                'address': this.address,
-                'menu_items': this.selectedItems
-            }
-            axios.post('api/orders', json, {
-                headers: {
-                    'Content-Type': 'application/json'
+            if (this.selectedItems.length > 0 && this.address.length > 0) {
+                const json = {
+                    'total': total,
+                    'address': this.address,
+                    'menu_items': this.selectedItems
                 }
-            }).then(async (response) => {
-                console.log(await response.data);
+                axios.post('api/orders', json, {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                }).then(async (response) => {
+                    console.log(await response.data);
+                }
+                ).catch(e => console.log(e));
             }
-            ).catch(e => console.log(e));
+            else {
+                console.log('Dati mancanti');
+            }
+
         },
         getTotal() {
             let total = 0;
