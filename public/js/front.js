@@ -1936,6 +1936,19 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     toggle: function toggle() {
       this.showDeliveryMethod = !this.showDeliveryMethod;
+    },
+    sendOrder: function sendOrder() {
+      var json = {
+        'total': 200,
+        'menu_items': this.selectedItems
+      };
+      axios.post('api/orders', json, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).then(function (response) {
+        console.log(response);
+      });
     }
   }
 });
@@ -2202,7 +2215,6 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       restaurants: []
-      // active: ''
     };
   },
   mounted: function mounted() {
@@ -2331,7 +2343,20 @@ var render = function render() {
     attrs: {
       d: "M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"
     }
-  })]), _vm._v("\n                Info sugli allergeni\n            ")])])]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c("div", {
+  })]), _vm._v("\n                Info sugli allergeni\n            ")])])]), _vm._v(" "), _c("div", {
+    staticClass: "row my-4"
+  }, [_c("div", {
+    staticClass: "col my-0"
+  }, [_c("a", {
+    staticClass: "btn btn-primary btn-lg btn-block",
+    attrs: {
+      href: "#",
+      id: "btn-checkout"
+    },
+    on: {
+      click: _vm.sendOrder
+    }
+  }, [_vm._v("Vai al\n                pagamento")])])]), _vm._v(" "), _c("div", {
     staticClass: "row my-4"
   }, [_c("div", {
     staticClass: "col btn-group btn-group-toggle btn-custom my-0 dh-mx"
@@ -2396,20 +2421,6 @@ var staticRenderFns = [function () {
   }, [_c("div", {
     staticClass: "col"
   }, [_c("h2", [_vm._v("Il tuo ordine")])])]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "row my-4"
-  }, [_c("div", {
-    staticClass: "col my-0"
-  }, [_c("a", {
-    staticClass: "btn btn-primary btn-lg btn-block",
-    attrs: {
-      href: "#",
-      id: "btn-checkout"
-    }
-  }, [_vm._v("Vai al pagamento")])])]);
 }];
 render._withStripped = true;
 
@@ -55835,7 +55846,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/davishkahikkaduwa/Desktop/boolean/PHP/DeliveBoo/resources/js/front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! /Users/Fede/Desktop/Boolean/Progetto/DeliveBoo/resources/js/front.js */"./resources/js/front.js");
 
 
 /***/ })
