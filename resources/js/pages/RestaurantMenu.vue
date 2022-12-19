@@ -16,7 +16,7 @@
         <div class="ristorante mb-4 text-left" v-for="item in menu" :key="item.id">
             <div>
                 <h2>{{ item.nome }}</h2>
-                <p>{{ item.descrizione }}</p>
+                <p>{{ item.description }}</p>
                 <p> Da {{ item.price }} $</p>
             </div>
 
