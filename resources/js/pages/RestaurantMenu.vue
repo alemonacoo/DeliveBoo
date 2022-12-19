@@ -1,18 +1,30 @@
 <template>
     <div>
         <div v-for="item in menu" :key="item.id">
-            <h5>{{ item.name }}</h5>
+            <h5 @click="() => onSelect(item)">
+                {{ item.name }}
+            </h5>
         </div>
+        <span>{{ clickedItems }}</span>
+
+        <BasketComponent :selectedItems="clickedItems" />
     </div>
 </template>
 
 <script>
+import BasketComponent from '../components/BasketComponent.vue';
+
+
 export default {
     name: 'RestaurantMenu',
     data() {
         return {
-            menu: []
+            menu: [],
+            clickedItems: [],
         }
+    },
+    props: {
+
     },
     mounted() {
         console.log('ristorante slug:', this.$route.params.slug);
@@ -27,7 +39,14 @@ export default {
                     console.log(data);
                     this.menu = data.results;
                 })
+        },
+        onSelect(item) {
+            this.clickedItems.push(item);
+            console.log(this.clickedItems);
         }
+    },
+    components: {
+        BasketComponent,
     },
 }
 </script>

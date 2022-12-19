@@ -42,7 +42,20 @@
             </div>
         </div>
         <!-- ORDINI AGGIUNTI  -->
-        <div class="row"></div>
+        <div class="container-sm">
+            <div class="row"  v-for="selectedItem in selectedItems" :key="selectedItem.id">
+                <div class="col-8">
+                    {{ selectedItem.name }}
+                </div>
+                <div class="col-4">
+                    {{ selectedItem.price }}
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            {{ selectedItems.length }}
+        </div>
     </div>
     </template>
 
@@ -53,6 +66,9 @@
             return {
                 showDeliveryMethod: true,
             };
+        },
+        props: {
+            selectedItems: Array,
         },
         methods: {
             toggle() {
