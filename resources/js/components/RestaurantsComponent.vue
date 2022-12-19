@@ -25,12 +25,15 @@ export default {
         }
     },
     methods: {
+        // showRestaurantMenu(slug) {
+        //     console.log(slug);
+        //     axios.get('/api/restaurants/' + slug + '/menus')
+        //         .then(({ data }) => {
+        //             console.log(data);
+        //         })
+        // },
         showRestaurantMenu(slug) {
-            console.log(slug);
-            axios.get('/api/restaurants/' + slug + '/menus')
-                .then(({ data }) => {
-                    console.log(data);
-                })
+            this.$router.push('/restaurant/' + slug);
         }
     }
 }

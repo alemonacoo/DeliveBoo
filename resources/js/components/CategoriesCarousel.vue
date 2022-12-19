@@ -33,11 +33,9 @@ export default {
     },
     methods: {
         showCategoryRestaurants(id) {
-            console.log(id);
             // this.active_id = id;
             axios.get('/api/categories/' + id + '/restaurants/')
                 .then(({ data }) => {
-                    console.log(data);
                     this.restaurants = data.results;
                 })
             this.$router.push('/category/' + id);

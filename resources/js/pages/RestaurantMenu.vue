@@ -42,22 +42,18 @@ export default {
 
     },
     mounted() {
-        console.log('ristorante slug:', this.$route.params.slug);
         const slug = this.$route.params.slug;
         this.loadPage('/api/restaurants/' + slug + '/menus');
     },
     methods: {
         loadPage(url) {
-            console.log(url);
             axios.get(url)
                 .then(({ data }) => {
-                    console.log(data);
                     this.menu = data.results;
                 })
         },
         onSelect(item) {
             this.clickedItems.push(item);
-            console.log(this.clickedItems);
         }
     },
     components: {

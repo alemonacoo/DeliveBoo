@@ -89,7 +89,7 @@ export default {
         },
         sendOrder() {
             let total = this.getTotal();
-            if (this.selectedItems.length > 0 && this.address > 0) {
+            if (selectedItems.length > 0 && this.address > 0) {
                 const json = {
                     'total': total,
                     'address': this.address,

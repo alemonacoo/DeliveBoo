@@ -1944,7 +1944,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     },
     sendOrder: function sendOrder() {
       var total = this.getTotal();
-      if (this.selectedItems.length > 0 && this.address > 0) {
+      if (selectedItems.length > 0 && this.address > 0) {
         var json = {
           'total': total,
           'address': this.address,
@@ -2020,11 +2020,9 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     showCategoryRestaurants: function showCategoryRestaurants(id) {
       var _this = this;
-      console.log(id);
       // this.active_id = id;
       axios.get('/api/categories/' + id + '/restaurants/').then(function (_ref) {
         var data = _ref.data;
-        console.log(data);
         _this.restaurants = data.results;
       });
       this.$router.push('/category/' + id);
@@ -2140,12 +2138,15 @@ __webpack_require__.r(__webpack_exports__);
     return {};
   },
   methods: {
+    // showRestaurantMenu(slug) {
+    //     console.log(slug);
+    //     axios.get('/api/restaurants/' + slug + '/menus')
+    //         .then(({ data }) => {
+    //             console.log(data);
+    //         })
+    // },
     showRestaurantMenu: function showRestaurantMenu(slug) {
-      console.log(slug);
-      axios.get('/api/restaurants/' + slug + '/menus').then(function (_ref) {
-        var data = _ref.data;
-        console.log(data);
-      });
+      this.$router.push('/restaurant/' + slug);
     }
   }
 });
@@ -2214,23 +2215,19 @@ __webpack_require__.r(__webpack_exports__);
   },
   props: {},
   mounted: function mounted() {
-    console.log('ristorante slug:', this.$route.params.slug);
     var slug = this.$route.params.slug;
     this.loadPage('/api/restaurants/' + slug + '/menus');
   },
   methods: {
     loadPage: function loadPage(url) {
       var _this = this;
-      console.log(url);
       axios.get(url).then(function (_ref) {
         var data = _ref.data;
-        console.log(data);
         _this.menu = data.results;
       });
     },
     onSelect: function onSelect(item) {
       this.clickedItems.push(item);
-      console.log(this.clickedItems);
     }
   },
   components: {
@@ -2259,23 +2256,22 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
-    console.log('categoria id:', this.$route.params.id);
     var category_id = this.$route.params.id;
     this.loadPage('/api/categories/' + category_id + '/restaurants/');
   },
   methods: {
     loadPage: function loadPage(url) {
       var _this = this;
-      console.log(url);
       axios.get(url).then(function (_ref) {
         var data = _ref.data;
-        console.log(data);
         _this.restaurants = data.results;
       });
     },
     showRestaurantMenu: function showRestaurantMenu(slug) {
-      console.log(slug);
       this.$router.push('/restaurant/' + slug);
+    },
+    zero: function zero() {
+      this.restaurants = [];
     }
   },
   components: {
@@ -2794,7 +2790,9 @@ var render = function render() {
     _c = _vm._self._c;
   return _c("div", {
     staticClass: "tt"
-  }, [_vm._m(0), _vm._v(" "), _c("h2", [_vm._v("Il nostro Menu")]), _vm._v(" "), _vm._l(_vm.menu, function (item) {
+  }, [_c("div", {
+    staticClass: "mb-5 hh"
+  }, [_c("h1", [_vm._v(_vm._s(this.$route.params.slug))]), _vm._v(" "), _c("hr")]), _vm._v(" "), _c("h2", [_vm._v("Il nostro Menu")]), _vm._v(" "), _vm._l(_vm.menu, function (item) {
     return _c("div", {
       key: item.id,
       staticClass: "ristorante mb-4 text-left"
@@ -2804,20 +2802,14 @@ var render = function render() {
           return _vm.onSelect(item);
         }
       }
-    }, [_vm._v(" Da\n            " + _vm._s(item.price) + " $")])])]);
+    }, [_vm._v(" Da\n                " + _vm._s(item.price) + " $")])])]);
   }), _vm._v(" "), _c("span", [_vm._v(_vm._s(_vm.clickedItems))]), _vm._v(" "), _c("BasketComponent", {
     attrs: {
       selectedItems: _vm.clickedItems
     }
   })], 2);
 };
-var staticRenderFns = [function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "mb-5 hh"
-  }, [_c("h1", [_vm._v("Ristorante 1")]), _vm._v(" "), _c("p", [_vm._v("Corso Vittorio II, Milano 86704")]), _vm._v(" "), _c("hr")]);
-}];
+var staticRenderFns = [];
 render._withStripped = true;
 
 
@@ -2839,7 +2831,16 @@ var render = function render() {
     _c = _vm._self._c;
   return _c("div", [_c("div", {
     staticClass: "container"
-  }, [_c("CategoriesComponent"), _vm._v(" "), _c("div", {
+  }, [_c("div", {
+    staticClass: "row",
+    on: {
+      click: function click($event) {
+        return _vm.zero();
+      }
+    }
+  }, [_c("div", {
+    staticClass: "col"
+  }, [_c("CategoriesComponent")], 1)]), _vm._v(" "), _c("div", {
     staticClass: "row"
   }, _vm._l(_vm.restaurants, function (restaurant) {
     return _c("div", {
@@ -2860,8 +2861,8 @@ var render = function render() {
       }
     }), _vm._v(" "), _c("div", {
       staticClass: "card-body"
-    }, [_c("h4", [_vm._v(_vm._s(restaurant.name))])])])]);
-  }), 0)], 1)]);
+    }, [_c("h4", [_vm._v(_vm._s(restaurant.name))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(restaurant.address))])])])]);
+  }), 0)])]);
 };
 var staticRenderFns = [];
 render._withStripped = true;
