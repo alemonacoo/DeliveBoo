@@ -2,7 +2,7 @@
     <div class="tt">
 
         <div class="mb-5 hh">
-            <h1>Ristorante 1</h1>
+            <h1>{{ this.$route.params.slug }}</h1>
 
             <p>Corso Vittorio II, Milano 86704</p>
 
@@ -18,7 +18,7 @@
                 <h2>{{ item.name }}</h2>
                 <p>{{ item.description }}</p>
                 <p @click="() => onSelect(item)"> Da
-                {{ item.price }} $</p>
+                    {{ item.price }} $</p>
 
             </div>
 

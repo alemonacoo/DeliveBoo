@@ -2794,7 +2794,9 @@ var render = function render() {
     _c = _vm._self._c;
   return _c("div", {
     staticClass: "tt"
-  }, [_vm._m(0), _vm._v(" "), _c("h2", [_vm._v("Il nostro Menu")]), _vm._v(" "), _vm._l(_vm.menu, function (item) {
+  }, [_c("div", {
+    staticClass: "mb-5 hh"
+  }, [_c("h1", [_vm._v(_vm._s(this.$route.params.slug))]), _vm._v(" "), _c("p", [_vm._v("Corso Vittorio II, Milano 86704")]), _vm._v(" "), _c("hr")]), _vm._v(" "), _c("h2", [_vm._v("Il nostro Menu")]), _vm._v(" "), _vm._l(_vm.menu, function (item) {
     return _c("div", {
       key: item.id,
       staticClass: "ristorante mb-4 text-left"
@@ -2804,20 +2806,14 @@ var render = function render() {
           return _vm.onSelect(item);
         }
       }
-    }, [_vm._v(" Da\n            " + _vm._s(item.price) + " $")])])]);
+    }, [_vm._v(" Da\n                " + _vm._s(item.price) + " $")])])]);
   }), _vm._v(" "), _c("span", [_vm._v(_vm._s(_vm.clickedItems))]), _vm._v(" "), _c("BasketComponent", {
     attrs: {
       selectedItems: _vm.clickedItems
     }
   })], 2);
 };
-var staticRenderFns = [function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "mb-5 hh"
-  }, [_c("h1", [_vm._v("Ristorante 1")]), _vm._v(" "), _c("p", [_vm._v("Corso Vittorio II, Milano 86704")]), _vm._v(" "), _c("hr")]);
-}];
+var staticRenderFns = [];
 render._withStripped = true;
 
 
@@ -55910,7 +55906,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/Fede/Desktop/Boolean/Progetto/DeliveBoo/resources/js/front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\alessandro corviino\Documents\Boolean\DeliveBoo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
