@@ -2645,11 +2645,13 @@ var staticRenderFns = [function () {
     attrs: {
       href: ""
     }
-  }, [_vm._v(" Diventa un rider")])]), _vm._v(" "), _c("li", [_c("a", {
+  }, [_c("i", {
+    staticClass: "bi-alarm"
+  }), _vm._v(" Diventa un rider")])]), _vm._v(" "), _c("li", [_c("a", {
     attrs: {
       href: ""
     }
-  }, [_vm._v("Accedi")])]), _vm._v(" "), _c("li", [_c("a", {
+  }, [_vm._v(" Accedi")])]), _vm._v(" "), _c("li", [_c("a", {
     attrs: {
       href: ""
     }

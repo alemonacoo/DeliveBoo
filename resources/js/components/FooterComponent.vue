@@ -44,22 +44,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container{
+.container {
     margin-top: 200px;
     min-width: 100vw;
     padding: 20px;
     background: #000;
     color: rgb(200, 200, 200);
-    .row{
-        .col{
+
+    .row {
+        .col {
             margin-top: 20px;
-            h5{
+
+            h5 {
                 margin-bottom: 20px;
             }
-            ul{
+
+            ul {
                 list-style: none;
                 padding-left: 0px;
-                li{
+
+                li {
                     margin-bottom: 10px;
                 }
             }

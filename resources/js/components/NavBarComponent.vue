@@ -9,9 +9,9 @@
 
             <div>
                 <ul>
-                    <li><a href=""> Diventa un rider</a></li>
+                    <li><a href=""><i class="bi-alarm"></i> Diventa un rider</a></li>
 
-                    <li> <a href="">Accedi</a></li>
+                    <li> <a href=""> Accedi</a></li>
 
                     <li><a href="">Aiuto?</a></li>
 
