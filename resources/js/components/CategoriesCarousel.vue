@@ -3,7 +3,7 @@
 
         <div class="row">
             <div class="col-2 my-3" v-for="category in categories" :key="category.id">
-                <div class="card" @click="showCategoryRestaurants(category.id)">
+                <div class="card " @click="showCategoryRestaurants(category.id)">
                     <img :src="category.image" class="card-img-top" :alt="category.name">
                     <div class="card-body">
                         <h5>{{ category.name }}</h5>
@@ -34,13 +34,13 @@ export default {
     methods: {
         showCategoryRestaurants(id) {
             console.log(id);
+            // this.active_id = id;
             axios.get('/api/categories/' + id + '/restaurants/')
                 .then(({ data }) => {
                     console.log(data);
                     this.restaurants = data.results;
-                    console.log(restaurants);
                 })
-            this.$router.push({ name: 'CategoryRestaurants' });
+            this.$router.push('/category/' + id);
         }
     },
     components: {
