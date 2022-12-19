@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h2>Il tuo ordine</h2>
+                <h2 class="text-center">Il tuo ordine</h2>
             </div>
         </div>
         <div class="row">
@@ -65,9 +65,9 @@
             </div>
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
             {{ selectedItems.length }}
-        </div>
+        </div> -->
     </div>
 </template>
 
