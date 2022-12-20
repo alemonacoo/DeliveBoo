@@ -12,12 +12,12 @@
             </div>
             <div class="row justify-content-between">
                 <div class="col-8">
-                    <div class="ristorante mb-4 text-left p-3" v-for="item in menu" :key="item.id"
-                        @click="() => onSelect(item)">
+                    <div class="ristorante mb-4 text-left p-3" v-for="item in menu" :key="item.id">
                         <div>
                             <h2>{{ item.name }}</h2>
                             <p>{{ item.description }}</p>
                             <p> Da {{ item.price }} $</p>
+                            <button @click="() => onSelect(item)"> Aggiungi al carrello</button>
 
                         </div>
                     </div>
@@ -82,5 +82,13 @@ export default {
     background-color: gray;
     border-radius: 15px;
     text-align: center;
+}
+
+button {
+    border-radius: 15px;
+    width: 150px;
+    border: 0;
+    background-color: #f36805;
+    color: white;
 }
 </style>
