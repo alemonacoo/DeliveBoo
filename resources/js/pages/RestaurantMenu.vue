@@ -65,7 +65,7 @@ export default {
 
 <style lang="scss" scoped>
 .ristorante {
-    border: 1px solid black;
+    box-shadow: 5px 5px 5px 1px black;
     cursor: pointer;
     border-radius: 10px;
 }
