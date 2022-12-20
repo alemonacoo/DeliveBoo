@@ -89,6 +89,7 @@ export default {
         },
         sendOrder() {
             let total = this.getTotal();
+            this.$router.push('/order-complete');
             if (this.selectedItems.length > 0 && this.address.length > 0) {
                 const json = {
                     total: total,
