@@ -6,6 +6,7 @@ use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Str;
+include (app_path() . '/Utilities/slug.php');
 
 
 class CategoryController extends Controller
@@ -13,7 +14,7 @@ class CategoryController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response 
      */
     public function index()
     {
@@ -55,7 +56,7 @@ class CategoryController extends Controller
         $form_data = $request->all();
         $category = new Category();
         $category->fill($form_data);
-        $slug = $this->getSlug($category->name);
+        $slug = getSlugForTable($category->name, 'categories');
         $category->slug = $slug;
         $category->save();
 
@@ -110,7 +111,7 @@ class CategoryController extends Controller
 
         $form_data = $request->all();
         if($category->name != $form_data['name']){
-            $slug = $this->getSlug($form_data['name']);
+            $slug = getSlugForTable($form_data['name'], 'categories');
             $form_data['slug'] = $slug;
         }
 
@@ -138,17 +139,17 @@ class CategoryController extends Controller
 
     }
 
-    private function getSlug($name){
-        $slug = Str::slug($name);
-        $slug_base = $slug;
+    // private function getSlug($name){
+    //     $slug = Str::slug($name);
+    //     $slug_base = $slug;
 
-        $existingRestaurant = Category::where('slug', $slug)->first();
-        $counter = 1;
-        while($existingRestaurant){
-            $slug = $slug_base . '_' . $counter;
-            $counter++;
-            $existingRestaurant = Category::where('slug', $slug)->first();
-        }
-        return $slug;
-    }
+    //     $existingRestaurant = Category::where('slug', $slug)->first();
+    //     $counter = 1;
+    //     while($existingRestaurant){
+    //         $slug = $slug_base . '_' . $counter;
+    //         $counter++;
+    //         $existingRestaurant = Category::where('slug', $slug)->first();
+    //     }
+    //     return $slug;
+    //}
 }

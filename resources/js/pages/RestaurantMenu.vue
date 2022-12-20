@@ -31,23 +31,20 @@
 </template>
 
 <script>
-import BasketComponent from '../components/BasketComponent.vue';
-
+import BasketComponent from "../components/BasketComponent.vue";
 
 export default {
-    name: 'RestaurantMenu',
+    name: "RestaurantMenu",
     data() {
         return {
             menu: [],
             clickedItems: [],
-        }
+        };
     },
-    props: {
-
-    },
+    props: {},
     mounted() {
         const slug = this.$route.params.slug;
-        this.loadPage('/api/restaurants/' + slug + '/menus');
+        this.loadPage("/api/restaurants/" + slug + "/menus");
     },
     methods: {
         loadPage(url) {
@@ -63,13 +60,11 @@ export default {
     components: {
         BasketComponent,
     },
-}
-
+};
 </script>
 
 <style lang="scss" scoped>
 .ristorante {
-
     border: 1px solid black;
     cursor: pointer;
     border-radius: 10px;
@@ -86,6 +81,6 @@ export default {
     height: 400px;
     background-color: gray;
     border-radius: 15px;
-    text-align: center
+    text-align: center;
 }
 </style>

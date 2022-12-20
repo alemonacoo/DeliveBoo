@@ -1,4 +1,5 @@
-@extends('layouts.dashboard')
+@extends('layouts.backoffice.dashboard')
+
 @section('content')
 <form action="{{route('admin.restaurants.update', $restaurant->slug)}}" method="POST">
     @csrf
@@ -22,6 +23,15 @@
         <label for="p_iva">Partita Iva:</label>
         <input type="text" name="p_iva" required maxlength="255" value="{{old('p_iva', $restaurant->p_iva)}}">
     </div>
+
+    <ul>
+        @foreach ($categories as $category)
+        <label for="categories">{{ $category->name }}</label>
+        <input type="checkbox" name="category[]" value="{{ $category->id }}" {{$restaurant->category->contains($category) ? 'checked' : ''}}>
+        @endforeach
+    </ul>
+
+
 
     <div>
         <button type="submit">Aggiorna</button>

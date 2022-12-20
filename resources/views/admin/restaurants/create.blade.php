@@ -1,4 +1,5 @@
-@extends('layouts.dashboard')
+@extends('layouts.backoffice.dashboard')
+
 @section('content')
 <form action="{{ route('admin.restaurants.store')}}" method="POST" enctype="multipart/form-data">
     @csrf

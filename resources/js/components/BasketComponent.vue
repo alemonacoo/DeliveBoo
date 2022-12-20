@@ -20,7 +20,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <input type="text" v-model="address">
+                <input type="text" v-model="address" />
             </div>
         </div>
         <div class="row my-4">
@@ -55,7 +55,7 @@
         </div>
         <!-- ORDINI AGGIUNTI  -->
         <div class="container-sm">
-            <div class="row" v-for="selectedItem in selectedItems" :key="selectedItem.id">
+            <div class="row" v-for="(selectedItem, index) in selectedItems" :key="index">
                 <div class="col-8">
                     {{ selectedItem.name }}
                 </div>
@@ -73,11 +73,11 @@
 
 <script>
 export default {
-    name: 'BasketComponent',
+    name: "BasketComponent",
     data() {
         return {
             showDeliveryMethod: true,
-            address: ''
+            address: "",
         };
     },
     props: {
@@ -89,25 +89,25 @@ export default {
         },
         sendOrder() {
             let total = this.getTotal();
-            if (selectedItems.length > 0 && this.address > 0) {
+            if (this.selectedItems.length > 0 && this.address.length > 0) {
                 const json = {
-                    'total': total,
-                    'address': this.address,
-                    'menu_items': this.selectedItems
-                }
-                axios.post('api/orders', json, {
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                }).then(async (response) => {
-                    console.log(await response.data);
-                }
-                ).catch(e => console.log(e));
+                    total: total,
+                    address: this.address,
+                    menu_items: this.selectedItems,
+                };
+                axios
+                    .post("api/orders", json, {
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                    })
+                    .then(async (response) => {
+                        console.log(await response.data);
+                    })
+                    .catch((e) => console.log(e));
+            } else {
+                console.log("Dati mancanti");
             }
-            else {
-                console.log('Dati mancanti');
-            }
-
         },
         getTotal() {
             let total = 0;
@@ -116,10 +116,9 @@ export default {
             }
             console.log(total);
             return total;
-
-        }
+        },
     },
-}
+};
 </script>
 
 <style scoped lang="scss">
@@ -136,13 +135,11 @@ export default {
 
 .btn-custom {
     background-color: rgb(60, 60, 60);
-
 }
 
 #btn-checkout {
     background-color: #f36805;
     font-weight: bolder !important;
-
 }
 
 .btn-custom.active {
@@ -166,9 +163,6 @@ export default {
     .btn-group {
         padding: 2px !important;
         background-color: rgb(60, 60, 60);
-
-        // padding: 2px;
-        .btn {}
     }
 }
 </style>

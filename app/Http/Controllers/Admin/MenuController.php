@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Restaurant;
 use Illuminate\Support\Facades\Auth;
+include (app_path() . '/Utilities/slug.php');
+
 
 class MenuController extends Controller
 {
@@ -18,6 +20,10 @@ class MenuController extends Controller
 
     public function index($restaurant_slug)
     {
+        $user_id = Restaurant::where('slug', $restaurant_slug)->get()->first()->user_id;
+        if ($user_id !== Auth::id() ) {
+            abort(404);
+        }
         $menus = Menu::all()->where('restaurant_slug', $restaurant_slug);
         return view('admin.menus.index', compact('menus', 'restaurant_slug'));
     }
@@ -50,8 +56,7 @@ class MenuController extends Controller
         $form_data = $request->all();
         $menu = new Menu();
         $menu->fill($form_data);
-        $menu->restaurant_slug = $restaurant_slug;
-
+        $menu->slug = getSlugForTable($form_data['name'], 'menus');
 
         $menu->save();
         return redirect()->route('admin.restaurants.menus.index', $restaurant_slug);
@@ -92,6 +97,10 @@ class MenuController extends Controller
     public function update(Request $request, $restaurant_slug, Menu $menu)
     {
         //
+        $user_id = Restaurant::where('slug', $restaurant_slug)->get()->first()->user_id;
+        if ($user_id !== Auth::id() ) {
+            abort(404);
+        }
         $form_data = $request->all();
         $menu->update($form_data);
         return redirect()->route('admin.restaurants.menus.index', $restaurant_slug);
