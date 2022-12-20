@@ -2,17 +2,28 @@
 
 
 @section('content')
-    <div class="row">
-        @foreach ($orders as $order)
-            <div class="col-12 my-2">
-                ID ORDINE: {{ $order->id }}
-                @foreach ($order->menu as $item)
-                    <div>
+    <div class="orders-container">
+        <div class="orders-columns orange">
+            <p>ID</p>
+            <p>Piatti</p>
+            <p>Totale</p>
+        </div>
+        <div>
+            @foreach ($orders as $order)
+            <div class="orders-columns">
+                <p>{{ $order->id }}</p>
+                <div>
+                    @foreach ($order->menu as $item)
+                    <p>
                         {{ $item->name }} - {{ $item->price }}$
-                    </div>
-                @endforeach
-                TOTALE: {{ $order->total }}$
+                    </p>
+                    @endforeach
+                </div>
+                
+                <p>{{ $order->total }}$</p>
             </div>
         @endforeach
+    </div>
+        
     </div>
 @endsection

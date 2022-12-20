@@ -22,8 +22,8 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark flex-md-nowrap p-0">
-        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Deliveboo</a>
+    <nav class="navbar navbar-expand-md navbar-dark flex-md-nowrap">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/admin">Deliveboo</a>
         <ul class="navbar-nav px-3 ml-auto">
             <li class="nav-item">
                 <a class="nav-link" href="/">
@@ -44,7 +44,7 @@
     </nav>
     <div class="container-fluid">
         <div class="row">
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 py-4">
+            <main role="main" class="main-container">
                 @yield('content')
             </main>
         </div>
