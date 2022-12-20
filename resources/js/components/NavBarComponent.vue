@@ -5,7 +5,9 @@
         >
             <a href="/">
                 <div>
-                    <img src="../assets/img/deliveroo_2_VV3s7Fj.png" alt="" />
+
+                    <img src="../assets/img/WhatsApp Image 2022-12-20 at 11.30.31.jpeg" alt="">
+
                 </div>
             </a>
 

@@ -2715,7 +2715,7 @@ var staticRenderFns = [function () {
     }
   }, [_c("div", [_c("img", {
     attrs: {
-      src: __webpack_require__(/*! ../assets/img/deliveroo_2_VV3s7Fj.png */ "./resources/js/assets/img/deliveroo_2_VV3s7Fj.png"),
+      src: __webpack_require__(/*! ../assets/img/WhatsApp Image 2022-12-20 at 11.30.31.jpeg */ "./resources/js/assets/img/WhatsApp Image 2022-12-20 at 11.30.31.jpeg"),
       alt: ""
     }
   })])]), _vm._v(" "), _c("div", [_c("ul", [_c("li", [_c("a", {
@@ -2886,13 +2886,14 @@ var render = function render() {
   }, _vm._l(_vm.menu, function (item) {
     return _c("div", {
       key: item.id,
-      staticClass: "ristorante mb-4 text-left p-3",
+      staticClass: "ristorante mb-4 text-left p-3"
+    }, [_c("div", [_c("h2", [_vm._v(_vm._s(item.name))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(item.description))]), _vm._v(" "), _c("p", [_vm._v(" Da " + _vm._s(item.price) + " $")]), _vm._v(" "), _c("button", {
       on: {
         click: function click() {
           return _vm.onSelect(item);
         }
       }
-    }, [_c("div", [_c("h2", [_vm._v(_vm._s(item.name))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(item.description))]), _vm._v(" "), _c("p", [_vm._v(" Da " + _vm._s(item.price) + " $")])])]);
+    }, [_vm._v(" Aggiungi al carrello")])])]);
   }), 0), _vm._v(" "), _c("div", {
     staticClass: "col-4"
   }, [_c("BasketComponent", {
@@ -7521,7 +7522,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".ristorante[data-v-14400205] {\n  border: 1px solid black;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.tt[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.hh[data-v-14400205] {\n  width: 400px;\n  height: 400px;\n  background-color: gray;\n  border-radius: 15px;\n  text-align: center;\n}", ""]);
+exports.push([module.i, ".ristorante[data-v-14400205] {\n  box-shadow: 5px 5px 5px 1px black;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.tt[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.hh[data-v-14400205] {\n  width: 400px;\n  height: 400px;\n  background-color: gray;\n  border-radius: 15px;\n  text-align: center;\n}\nbutton[data-v-14400205] {\n  border-radius: 15px;\n  width: 150px;\n  border: 0;\n  background-color: #f36805;\n  color: white;\n}", ""]);
 
 // exports
 
@@ -54832,6 +54833,17 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/js/assets/img/WhatsApp Image 2022-12-20 at 11.30.31.jpeg":
+/*!****************************************************************************!*\
+  !*** ./resources/js/assets/img/WhatsApp Image 2022-12-20 at 11.30.31.jpeg ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/WhatsApp Image 2022-12-20 at 11.30.31.jpeg?a6ada0d719b631d85a44d08c54046ced";
+
+/***/ }),
+
 /***/ "./resources/js/assets/img/apps_promo-wide-je.png":
 /*!********************************************************!*\
   !*** ./resources/js/assets/img/apps_promo-wide-je.png ***!
@@ -54851,17 +54863,6 @@ module.exports = "/images/apps_promo-wide-je.png?de10ee0b25eb0679003f33c3cca519d
 /***/ (function(module, exports) {
 
 module.exports = "/images/bg_hero-wide.jpg?11548fa1dbc37aacb58c3d6db3980590";
-
-/***/ }),
-
-/***/ "./resources/js/assets/img/deliveroo_2_VV3s7Fj.png":
-/*!*********************************************************!*\
-  !*** ./resources/js/assets/img/deliveroo_2_VV3s7Fj.png ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/deliveroo_2_VV3s7Fj.png?c6b1da7c5475c1dd4e626d4880988202";
 
 /***/ }),
 
