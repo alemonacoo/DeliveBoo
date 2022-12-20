@@ -2708,16 +2708,12 @@ var staticRenderFns = [function () {
     staticClass: "ac-white"
   }, [_c("div", {
     staticClass: "container-xl d-flex align-items-baseline justify-content-between"
-  }, [_c("a", {
-    attrs: {
-      href: "/"
-    }
   }, [_c("div", [_c("img", {
     attrs: {
       src: __webpack_require__(/*! ../assets/img/WhatsApp Image 2022-12-20 at 11.30.31.jpeg */ "./resources/js/assets/img/WhatsApp Image 2022-12-20 at 11.30.31.jpeg"),
       alt: ""
     }
-  })])]), _vm._v(" "), _c("div", [_c("ul", [_c("li", [_c("a", {
+  })]), _vm._v(" "), _c("div", [_c("ul", [_c("li", [_c("a", {
     attrs: {
       href: ""
     }
@@ -7463,7 +7459,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".ac-white[data-v-1614d4d2] {\n  background-color: white;\n}\nimg[data-v-1614d4d2] {\n  width: 200px;\n}\nul[data-v-1614d4d2] {\n  display: flex;\n  list-style: none;\n  -moz-column-gap: 10px;\n       column-gap: 10px;\n}\na[data-v-1614d4d2] {\n  text-decoration: none;\n  color: black;\n}\ni[data-v-1614d4d2] {\n  color: black;\n}\na[data-v-1614d4d2]:hover {\n  background-color: aliceblue;\n  border: 10px solid aliceblue;\n  border-radius: 15px;\n}", ""]);
+exports.push([module.i, ".ac-white[data-v-1614d4d2] {\n  background-color: white;\n  padding: 20px;\n}\nimg[data-v-1614d4d2] {\n  width: 200px;\n}\nul[data-v-1614d4d2] {\n  display: flex;\n  list-style: none;\n  -moz-column-gap: 10px;\n       column-gap: 10px;\n}\na[data-v-1614d4d2] {\n  text-decoration: none;\n  color: black;\n}\ni[data-v-1614d4d2] {\n  color: black;\n}\na[data-v-1614d4d2]:hover {\n  background-color: aliceblue;\n  border: 10px solid aliceblue;\n  border-radius: 15px;\n}", ""]);
 
 // exports
 

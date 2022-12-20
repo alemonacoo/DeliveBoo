@@ -1,13 +1,12 @@
 <template>
     <div class="ac-white">
         <div class="container-xl d-flex align-items-baseline justify-content-between ">
-            <a href="/">
-                <div>
 
-                    <img src="../assets/img/WhatsApp Image 2022-12-20 at 11.30.31.jpeg" alt="">
+            <div>
 
-                </div>
-            </a>
+                <img src="../assets/img/WhatsApp Image 2022-12-20 at 11.30.31.jpeg" alt="">
+
+            </div>
 
 
             <div>
@@ -39,6 +38,7 @@ export default {
 <style lang="scss" scoped>
 .ac-white {
     background-color: white;
+    padding: 20px;
 
 }
 
