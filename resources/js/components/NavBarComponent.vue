@@ -1,17 +1,20 @@
 <template>
     <div class="ac-white">
         <div class="container-xl d-flex align-items-baseline justify-content-between ">
-            <div>
+            <a href="/">
+                <div>
 
-                <img src="../assets/img/deliveroo_2_VV3s7Fj.png" alt="">
+                    <img src="../assets/img/deliveroo_2_VV3s7Fj.png" alt="">
 
-            </div>
+                </div>
+            </a>
+
 
             <div>
                 <ul>
                     <li><a href=""><i class="bi bi-car-front"></i> Diventa un rider</a></li>
 
-                    <li> <a href=""> Accedi</a></li>
+                    <li> <a href="/login"> Accedi</a></li>
 
                     <li><a href=""><i class="bi bi-question-circle"></i> Aiuto?</a></li>
 
