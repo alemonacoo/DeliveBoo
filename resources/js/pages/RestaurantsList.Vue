@@ -1,15 +1,15 @@
 <template>
-    <div>
-        <div class="container">
+    <div class="container">
 
-            <!-- categories section -->
-            <div class="row" @click="zero()">
-                <div class="col">
-                    <CategoriesComponent />
-                </div>
+        <!-- componente categorie -->
+        <div class="row" @click="zero()">
+            <div class="col">
+                <CategoriesComponent />
             </div>
+        </div>
 
-            <!-- restaurants section -->
+        <!-- lista ristoranti appartenenti alla categoria cliccata -->
+        <div class="container mb-4">
             <div class="row">
                 <div class="col-3 my-3 text-center" v-for="restaurant in restaurants" :key="restaurant.id">
                     <div class="card" @click="showRestaurantMenu(restaurant)">
@@ -67,6 +67,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.card {
+    height: 100%;
+    cursor: pointer;
+    border-radius: 10px;
 
+    .card-body {
+        text-align: center;
+        padding: 0;
+        padding-top: 0.5rem;
+    }
+
+    img {
+        height: 8rem;
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+}
 </style>
 

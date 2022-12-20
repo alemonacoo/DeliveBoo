@@ -1,11 +1,14 @@
 <template>
     <div class="container">
         <div class="row">
+
+            <!-- lista ristoranti appartenenti alla categoria cliccata -->
             <div class="col-3 my-3 text-center" v-for="restaurant in list" :key="restaurant.id">
                 <div class="card" @click="showRestaurantMenu(restaurant)">
                     <img :src="restaurant.image" class="card-img-top" :alt="restaurant.name">
                     <div class="card-body">
                         <h4>{{ restaurant.name }}</h4>
+                        <p>{{ restaurant.address }}</p>
                     </div>
                 </div>
             </div>
