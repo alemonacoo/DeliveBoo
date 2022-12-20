@@ -8,9 +8,9 @@
 
             <div>
                 <h1>Il bello è prenderci gusto</h1>
-                <p>Scarica l'app di Just Eat e ordina dove vuoi, qualunque cosa desideri.</p>
-                <button>Scarica su App store</button>
-                <button>Disponibile su Google Play</button>
+                <p>Scarica l'app di Deliveroo e ordina dove vuoi, qualunque cosa desideri.</p>
+                <button><i class="bi bi-google-play"></i> Disponibile su Google</button>
+                <button><i class="bi bi-apple"></i> Scarica su App Store</button>
             </div>
 
 

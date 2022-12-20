@@ -77,4 +77,9 @@ export default {
 .active {
     filter: drop-shadow(2px 4px 6px grey);
 }
+
+.card:hover {
+    position: relative;
+    bottom: 20px;
+}
 </style>

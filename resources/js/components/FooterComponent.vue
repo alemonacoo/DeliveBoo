@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container-fluid ">
         <div class="row">
             <div class="col">
                 <h5>Servizio Clienti</h5>
@@ -7,28 +7,80 @@
                     <li>Domande Frequenti</li>
                     <li>Accedi</li>
                     <li>Registrati</li>
+                    <li>Miglior Prezzo Garantito</li>
+
+
                 </ul>
             </div>
             <div class="col">
                 <h5>Cucine</h5>
                 <ul>
-                    <li v-for="category in categories" :key="category.id">
-                        {{ category.name }}
-                    </li>
-                    <!-- <li>Americano</li>
+                    <li>Vegetariano</li>
+                    <li>Messicano</li>
+                    <li>Cinese</li>
+                    <li>Indiano</li>
+                    <li>Greco</li>
+                    <li>Giapponese</li>
                     <li>Italiano</li>
-                    <li>Cinese</li> -->
+                    <li>Thai</li>
+                    <li>Pizza</li>
+                    <li>Americano</li>
+
+
+
                 </ul>
             </div>
+
+            <div class="col">
+                <h5>Catene</h5>
+                <ul>
+                    <li>Alice Pizza</li>
+                    <li>Burger King</li>
+                    <li>Zushi</li>
+                    <li>Old Wild West</li>
+                    <li>Poke House</li>
+                    <li>RoadHouse</li>
+                    <li>Sushiko</li>
+                    <li>KFC</li>
+                    <li>Fratelli La Bufala</li>
+                    <li>McDonald's</li>
+
+
+
+                </ul>
+            </div>
+
+
             <div class="col">
                 <h5>Città</h5>
                 <ul>
                     <li>Milano</li>
                     <li>Roma</li>
                     <li>Firenze</li>
-                    <li>Bologna</li>
+                    <li>Salerno</li>
+                    <li>Padova</li>
+                    <li>Parma</li>
+                    <li>Ferrara</li>
+                    <li>Napoli</li>
+                    <li>Udine</li>
+                    <li>Campobasso</li>
+                    <li>Varese</li>
+
                 </ul>
             </div>
+
+            <div class="col">
+                <h5>Chi Siamo</h5>
+                <ul>
+                    <li>Informazioni su Deliveroo</li>
+                    <li>Diventa partner di Deliveroo</li>
+                    <li>Programma Bug Bounty</li>
+                    <li>Partner Center</li>
+
+
+                </ul>
+            </div>
+
         </div>
     </div>
 </template>
@@ -44,22 +96,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container{
-    margin-top: 200px;
-    min-width: 100vw;
+.container-fluid {
     padding: 20px;
-    background: #000;
-    color: rgb(200, 200, 200);
-    .row{
-        .col{
+    background: #efedea;
+    color: black;
+
+    .row {
+
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .col {
             margin-top: 20px;
-            h5{
+
+            h5 {
                 margin-bottom: 20px;
             }
-            ul{
+
+            ul {
                 list-style: none;
                 padding-left: 0px;
-                li{
+
+                li {
                     margin-bottom: 10px;
                 }
             }
