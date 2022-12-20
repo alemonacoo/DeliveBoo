@@ -89,7 +89,6 @@ export default {
         },
         sendOrder() {
             let total = this.getTotal();
-            this.$router.push('/order-complete');
             if (this.selectedItems.length > 0 && this.address.length > 0) {
                 const json = {
                     total: total,
@@ -104,6 +103,7 @@ export default {
                     })
                     .then(async (response) => {
                         console.log(await response.data);
+                        this.$router.push('/order-complete/' + response.data.id);
                     })
                     .catch((e) => console.log(e));
             } else {
