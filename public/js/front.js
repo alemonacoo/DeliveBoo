@@ -2156,15 +2156,14 @@ __webpack_require__.r(__webpack_exports__);
     return {};
   },
   methods: {
-    // showRestaurantMenu(slug) {
-    //     console.log(slug);
-    //     axios.get('/api/restaurants/' + slug + '/menus')
-    //         .then(({ data }) => {
-    //             console.log(data);
-    //         })
-    // },
-    showRestaurantMenu: function showRestaurantMenu(slug) {
-      this.$router.push('/restaurant/' + slug);
+    showRestaurantMenu: function showRestaurantMenu(restaurant) {
+      this.$router.push({
+        name: 'restaurant-menu',
+        params: {
+          restaurant: restaurant,
+          slug: restaurant.slug
+        }
+      });
     }
   }
 });
@@ -2248,7 +2247,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   props: {},
   mounted: function mounted() {
-    var slug = this.$route.params.slug;
+    var slug = this.$route.params.restaurant.slug > 0 ? this.$route.params.restaurant.slug : this.$route.params.slug;
     this.loadPage("/api/restaurants/" + slug + "/menus");
   },
   methods: {
@@ -2300,8 +2299,14 @@ __webpack_require__.r(__webpack_exports__);
         _this.restaurants = data.results;
       });
     },
-    showRestaurantMenu: function showRestaurantMenu(slug) {
-      this.$router.push('/restaurant/' + slug);
+    showRestaurantMenu: function showRestaurantMenu(restaurant) {
+      this.$router.push({
+        name: 'restaurant-menu',
+        params: {
+          restaurant: restaurant,
+          slug: restaurant.slug
+        }
+      });
     },
     zero: function zero() {
       this.restaurants = [];
@@ -2807,7 +2812,7 @@ var render = function render() {
       staticClass: "card",
       on: {
         click: function click($event) {
-          return _vm.showRestaurantMenu(restaurant.slug);
+          return _vm.showRestaurantMenu(restaurant);
         }
       }
     }, [_c("img", {
@@ -2942,7 +2947,12 @@ var render = function render() {
     staticClass: "tt"
   }, [_c("div", {
     staticClass: "my-5 hh"
-  }, [_c("h1", [_vm._v(_vm._s(this.$route.params.slug))]), _vm._v(" "), _c("hr")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c("div", {
+  }, [_c("h1", [_vm._v(_vm._s(this.$route.params.restaurant.name))]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("img", {
+    attrs: {
+      src: this.$route.params.restaurant.image,
+      alt: this.$route.params.restaurant.name
+    }
+  })]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c("div", {
     staticClass: "row justify-content-between"
   }, [_c("div", {
     staticClass: "col-8"
@@ -3011,7 +3021,7 @@ var render = function render() {
       staticClass: "card",
       on: {
         click: function click($event) {
-          return _vm.showRestaurantMenu(restaurant.slug);
+          return _vm.showRestaurantMenu(restaurant);
         }
       }
     }, [_c("img", {
@@ -7603,7 +7613,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".ristorante[data-v-14400205] {\n  border: 1px solid black;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.tt[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.hh[data-v-14400205] {\n  width: 400px;\n  height: 400px;\n  background-color: gray;\n  border-radius: 15px;\n  text-align: center;\n}", ""]);
+exports.push([module.i, ".ristorante[data-v-14400205] {\n  border: 1px solid black;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.tt[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.hh[data-v-14400205] {\n  width: 400px;\n  height: 400px;\n  background-color: gray;\n  border-radius: 15px;\n  text-align: center;\n}\nimg[data-v-14400205] {\n  width: 50%;\n}", ""]);
 
 // exports
 

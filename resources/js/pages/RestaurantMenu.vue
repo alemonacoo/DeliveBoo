@@ -3,8 +3,9 @@
         <div class="tt">
 
             <div class="my-5 hh">
-                <h1>{{ this.$route.params.slug }}</h1>
+                <h1>{{ this.$route.params.restaurant.name }}</h1>
                 <hr>
+                <img :src="this.$route.params.restaurant.image" :alt="this.$route.params.restaurant.name">
             </div>
 
             <div class="row mb-3">
@@ -43,7 +44,7 @@ export default {
     },
     props: {},
     mounted() {
-        const slug = this.$route.params.slug;
+        const slug = ((this.$route.params.restaurant.slug > 0) ? this.$route.params.restaurant.slug : this.$route.params.slug);
         this.loadPage("/api/restaurants/" + slug + "/menus");
     },
     methods: {
@@ -82,5 +83,9 @@ export default {
     background-color: gray;
     border-radius: 15px;
     text-align: center;
+}
+
+img {
+    width: 50%;
 }
 </style>
