@@ -51,7 +51,7 @@
                     {{ selectedItem.name }}
                 </div>
                 <div class="col-4">
-                    {{ selectedItem.price }}
+                    {{ selectedItem.price }} $
                 </div>
                 <hr class="border border-dark w-100">
             </div>
