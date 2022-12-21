@@ -2236,6 +2236,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_BasketComponent_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/BasketComponent.vue */ "./resources/js/components/BasketComponent.vue");
+/* harmony import */ var _components_PictureComponent_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/PictureComponent.vue */ "./resources/js/components/PictureComponent.vue");
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "RestaurantMenu",
@@ -2263,7 +2265,8 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   components: {
-    BasketComponent: _components_BasketComponent_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    BasketComponent: _components_BasketComponent_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    PictureComponent: _components_PictureComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   }
 });
 
@@ -2939,11 +2942,11 @@ var render = function render() {
     _c = _vm._self._c;
   return _c("div", {
     staticClass: "container-ac"
-  }, [_c("div", {
+  }, [_c("div", [_c("PictureComponent")], 1), _vm._v(" "), _c("div", {
     staticClass: "tt"
   }, [_c("div", {
     staticClass: "my-5 hh"
-  }, [_c("h1", [_vm._v(_vm._s(this.$route.params.restaurant.name))]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("img", {
+  }, [_c("h1", [_vm._v(_vm._s(this.$route.params.restaurant.name))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.$route.params.restaurant.address))]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("img", {
     attrs: {
       src: this.$route.params.restaurant.image,
       alt: this.$route.params.restaurant.name
@@ -7612,10 +7615,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-<<<<<<< HEAD
-exports.push([module.i, ".ristorante[data-v-14400205] {\n  box-shadow: 5px 5px 5px 1px black;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.tt[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.hh[data-v-14400205] {\n  width: 400px;\n  height: 400px;\n  border-radius: 15px;\n  text-align: center;\n  box-shadow: 5px 5px 5px 1px black;\n  cursor: pointer;\n  border-radius: 10px;\n}\nbutton[data-v-14400205] {\n  border-radius: 15px;\n  width: 150px;\n  border: 0;\n  background-color: #f36805;\n  color: white;\n}", ""]);
-=======
-exports.push([module.i, ".ristorante[data-v-14400205] {\n  border: 1px solid black;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.tt[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.hh[data-v-14400205] {\n  width: 400px;\n  height: 400px;\n  background-color: gray;\n  border-radius: 15px;\n  text-align: center;\n}\nimg[data-v-14400205] {\n  width: 50%;\n}", ""]);
+exports.push([module.i, ".ristorante[data-v-14400205] {\n  box-shadow: 5px 5px 5px 1px black;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.tt[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.hh[data-v-14400205] {\n  width: 400px;\n  height: 400px;\n  border-radius: 15px;\n  text-align: center;\n  box-shadow: 5px 5px 5px 1px black;\n  cursor: pointer;\n  border-radius: 10px;\n}\nbutton[data-v-14400205] {\n  border-radius: 15px;\n  width: 150px;\n  border: 0;\n  background-color: #f36805;\n  color: white;\n}\nimg[data-v-14400205] {\n  width: 70%;\n  border-radius: 15px;\n}", ""]);
 
 // exports
 
@@ -7635,7 +7635,6 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 // module
 exports.push([module.i, ".card[data-v-48bc361b] {\n  height: 100%;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.card .card-body[data-v-48bc361b] {\n  text-align: center;\n  padding: 0;\n  padding-top: 0.5rem;\n}\n.card img[data-v-48bc361b] {\n  height: 8rem;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n}", ""]);
->>>>>>> origin/FT_branch
 
 // exports
 

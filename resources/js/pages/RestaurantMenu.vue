@@ -1,13 +1,18 @@
 <template>
     <div class="container-ac">
 
-        <div class="tt">
+        <div>
+            <PictureComponent />
+        </div>
 
+        <div class="tt">
             <!-- card ristorante -->
             <div class="my-5 hh">
                 <h1>{{ this.$route.params.restaurant.name }}</h1>
+                <p>{{ $route.params.restaurant.address }}</p>
                 <hr>
                 <img :src="this.$route.params.restaurant.image" :alt="this.$route.params.restaurant.name">
+
             </div>
 
             <!-- lista piatti -->
@@ -38,6 +43,8 @@
 
 <script>
 import BasketComponent from "../components/BasketComponent.vue";
+import PictureComponent from "../components/PictureComponent.vue";
+
 
 
 
@@ -67,6 +74,7 @@ export default {
     },
     components: {
         BasketComponent,
+        PictureComponent
 
     },
 };
@@ -80,15 +88,16 @@ export default {
 }
 
 .tt {
+
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .hh {
     width: 400px;
     height: 400px;
-
     border-radius: 15px;
     text-align: center;
     box-shadow: 5px 5px 5px 1px black;
@@ -105,6 +114,7 @@ button {
 }
 
 img {
-    width: 50%;
+    width: 70%;
+    border-radius: 15px;
 }
 </style>
