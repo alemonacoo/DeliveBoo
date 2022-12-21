@@ -3191,12 +3191,6 @@ var render = function render() {
       }
     })])])]);
   }), 0), _vm._v(" "), _c("div", {
-    staticClass: "col-4"
-  }, [_c("BasketComponent", {
-    attrs: {
-      selectedItems: _vm.clickedItems
-    }
-  }), _vm._v(" "), _c("div", {
     staticClass: "col-5 flow-area mb-4"
   }, [_c("BasketComponent", {
     ref: "form",
@@ -3204,7 +3198,7 @@ var render = function render() {
     attrs: {
       selectedItems: _vm.clickedItems
     }
-  })], 1)], 1), _vm._v(" "), _c("div", {
+  })], 1), _vm._v(" "), _c("div", {
     staticClass: "row checkout-bar",
     on: {
       click: _vm.checkout
@@ -7872,7 +7866,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".ristorante[data-v-14400205] {\n  box-shadow: 5px 5px 5px 1px black;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.tt[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.hh[data-v-14400205] {\n  width: 400px;\n  height: 400px;\n  border-radius: 15px;\n  text-align: center;\n  box-shadow: 5px 5px 5px 1px black;\n  cursor: pointer;\n  border-radius: 10px;\n  background-color: aliceblue;\n}\nbutton[data-v-14400205] {\n  border-radius: 15px;\n  width: 150px;\n  border: 0;\n  background-color: #f36805;\n  color: white;\n}\n.flow-area[data-v-14400205] {\n  flex-grow: 1;\n}\n.cart[data-v-14400205] {\n  position: sticky;\n  top: 50px;\n}\n.checkout-bar[data-v-14400205] {\n  display: none;\n  width: 100vw;\n  background-color: #f36805;\n  color: #fff;\n  font-weight: bolder !important;\n  padding: 10px;\n  margin-top: 10px;\n  cursor: pointer;\n}\n.checkout-bar .bi-cart-check[data-v-14400205] {\n  font-size: xx-large;\n}\n@media only screen and (max-width: 600px) {\n.container-fluid[data-v-14400205] {\n    width: 100vw;\n}\n.flow-area[data-v-14400205] {\n    display: none;\n}\n.checkout-bar[data-v-14400205] {\n    display: flex;\n    position: fixed;\n    bottom: 0;\n    z-index: 100;\n}\n.ristorante[data-v-14400205] {\n    align-items: center;\n}\n}", ""]);
+exports.push([module.i, ".ristorante[data-v-14400205] {\n  box-shadow: 5px 5px 5px 1px black;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.tt[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.hh[data-v-14400205] {\n  width: 400px;\n  height: 400px;\n  border-radius: 15px;\n  text-align: center;\n  box-shadow: 5px 5px 5px 1px black;\n  cursor: pointer;\n  border-radius: 10px;\n  background-color: aliceblue;\n}\nbutton[data-v-14400205] {\n  border-radius: 15px;\n  width: 150px;\n  border: 0;\n  background-color: #f36805;\n  color: white;\n}\n.flow-area[data-v-14400205] {\n  flex-grow: 1;\n}\n.cart[data-v-14400205] {\n  position: sticky;\n  top: 50px;\n}\n.checkout-bar[data-v-14400205] {\n  display: none;\n  width: 100vw;\n  background-color: #f36805;\n  color: #fff;\n  font-weight: bolder !important;\n  padding: 10px;\n  margin-top: 10px;\n  cursor: pointer;\n}\n.checkout-bar .bi-cart-check[data-v-14400205] {\n  font-size: xx-large;\n}\n@media only screen and (max-width: 600px) {\n.container-fluid[data-v-14400205] {\n    width: 100vw;\n}\n.flow-area[data-v-14400205] {\n    display: none;\n}\n.checkout-bar[data-v-14400205] {\n    display: flex;\n    position: fixed;\n    bottom: 0;\n    z-index: 100;\n}\n.ristorante[data-v-14400205] {\n    align-items: center;\n}\n}\nimg[data-v-14400205] {\n  width: 80%;\n  height: 40%;\n  border-radius: 15px;\n}", ""]);
 
 // exports
 
@@ -56388,15 +56382,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!***********************************************!*\
   !*** ./resources/js/pages/RestaurantMenu.vue ***!
   \***********************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _RestaurantMenu_vue_vue_type_template_id_14400205_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RestaurantMenu.vue?vue&type=template&id=14400205&scoped=true& */ "./resources/js/pages/RestaurantMenu.vue?vue&type=template&id=14400205&scoped=true&");
 /* harmony import */ var _RestaurantMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RestaurantMenu.vue?vue&type=script&lang=js& */ "./resources/js/pages/RestaurantMenu.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _RestaurantMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _RestaurantMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _RestaurantMenu_vue_vue_type_style_index_0_id_14400205_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./RestaurantMenu.vue?vue&type=style&index=0&id=14400205&lang=scss&scoped=true& */ "./resources/js/pages/RestaurantMenu.vue?vue&type=style&index=0&id=14400205&lang=scss&scoped=true&");
+/* empty/unused harmony star reexport *//* harmony import */ var _RestaurantMenu_vue_vue_type_style_index_0_id_14400205_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./RestaurantMenu.vue?vue&type=style&index=0&id=14400205&lang=scss&scoped=true& */ "./resources/js/pages/RestaurantMenu.vue?vue&type=style&index=0&id=14400205&lang=scss&scoped=true&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -56428,7 +56421,7 @@ component.options.__file = "resources/js/pages/RestaurantMenu.vue"
 /*!************************************************************************!*\
   !*** ./resources/js/pages/RestaurantMenu.vue?vue&type=script&lang=js& ***!
   \************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

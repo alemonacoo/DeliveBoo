@@ -47,15 +47,12 @@
                 </div>
 
                 <!-- componente carrello -->
-                <div class="col-4">
-                    <BasketComponent :selectedItems="clickedItems" />
-                    <div class="col-5 flow-area mb-4">
-                        <BasketComponent
-                            :selectedItems="clickedItems"
-                            ref="form"
-                            class="cart"
-                        />
-                    </div>
+                <div class="col-5 flow-area mb-4">
+                    <BasketComponent
+                        :selectedItems="clickedItems"
+                        ref="form"
+                        class="cart"
+                    />
                 </div>
                 <div class="row checkout-bar" @click="checkout">
                     <div class="col-2">
@@ -183,5 +180,10 @@ button {
     .ristorante {
         align-items: center;
     }
+}
+img {
+    width: 80%;
+    height: 40%;
+    border-radius: 15px;
 }
 </style>
