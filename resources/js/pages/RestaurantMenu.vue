@@ -11,12 +11,13 @@
                 <h1>{{ this.$route.params.restaurant.name }}</h1>
                 <p>{{ $route.params.restaurant.address }}</p>
                 <hr>
-                <img :src="this.$route.params.restaurant.image" :alt="this.$route.params.restaurant.name">
-
+                <div class="restaurant-img">
+                    <img :src="this.$route.params.restaurant.image" :alt="this.$route.params.restaurant.name">
+                </div>
             </div>
 
             <!-- lista piatti -->
-            <div class="row mb-3">
+            <div class="row mb-3 menu-text">
                 <h2>Il nostro Menu</h2>
             </div>
             <div class="row justify-content-between">
@@ -116,14 +117,35 @@ export default {
 }
 
 .tt {
-
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    .restaurant-img {
+        height: 220px;
+    }
+
+    h1 {
+        padding: 1rem 0.4rem 0rem;
+    }
+
+    img {
+        width: 92%;
+        height: 100%;
+        border-radius: 15px;
+        object-fit: cover;
+    }
+
+    .menu-text {
+        padding-top: 18rem;
+    }
+
 }
 
 .hh {
+    position: absolute;
+    transform: translateY(-48%);
     width: 400px;
     height: 400px;
     border-radius: 15px;
