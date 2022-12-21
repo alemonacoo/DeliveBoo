@@ -8,6 +8,10 @@ main.main-container {
     margin: auto;
     margin-top: 3rem;
 
+    .orange-link {
+        color: #f6993f !important;
+    }
+
     .relative-container {
         position: relative;
         display: flex;
