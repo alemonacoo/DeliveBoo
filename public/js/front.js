@@ -2118,7 +2118,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'NavbarComponent'
+  name: "NavbarComponent"
 });
 
 /***/ }),
@@ -2284,7 +2284,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_CategoriesComponent_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/CategoriesComponent.vue */ "./resources/js/components/CategoriesComponent.vue");
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'RestaurantList',
+  name: "RestaurantList",
   data: function data() {
     return {
       restaurants: []
@@ -2292,7 +2292,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     var category_id = this.$route.params.id;
-    this.loadPage('/api/categories/' + category_id + '/restaurants/');
+    this.loadPage("/api/categories/" + category_id + "/restaurants/");
   },
   methods: {
     loadPage: function loadPage(url) {
@@ -2300,8 +2300,10 @@ __webpack_require__.r(__webpack_exports__);
       axios.get(url).then(function (_ref) {
         var data = _ref.data;
         _this.restaurants = data.results;
+        console.log(_this.restaurants);
       });
     },
+<<<<<<< HEAD
     showRestaurantMenu: function showRestaurantMenu(restaurant) {
       this.$router.push({
         name: 'restaurant-menu',
@@ -2310,6 +2312,10 @@ __webpack_require__.r(__webpack_exports__);
           slug: restaurant.slug
         }
       });
+=======
+    showRestaurantMenu: function showRestaurantMenu(slug) {
+      this.$router.push("/restaurant/" + slug);
+>>>>>>> origin/master
     },
     zero: function zero() {
       this.restaurants = [];
@@ -7547,7 +7553,11 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
+<<<<<<< HEAD
 exports.push([module.i, ".ac-white[data-v-1614d4d2] {\n  background-color: white;\n  padding: 20px;\n}\nimg[data-v-1614d4d2] {\n  width: 200px;\n}\nul[data-v-1614d4d2] {\n  display: flex;\n  list-style: none;\n  -moz-column-gap: 10px;\n       column-gap: 10px;\n}\na[data-v-1614d4d2] {\n  text-decoration: none;\n  color: black;\n}\ni[data-v-1614d4d2] {\n  color: black;\n}\na[data-v-1614d4d2]:hover {\n  background-color: aliceblue;\n  border: 10px solid aliceblue;\n  border-radius: 15px;\n}", ""]);
+=======
+exports.push([module.i, ".ac-white[data-v-1614d4d2] {\n  background-color: white;\n}\nimg[data-v-1614d4d2] {\n  width: 200px;\n}\nul[data-v-1614d4d2] {\n  display: flex;\n  list-style: none;\n  -moz-column-gap: 10px;\n       column-gap: 10px;\n}\na[data-v-1614d4d2] {\n  text-decoration: none;\n  color: black;\n}\ni[data-v-1614d4d2] {\n  color: black;\n}\nli a[data-v-1614d4d2]:hover {\n  background-color: aliceblue;\n  border: 10px solid aliceblue;\n  border-radius: 15px;\n}", ""]);
+>>>>>>> origin/master
 
 // exports
 
@@ -56438,7 +56448,11 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 module.exports = __webpack_require__(/*! C:\Users\alessandro corviino\Documents\Boolean\DeliveBoo\resources\js\front.js */"./resources/js/front.js");
+=======
+module.exports = __webpack_require__(/*! /Users/alessandromonaco/Desktop/Boolean/Progetto/DeliveBoo/resources/js/front.js */"./resources/js/front.js");
+>>>>>>> origin/master
 
 
 /***/ })
