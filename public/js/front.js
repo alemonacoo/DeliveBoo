@@ -2734,45 +2734,22 @@ var staticRenderFns = [function () {
     staticClass: "ac-white"
   }, [_c("div", {
     staticClass: "container-xl d-flex align-items-baseline justify-content-between"
-  }, [_c("div", [_c("img", {
-    attrs: {
-      src: __webpack_require__(/*! ../assets/img/WhatsApp Image 2022-12-20 at 11.30.31.jpeg */ "./resources/js/assets/img/WhatsApp Image 2022-12-20 at 11.30.31.jpeg"),
-      alt: ""
-    }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "container-xl d-flex align-items-baseline justify-content-between"
   }, [_c("a", {
     attrs: {
       href: "/"
     }
   }, [_c("div", [_c("img", {
     attrs: {
-      src: __webpack_require__(/*! ../assets/img/deliveroo_2_VV3s7Fj.png */ "./resources/js/assets/img/deliveroo_2_VV3s7Fj.png"),
+      src: __webpack_require__(/*! ../assets/img/WhatsApp Image 2022-12-20 at 11.30.31.jpeg */ "./resources/js/assets/img/WhatsApp Image 2022-12-20 at 11.30.31.jpeg"),
       alt: ""
     }
   })])]), _vm._v(" "), _c("div", [_c("ul", [_c("li", [_c("a", {
     attrs: {
-      href: "https://www.decathlon.it/browse/c0-tutti-gli-sport/c1-ciclismo/c2-biciclette/_/N-6pql59"
-    }
-  }, [_c("i", {
-    staticClass: "bi bi-car-front"
-  }), _vm._v(" Diventa un\n                            rider")])]), _vm._v(" "), _c("li", [_c("a", {
-    attrs: {
-      href: "/login"
-    }
-  }, [_vm._v(" Accedi")])]), _vm._v(" "), _c("li", [_c("a", {
-    attrs: {
-      href: "https://deliveroo.it/it/faq"
-    }
-  }, [_c("i", {
-    staticClass: "bi bi-question-circle"
-  }), _vm._v(" Aiuto?")])]), _vm._v(" "), _c("li", [_c("a", {
-    attrs: {
       href: ""
     }
   }, [_c("i", {
     staticClass: "bi bi-car-front"
-  }), _vm._v(" Diventa un\n                            rider")])]), _vm._v(" "), _c("li", [_c("a", {
+  }), _vm._v(" Diventa un rider")])]), _vm._v(" "), _c("li", [_c("a", {
     attrs: {
       href: "/login"
     }
@@ -2782,7 +2759,7 @@ var staticRenderFns = [function () {
     }
   }, [_c("i", {
     staticClass: "bi bi-question-circle"
-  }), _vm._v(" Aiuto?")])])])])])])]);
+  }), _vm._v(" Aiuto?")])])])])])]);
 }];
 render._withStripped = true;
 
@@ -55072,17 +55049,6 @@ module.exports = "/images/apps_promo-wide-je.png?de10ee0b25eb0679003f33c3cca519d
 /***/ (function(module, exports) {
 
 module.exports = "/images/bg_hero-wide.jpg?11548fa1dbc37aacb58c3d6db3980590";
-
-/***/ }),
-
-/***/ "./resources/js/assets/img/deliveroo_2_VV3s7Fj.png":
-/*!*********************************************************!*\
-  !*** ./resources/js/assets/img/deliveroo_2_VV3s7Fj.png ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/deliveroo_2_VV3s7Fj.png?c6b1da7c5475c1dd4e626d4880988202";
 
 /***/ }),
 
