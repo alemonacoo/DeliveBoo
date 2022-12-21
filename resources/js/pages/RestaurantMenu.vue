@@ -20,7 +20,7 @@
                 <h2>Il nostro Menu</h2>
             </div>
             <div class="row justify-content-between">
-                <div class="col-8">
+                <div class="col">
                     <div class="ristorante mb-4 text-left p-3" v-for="item in menu" :key="item.id">
                         <div class="menu d-flex align-items-center justify-content-between">
 
@@ -45,6 +45,23 @@
                 <!-- componente carrello -->
                 <div class="col-4">
                     <BasketComponent :selectedItems="clickedItems" />
+                <div class="col-5 flow-area mb-4">
+                    <BasketComponent :selectedItems="clickedItems" ref="form" class="cart"/>
+                </div>
+            </div>
+            <div class="row checkout-bar" @click="checkout">
+                <div class="col-2">
+                    <i class="bi bi-cart-check"></i>
+                </div>
+                <div class="col-10">
+                    <div class="row">
+                        <div class="col-10">
+                            <h2>10 $</h2>
+                        </div>
+                        <div class="col-10">
+                            <h5>Vai al pagamento</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -81,6 +98,9 @@ export default {
         onSelect(item) {
             this.clickedItems.push(item);
         }
+        checkout() {
+            this.$refs.form.sendOrder(this.clickedItems);
+        },
     },
     components: {
         BasketComponent,
@@ -123,24 +143,41 @@ button {
     background-color: #f36805;
     color: white;
 }
-
-img {
-    width: 80%;
-    height: 40%;
-    border-radius: 15px;
+.flow-area{
+    flex-grow: 1;
 }
+.cart{
+    position: sticky;
+    top: 50px
+}
+.checkout-bar{
+    display: none;
+    width: 100vw;
+    background-color: #f36805;
+    color: #fff;
+    font-weight: bolder !important;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
 
-.menu {
-    column-gap: 50px;
-
-    img {
-        width: 100px;
+    .bi-cart-check{
+        font-size: xx-large;
     }
 }
 
-.d-flexx {
-    display: flex;
-    flex-direction: column;
-
+@media only screen and (max-width: 600px) {
+    .container-fluid{
+        width: 100vw;
+    }
+    .flow-area {display: none;}
+    .checkout-bar {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        z-index: 100;
+    }
+    .ristorante{
+        align-items: center;
+    }
 }
 </style>
