@@ -1,7 +1,7 @@
 <template>
-    <div class="container">
-        <div class="tt">
+    <div class="container-ac">
 
+        <div class="tt">
             <div class="my-5 hh">
                 <h1>{{ this.$route.params.slug }}</h1>
                 <hr>
@@ -33,6 +33,8 @@
 <script>
 import BasketComponent from "../components/BasketComponent.vue";
 
+
+
 export default {
     name: "RestaurantMenu",
     data() {
@@ -59,6 +61,7 @@ export default {
     },
     components: {
         BasketComponent,
+
     },
 };
 </script>
@@ -79,9 +82,12 @@ export default {
 .hh {
     width: 400px;
     height: 400px;
-    background-color: gray;
+
     border-radius: 15px;
     text-align: center;
+    box-shadow: 5px 5px 5px 1px black;
+    cursor: pointer;
+    border-radius: 10px;
 }
 
 button {
@@ -91,4 +97,6 @@ button {
     background-color: #f36805;
     color: white;
 }
+
+.col-12 {}
 </style>
