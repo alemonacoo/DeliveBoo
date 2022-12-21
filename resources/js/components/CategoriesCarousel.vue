@@ -2,8 +2,9 @@
     <div class="container">
 
         <!-- 'carosello' categorie caricate axios -->
-        <div class="row">
-            <div class="col-2 my-3" v-for="category in categories" :key="category.id">
+        <!-- <div class="row"> -->
+        <carousel :perPageCustom="[[768, 3], [1024, 6]]" class="mt-3">
+            <slide v-for="category in categories" :key="category.id" class="pt-2 px-1">
                 <div class="card" :class="{ active: category.id === activeIndex }"
                     @click="showCategoryRestaurants(category.id)">
                     <img :src="category.image" class="card-img-top" :alt="category.name">
@@ -11,8 +12,11 @@
                         <h5>{{ category.name }}</h5>
                     </div>
                 </div>
-            </div>
-        </div>
+            </slide>
+        </carousel>
+
+        <!-- </div> -->
+        <!-- </div> -->
 
         <!-- compoenente ristoranti -->
         <div class="row">
@@ -22,7 +26,8 @@
 </template>
 
 <script>
-import RestaurantsComponent from './RestaurantsComponent.vue'
+import RestaurantsComponent from './RestaurantsComponent.vue';
+import { Carousel, Slide } from 'vue-carousel';
 
 export default {
     name: 'CategoriesCarousel',
@@ -46,7 +51,9 @@ export default {
         }
     },
     components: {
-        RestaurantsComponent
+        RestaurantsComponent,
+        Carousel,
+        Slide
     }
 
 }
@@ -69,7 +76,7 @@ export default {
     }
 
     img {
-        height: 4rem;
+        height: 5rem;
         object-fit: cover;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -78,6 +85,7 @@ export default {
 
 .active {
     filter: drop-shadow(2px 4px 6px grey);
+    color: #ef9b6b;
 }
 
 .card:hover {
