@@ -2,11 +2,15 @@
     <div class="container-ac">
 
         <div class="tt">
+
+            <!-- card ristorante -->
             <div class="my-5 hh">
-                <h1>{{ this.$route.params.slug }}</h1>
+                <h1>{{ this.$route.params.restaurant.name }}</h1>
                 <hr>
+                <img :src="this.$route.params.restaurant.image" :alt="this.$route.params.restaurant.name">
             </div>
 
+            <!-- lista piatti -->
             <div class="row mb-3">
                 <h2>Il nostro Menu</h2>
             </div>
@@ -22,6 +26,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- componente carrello -->
                 <div class="col-4">
                     <BasketComponent :selectedItems="clickedItems" />
                 </div>
@@ -45,7 +51,7 @@ export default {
     },
     props: {},
     mounted() {
-        const slug = this.$route.params.slug;
+        const slug = this.$route.params.restaurant.slug;
         this.loadPage("/api/restaurants/" + slug + "/menus");
     },
     methods: {
@@ -98,5 +104,7 @@ button {
     color: white;
 }
 
-.col-12 {}
+img {
+    width: 50%;
+}
 </style>

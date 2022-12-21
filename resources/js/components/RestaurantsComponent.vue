@@ -1,11 +1,14 @@
 <template>
     <div class="container">
         <div class="row">
+
+            <!-- lista ristoranti appartenenti alla categoria cliccata -->
             <div class="col-3 my-3 text-center" v-for="restaurant in list" :key="restaurant.id">
-                <div class="card" @click="showRestaurantMenu(restaurant.slug)">
+                <div class="card" @click="showRestaurantMenu(restaurant)">
                     <img :src="restaurant.image" class="card-img-top" :alt="restaurant.name">
                     <div class="card-body">
                         <h4>{{ restaurant.name }}</h4>
+                        <p>{{ restaurant.address }}</p>
                     </div>
                 </div>
             </div>
@@ -25,15 +28,14 @@ export default {
         }
     },
     methods: {
-        // showRestaurantMenu(slug) {
-        //     console.log(slug);
-        //     axios.get('/api/restaurants/' + slug + '/menus')
-        //         .then(({ data }) => {
-        //             console.log(data);
-        //         })
-        // },
-        showRestaurantMenu(slug) {
-            this.$router.push('/restaurant/' + slug);
+        showRestaurantMenu(restaurant) {
+            this.$router.push({
+                name: 'restaurant-menu',
+                params: {
+                    restaurant: restaurant,
+                    slug: restaurant.slug
+                },
+            });
         }
     }
 }

@@ -103,6 +103,7 @@ export default {
                     })
                     .then(async (response) => {
                         console.log(await response.data);
+                        this.$router.push('/order-complete/' + response.data.id);
                     })
                     .catch((e) => console.log(e));
             } else {
