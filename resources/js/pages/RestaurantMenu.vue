@@ -74,7 +74,7 @@ export default {
         },
         onSelect(item) {
             this.clickedItems.push(item);
-        }
+        },
         checkout() {
             this.$refs.form.sendOrder(this.clickedItems);
         },
