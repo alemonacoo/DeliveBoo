@@ -2,16 +2,30 @@
 
 @section('content')
 
- <p>Descrizione Piatto: {{$menu->description}}</p>
- <p>Prezzo: {{$menu->price}}$</p>
+<div class="relative-container">
+<a class="back-button" href="../">&#10094;</a>
 
-  <a href="{{route('admin.restaurants.menus.edit', [$restaurant_slug, $menu->slug])}}">EDITA</a>
+<h6 class="form-title dish">{{$menu->name}}</h6>
+
+<div class="piatto-container">
+    <div>
+        <p class="titolo">Ingredienti:</p>
+        <p >{{$menu->description}}</p>
+    </div>
+    <div>
+        <p class="titolo">Prezzo:</p>
+        <p>{{$menu->price}}$</p>
+    </div>
+
+    <div class="single-dish-btn-container">
+  <a href="{{route('admin.restaurants.menus.edit', [$restaurant_slug, $menu->slug])}}" class="button-global"><button>Modifica</button></a>
 
   <form action="{{route('admin.restaurants.menus.destroy', [$restaurant_slug, $menu->slug])}}" method="post">
           @csrf
           @method('DELETE')
-          <input onclick="corfirm('Are you sure?')" type="submit" value="ELIMINA">
+          <a type="submit" value="delete" onclick="corfirm('Are you sure?')" class="button-global red"><button>Elimina</button></a>
       </form>
-
-
+    </div>
+</div>
+    </div>
 @endsection
