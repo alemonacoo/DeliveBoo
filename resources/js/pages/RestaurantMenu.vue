@@ -103,6 +103,7 @@ export default {
     box-shadow: 5px 5px 5px 1px black;
     cursor: pointer;
     border-radius: 10px;
+    background-color: aliceblue;
 }
 
 button {
@@ -114,7 +115,8 @@ button {
 }
 
 img {
-    width: 70%;
+    width: 80%;
+    height: 40%;
     border-radius: 15px;
 }
 </style>

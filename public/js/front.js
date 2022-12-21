@@ -7615,7 +7615,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".ristorante[data-v-14400205] {\n  box-shadow: 5px 5px 5px 1px black;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.tt[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.hh[data-v-14400205] {\n  width: 400px;\n  height: 400px;\n  border-radius: 15px;\n  text-align: center;\n  box-shadow: 5px 5px 5px 1px black;\n  cursor: pointer;\n  border-radius: 10px;\n}\nbutton[data-v-14400205] {\n  border-radius: 15px;\n  width: 150px;\n  border: 0;\n  background-color: #f36805;\n  color: white;\n}\nimg[data-v-14400205] {\n  width: 70%;\n  border-radius: 15px;\n}", ""]);
+exports.push([module.i, ".ristorante[data-v-14400205] {\n  box-shadow: 5px 5px 5px 1px black;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.tt[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.hh[data-v-14400205] {\n  width: 400px;\n  height: 400px;\n  border-radius: 15px;\n  text-align: center;\n  box-shadow: 5px 5px 5px 1px black;\n  cursor: pointer;\n  border-radius: 10px;\n  background-color: aliceblue;\n}\nbutton[data-v-14400205] {\n  border-radius: 15px;\n  width: 150px;\n  border: 0;\n  background-color: #f36805;\n  color: white;\n}\nimg[data-v-14400205] {\n  width: 80%;\n  height: 40%;\n  border-radius: 15px;\n}", ""]);
 
 // exports
 
