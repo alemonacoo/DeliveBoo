@@ -2684,6 +2684,8 @@ var staticRenderFns = [function () {
   return _c("div", {
     staticClass: "container-fluid"
   }, [_c("div", {
+    staticClass: "links-1"
+  }, [_c("div", {
     staticClass: "row"
   }, [_c("div", {
     staticClass: "col"
@@ -2695,7 +2697,215 @@ var staticRenderFns = [function () {
     staticClass: "col"
   }, [_c("h5", [_vm._v("Città")]), _vm._v(" "), _c("ul", [_c("li", [_vm._v("Milano")]), _vm._v(" "), _c("li", [_vm._v("Roma")]), _vm._v(" "), _c("li", [_vm._v("Firenze")]), _vm._v(" "), _c("li", [_vm._v("Salerno")]), _vm._v(" "), _c("li", [_vm._v("Padova")]), _vm._v(" "), _c("li", [_vm._v("Parma")]), _vm._v(" "), _c("li", [_vm._v("Ferrara")]), _vm._v(" "), _c("li", [_vm._v("Napoli")]), _vm._v(" "), _c("li", [_vm._v("Udine")]), _vm._v(" "), _c("li", [_vm._v("Campobasso")]), _vm._v(" "), _c("li", [_vm._v("Varese")])])]), _vm._v(" "), _c("div", {
     staticClass: "col"
-  }, [_c("h5", [_vm._v("Chi Siamo")]), _vm._v(" "), _c("ul", [_c("li", [_vm._v("Informazioni su Deliveroo")]), _vm._v(" "), _c("li", [_vm._v("Diventa partner di Deliveroo")]), _vm._v(" "), _c("li", [_vm._v("Programma Bug Bounty")]), _vm._v(" "), _c("li", [_vm._v("Partner Center")])])])])]);
+  }, [_c("h5", [_vm._v("Chi Siamo")]), _vm._v(" "), _c("ul", [_c("li", [_vm._v("Informazioni su Deliveroo")]), _vm._v(" "), _c("li", [_vm._v("Diventa partner di Deliveroo")]), _vm._v(" "), _c("li", [_vm._v("Programma Bug Bounty")]), _vm._v(" "), _c("li", [_vm._v("Partner Center")])])])])]), _vm._v(" "), _c("div", {
+    staticClass: "links-2"
+  }, [_c("div", {
+    staticClass: "pos-f-t"
+  }, [_c("nav", {
+    staticClass: "navbar"
+  }, [_c("h5", [_vm._v("Servizio Clienti")]), _vm._v(" "), _c("span", {
+    staticClass: "arrow-toggler",
+    attrs: {
+      "data-toggle": "collapse",
+      "data-target": "#navbarToggleExternalContent1",
+      "aria-controls": "navbarToggleExternalContent1",
+      "aria-expanded": "false",
+      "aria-label": "Toggle navigation"
+    }
+  }, [_c("i", {
+    staticClass: "bi bi-arrow-right-circle"
+  })])]), _vm._v(" "), _c("div", {
+    staticClass: "collapse",
+    attrs: {
+      id: "navbarToggleExternalContent1"
+    }
+  }, [_c("div", {
+    staticClass: "p-2"
+  }, [_c("div", {
+    staticClass: "row drop-list text-white"
+  }, [_c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Domande Frequenti")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Accedi")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Registrati")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Miglior Prezzo Garantito")])])])]), _vm._v(" "), _c("hr", {
+    staticClass: "border border-dark w-100"
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "pos-f-t"
+  }, [_c("nav", {
+    staticClass: "navbar"
+  }, [_c("h5", [_vm._v("Cucine")]), _vm._v(" "), _c("span", {
+    staticClass: "arrow-toggler",
+    attrs: {
+      "data-toggle": "collapse",
+      "data-target": "#navbarToggleExternalContent2",
+      "aria-controls": "navbarToggleExternalContent2",
+      "aria-expanded": "false",
+      "aria-label": "Toggle navigation"
+    }
+  }, [_c("i", {
+    staticClass: "bi bi-arrow-right-circle"
+  })])]), _vm._v(" "), _c("div", {
+    staticClass: "collapse",
+    attrs: {
+      id: "navbarToggleExternalContent2"
+    }
+  }, [_c("div", {
+    staticClass: "p-2"
+  }, [_c("div", {
+    staticClass: "row drop-list text-white"
+  }, [_c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Vegetariano")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Messicano")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Cinese")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Indiano")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Greco")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Giapponese")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Italiano")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Thai")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Pizza")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Americano")])])])]), _vm._v(" "), _c("hr", {
+    staticClass: "border border-dark w-100"
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "pos-f-t"
+  }, [_c("nav", {
+    staticClass: "navbar"
+  }, [_c("h5", [_vm._v("Catene")]), _vm._v(" "), _c("span", {
+    staticClass: "arrow-toggler",
+    attrs: {
+      "data-toggle": "collapse",
+      "data-target": "#navbarToggleExternalContent3",
+      "aria-controls": "navbarToggleExternalContent3",
+      "aria-expanded": "false",
+      "aria-label": "Toggle navigation"
+    }
+  }, [_c("i", {
+    staticClass: "bi bi-arrow-right-circle"
+  })])]), _vm._v(" "), _c("div", {
+    staticClass: "collapse",
+    attrs: {
+      id: "navbarToggleExternalContent3"
+    }
+  }, [_c("div", {
+    staticClass: "p-2"
+  }, [_c("div", {
+    staticClass: "row drop-list text-white"
+  }, [_c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Alice Pizza")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Burger King")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Zushi")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Old Wild West")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Poke House")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("RoadHouse")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Sushiko")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("KFC")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Fratelli La Bufala")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("McDonald's")])])])]), _vm._v(" "), _c("hr", {
+    staticClass: "border border-dark w-100"
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "pos-f-t"
+  }, [_c("nav", {
+    staticClass: "navbar"
+  }, [_c("h5", [_vm._v("Città")]), _vm._v(" "), _c("span", {
+    staticClass: "arrow-toggler",
+    attrs: {
+      "data-toggle": "collapse",
+      "data-target": "#navbarToggleExternalContent4",
+      "aria-controls": "navbarToggleExternalContent4",
+      "aria-expanded": "false",
+      "aria-label": "Toggle navigation"
+    }
+  }, [_c("i", {
+    staticClass: "bi bi-arrow-right-circle"
+  })])]), _vm._v(" "), _c("div", {
+    staticClass: "collapse",
+    attrs: {
+      id: "navbarToggleExternalContent4"
+    }
+  }, [_c("div", {
+    staticClass: "p-2"
+  }, [_c("div", {
+    staticClass: "row drop-list text-white"
+  }, [_c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Milano")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Roma")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Firenze")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Salerno")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Padova")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Parma")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Ferrara")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Napoli")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Udine")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Campobasso")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Varese")])])])]), _vm._v(" "), _c("hr", {
+    staticClass: "border border-dark w-100"
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "pos-f-t"
+  }, [_c("nav", {
+    staticClass: "navbar"
+  }, [_c("h5", [_vm._v("Chi Siamo")]), _vm._v(" "), _c("span", {
+    staticClass: "arrow-toggler",
+    attrs: {
+      "data-toggle": "collapse",
+      "data-target": "#navbarToggleExternalContent5",
+      "aria-controls": "navbarToggleExternalContent5",
+      "aria-expanded": "false",
+      "aria-label": "Toggle navigation"
+    }
+  }, [_c("i", {
+    staticClass: "bi bi-arrow-right-circle"
+  })])]), _vm._v(" "), _c("div", {
+    staticClass: "collapse",
+    attrs: {
+      id: "navbarToggleExternalContent5"
+    }
+  }, [_c("div", {
+    staticClass: "p-2"
+  }, [_c("div", {
+    staticClass: "row drop-list text-white"
+  }, [_c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Informazioni su Deliveroo")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Diventa partner di Deliveroo")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Programma Bug Bounty")]), _vm._v(" "), _c("div", {
+    staticClass: "col-12 py-2"
+  }, [_vm._v("Partner Center")])])])])])])]);
 }];
 render._withStripped = true;
 
@@ -7543,7 +7753,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".container-fluid[data-v-abfbddf2] {\n  padding: 20px;\n  background: #efedea;\n  color: black;\n}\n.container-fluid .row[data-v-abfbddf2] {\n  max-width: 1200px;\n  margin: 0 auto;\n}\n.container-fluid .row .col[data-v-abfbddf2] {\n  margin-top: 20px;\n}\n.container-fluid .row .col h5[data-v-abfbddf2] {\n  margin-bottom: 20px;\n}\n.container-fluid .row .col ul[data-v-abfbddf2] {\n  list-style: none;\n  padding-left: 0px;\n}\n.container-fluid .row .col ul li[data-v-abfbddf2] {\n  margin-bottom: 10px;\n}", ""]);
+exports.push([module.i, ".container-fluid[data-v-abfbddf2] {\n  padding: 20px;\n  background: black;\n  color: #efedea;\n}\n.container-fluid .links-1[data-v-abfbddf2] {\n  display: flex;\n}\n.container-fluid .links-1 .row[data-v-abfbddf2] {\n  max-width: 1200px;\n  margin: 0 auto;\n}\n.container-fluid .links-1 .row .col[data-v-abfbddf2] {\n  margin-top: 20px;\n}\n.container-fluid .links-1 .row .col h5[data-v-abfbddf2] {\n  margin-bottom: 20px;\n}\n.container-fluid .links-1 .row .col ul[data-v-abfbddf2] {\n  list-style: none;\n  padding-left: 0px;\n}\n.container-fluid .links-1 .row .col ul li[data-v-abfbddf2] {\n  margin-bottom: 10px;\n}\n.container-fluid .links-2[data-v-abfbddf2] {\n  display: none;\n}\n.container-fluid .links-2 .pos-f-t .navbar .arrow-toggler[data-v-abfbddf2] {\n  padding: 0 !important;\n  cursor: pointer;\n  width: -moz-fit-content;\n  width: fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n.container-fluid .links-2 .pos-f-t .navbar .arrow-toggler .bi-arrow-right-circle[data-v-abfbddf2] {\n  font-size: 30px;\n  color: white;\n}\n@media only screen and (max-width: 600px) {\n.links-1[data-v-abfbddf2] {\n    display: none !important;\n}\n.links-2[data-v-abfbddf2] {\n    display: flex !important;\n    flex-direction: column !important;\n}\n}\n/* Medium devices (landscape tablets, 768px and up) */\n/* Large devices (laptops/desktops, 992px and up) */\n/* Extra large devices (large laptops and desktops, 1200px and up) */", ""]);
 
 // exports
 
