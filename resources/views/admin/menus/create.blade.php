@@ -17,6 +17,7 @@
 @endif
 <form action="{{ route('admin.restaurants.menus.store', $restaurant_slug) }}" method="post">
     @csrf
+    @method('POST')
     <div class="input-container">
         <label for="name">Name:</label>
         <input required maxlength="255" type="text" name="name" value="{{ old('name', '') }}">
