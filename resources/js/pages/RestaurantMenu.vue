@@ -22,11 +22,21 @@
             <div class="row justify-content-between">
                 <div class="col-8">
                     <div class="ristorante mb-4 text-left p-3" v-for="item in menu" :key="item.id">
-                        <div>
-                            <h2>{{ item.name }}</h2>
-                            <p>{{ item.description }}</p>
-                            <p> Da {{ item.price }} $</p>
-                            <button @click="() => onSelect(item)"> Aggiungi al carrello</button>
+                        <div class="menu d-flex align-items-center justify-content-between">
+
+                            <div class="d-flexx">
+                                <h2>{{ item.name }}</h2>
+                                <p>{{ item.description }}</p>
+                                <p> Da {{ item.price }} $</p>
+                                <button @click="() => onSelect(item)"> Aggiungi al carrello</button>
+
+                            </div>
+
+
+
+                            <div>
+                                <img :src="item.image" alt="">
+                            </div>
 
                         </div>
                     </div>
@@ -118,5 +128,19 @@ img {
     width: 80%;
     height: 40%;
     border-radius: 15px;
+}
+
+.menu {
+    column-gap: 50px;
+
+    img {
+        width: 100px;
+    }
+}
+
+.d-flexx {
+    display: flex;
+    flex-direction: column;
+
 }
 </style>

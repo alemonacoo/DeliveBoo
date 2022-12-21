@@ -17,7 +17,7 @@
 
                     <li> <a href="/login"> Accedi</a></li>
 
-                    <li><a href=""><i class="bi bi-question-circle"></i> Aiuto?</a></li>
+                    <li><a href="https://deliveroo.it/it/faq"><i class="bi bi-question-circle"></i> Aiuto?</a></li>
 
                 </ul>
             </div>

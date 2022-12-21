@@ -2750,7 +2750,7 @@ var staticRenderFns = [function () {
     }
   }, [_vm._v(" Accedi")])]), _vm._v(" "), _c("li", [_c("a", {
     attrs: {
-      href: ""
+      href: "https://deliveroo.it/it/faq"
     }
   }, [_c("i", {
     staticClass: "bi bi-question-circle"
@@ -2959,13 +2959,22 @@ var render = function render() {
     return _c("div", {
       key: item.id,
       staticClass: "ristorante mb-4 text-left p-3"
-    }, [_c("div", [_c("h2", [_vm._v(_vm._s(item.name))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(item.description))]), _vm._v(" "), _c("p", [_vm._v(" Da " + _vm._s(item.price) + " $")]), _vm._v(" "), _c("button", {
+    }, [_c("div", {
+      staticClass: "menu d-flex align-items-center justify-content-between"
+    }, [_c("div", {
+      staticClass: "d-flexx"
+    }, [_c("h2", [_vm._v(_vm._s(item.name))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(item.description))]), _vm._v(" "), _c("p", [_vm._v(" Da " + _vm._s(item.price) + " $")]), _vm._v(" "), _c("button", {
       on: {
         click: function click() {
           return _vm.onSelect(item);
         }
       }
-    }, [_vm._v(" Aggiungi al carrello")])])]);
+    }, [_vm._v(" Aggiungi al carrello")])]), _vm._v(" "), _c("div", [_c("img", {
+      attrs: {
+        src: item.image,
+        alt: ""
+      }
+    })])])]);
   }), 0), _vm._v(" "), _c("div", {
     staticClass: "col-4"
   }, [_c("BasketComponent", {
@@ -7615,7 +7624,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".ristorante[data-v-14400205] {\n  box-shadow: 5px 5px 5px 1px black;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.tt[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.hh[data-v-14400205] {\n  width: 400px;\n  height: 400px;\n  border-radius: 15px;\n  text-align: center;\n  box-shadow: 5px 5px 5px 1px black;\n  cursor: pointer;\n  border-radius: 10px;\n  background-color: aliceblue;\n}\nbutton[data-v-14400205] {\n  border-radius: 15px;\n  width: 150px;\n  border: 0;\n  background-color: #f36805;\n  color: white;\n}\nimg[data-v-14400205] {\n  width: 80%;\n  height: 40%;\n  border-radius: 15px;\n}", ""]);
+exports.push([module.i, ".ristorante[data-v-14400205] {\n  box-shadow: 5px 5px 5px 1px black;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.tt[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.hh[data-v-14400205] {\n  width: 400px;\n  height: 400px;\n  border-radius: 15px;\n  text-align: center;\n  box-shadow: 5px 5px 5px 1px black;\n  cursor: pointer;\n  border-radius: 10px;\n  background-color: aliceblue;\n}\nbutton[data-v-14400205] {\n  border-radius: 15px;\n  width: 150px;\n  border: 0;\n  background-color: #f36805;\n  color: white;\n}\nimg[data-v-14400205] {\n  width: 80%;\n  height: 40%;\n  border-radius: 15px;\n}\n.menu[data-v-14400205] {\n  -moz-column-gap: 50px;\n       column-gap: 50px;\n}\n.menu img[data-v-14400205] {\n  width: 100px;\n}\n.d-flexx[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n}", ""]);
 
 // exports
 
