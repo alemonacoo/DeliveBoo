@@ -2303,25 +2303,14 @@ __webpack_require__.r(__webpack_exports__);
         console.log(_this.restaurants);
       });
     },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/AC_branch
     showRestaurantMenu: function showRestaurantMenu(restaurant) {
       this.$router.push({
-        name: 'restaurant-menu',
+        name: "restaurant-menu",
         params: {
           restaurant: restaurant,
           slug: restaurant.slug
         }
       });
-<<<<<<< HEAD
-=======
-=======
-    showRestaurantMenu: function showRestaurantMenu(slug) {
-      this.$router.push("/restaurant/" + slug);
->>>>>>> origin/master
->>>>>>> origin/AC_branch
     },
     zero: function zero() {
       this.restaurants = [];
@@ -2750,13 +2739,24 @@ var staticRenderFns = [function () {
       src: __webpack_require__(/*! ../assets/img/WhatsApp Image 2022-12-20 at 11.30.31.jpeg */ "./resources/js/assets/img/WhatsApp Image 2022-12-20 at 11.30.31.jpeg"),
       alt: ""
     }
-  })]), _vm._v(" "), _c("div", [_c("ul", [_c("li", [_c("a", {
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "container-xl d-flex align-items-baseline justify-content-between"
+  }, [_c("a", {
+    attrs: {
+      href: "/"
+    }
+  }, [_c("div", [_c("img", {
+    attrs: {
+      src: __webpack_require__(/*! ../assets/img/deliveroo_2_VV3s7Fj.png */ "./resources/js/assets/img/deliveroo_2_VV3s7Fj.png"),
+      alt: ""
+    }
+  })])]), _vm._v(" "), _c("div", [_c("ul", [_c("li", [_c("a", {
     attrs: {
       href: "https://www.decathlon.it/browse/c0-tutti-gli-sport/c1-ciclismo/c2-biciclette/_/N-6pql59"
     }
   }, [_c("i", {
     staticClass: "bi bi-car-front"
-  }), _vm._v(" Diventa un rider")])]), _vm._v(" "), _c("li", [_c("a", {
+  }), _vm._v(" Diventa un\n                            rider")])]), _vm._v(" "), _c("li", [_c("a", {
     attrs: {
       href: "/login"
     }
@@ -2766,7 +2766,23 @@ var staticRenderFns = [function () {
     }
   }, [_c("i", {
     staticClass: "bi bi-question-circle"
-  }), _vm._v(" Aiuto?")])])])])])]);
+  }), _vm._v(" Aiuto?")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: ""
+    }
+  }, [_c("i", {
+    staticClass: "bi bi-car-front"
+  }), _vm._v(" Diventa un\n                            rider")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: "/login"
+    }
+  }, [_vm._v(" Accedi")])]), _vm._v(" "), _c("li", [_c("a", {
+    attrs: {
+      href: ""
+    }
+  }, [_c("i", {
+    staticClass: "bi bi-question-circle"
+  }), _vm._v(" Aiuto?")])])])])])])]);
 }];
 render._withStripped = true;
 
@@ -7559,11 +7575,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-<<<<<<< HEAD
-exports.push([module.i, ".ac-white[data-v-1614d4d2] {\n  background-color: white;\n  padding: 20px;\n}\nimg[data-v-1614d4d2] {\n  width: 200px;\n}\nul[data-v-1614d4d2] {\n  display: flex;\n  list-style: none;\n  -moz-column-gap: 10px;\n       column-gap: 10px;\n}\na[data-v-1614d4d2] {\n  text-decoration: none;\n  color: black;\n}\ni[data-v-1614d4d2] {\n  color: black;\n}\na[data-v-1614d4d2]:hover {\n  background-color: aliceblue;\n  border: 10px solid aliceblue;\n  border-radius: 15px;\n}", ""]);
-=======
-exports.push([module.i, ".ac-white[data-v-1614d4d2] {\n  background-color: white;\n}\nimg[data-v-1614d4d2] {\n  width: 200px;\n}\nul[data-v-1614d4d2] {\n  display: flex;\n  list-style: none;\n  -moz-column-gap: 10px;\n       column-gap: 10px;\n}\na[data-v-1614d4d2] {\n  text-decoration: none;\n  color: black;\n}\ni[data-v-1614d4d2] {\n  color: black;\n}\nli a[data-v-1614d4d2]:hover {\n  background-color: aliceblue;\n  border: 10px solid aliceblue;\n  border-radius: 15px;\n}", ""]);
->>>>>>> origin/master
+exports.push([module.i, ".ac-white[data-v-1614d4d2] {\n  background-color: white;\n  padding: 20px;\n}\nimg[data-v-1614d4d2] {\n  width: 200px;\n}\nul[data-v-1614d4d2] {\n  display: flex;\n  list-style: none;\n  -moz-column-gap: 10px;\n       column-gap: 10px;\n}\na[data-v-1614d4d2] {\n  text-decoration: none;\n  color: black;\n}\ni[data-v-1614d4d2] {\n  color: black;\n}\nli a[data-v-1614d4d2]:hover {\n  background-color: aliceblue;\n  border: 10px solid aliceblue;\n  border-radius: 15px;\n}", ""]);
 
 // exports
 
@@ -55063,6 +55075,17 @@ module.exports = "/images/bg_hero-wide.jpg?11548fa1dbc37aacb58c3d6db3980590";
 
 /***/ }),
 
+/***/ "./resources/js/assets/img/deliveroo_2_VV3s7Fj.png":
+/*!*********************************************************!*\
+  !*** ./resources/js/assets/img/deliveroo_2_VV3s7Fj.png ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/deliveroo_2_VV3s7Fj.png?c6b1da7c5475c1dd4e626d4880988202";
+
+/***/ }),
+
 /***/ "./resources/js/bootstrap.js":
 /*!***********************************!*\
   !*** ./resources/js/bootstrap.js ***!
@@ -56454,15 +56477,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-module.exports = __webpack_require__(/*! /Users/Fede/Desktop/Boolean/Progetto/DeliveBoo/resources/js/front.js */"./resources/js/front.js");
-=======
-<<<<<<< HEAD
-module.exports = __webpack_require__(/*! C:\Users\alessandro corviino\Documents\Boolean\DeliveBoo\resources\js\front.js */"./resources/js/front.js");
-=======
 module.exports = __webpack_require__(/*! /Users/alessandromonaco/Desktop/Boolean/Progetto/DeliveBoo/resources/js/front.js */"./resources/js/front.js");
->>>>>>> origin/master
->>>>>>> origin/AC_branch
 
 
 /***/ })
