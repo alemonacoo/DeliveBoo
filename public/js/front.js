@@ -2236,6 +2236,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_BasketComponent_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/BasketComponent.vue */ "./resources/js/components/BasketComponent.vue");
+/* harmony import */ var _components_PictureComponent_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/PictureComponent.vue */ "./resources/js/components/PictureComponent.vue");
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "RestaurantMenu",
@@ -2266,7 +2268,8 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   components: {
-    BasketComponent: _components_BasketComponent_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    BasketComponent: _components_BasketComponent_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    PictureComponent: _components_PictureComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   }
 });
 
@@ -2303,6 +2306,10 @@ __webpack_require__.r(__webpack_exports__);
         console.log(_this.restaurants);
       });
     },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/AC_branch
     showRestaurantMenu: function showRestaurantMenu(restaurant) {
       this.$router.push({
         name: 'restaurant-menu',
@@ -2311,6 +2318,13 @@ __webpack_require__.r(__webpack_exports__);
           slug: restaurant.slug
         }
       });
+<<<<<<< HEAD
+=======
+=======
+    showRestaurantMenu: function showRestaurantMenu(slug) {
+      this.$router.push("/restaurant/" + slug);
+>>>>>>> origin/master
+>>>>>>> origin/AC_branch
     },
     zero: function zero() {
       this.restaurants = [];
@@ -2941,16 +2955,12 @@ var staticRenderFns = [function () {
     staticClass: "ac-white"
   }, [_c("div", {
     staticClass: "container-xl d-flex align-items-baseline justify-content-between"
-  }, [_c("a", {
-    attrs: {
-      href: "/"
-    }
   }, [_c("div", [_c("img", {
     attrs: {
       src: __webpack_require__(/*! ../assets/img/WhatsApp Image 2022-12-20 at 11.30.31.jpeg */ "./resources/js/assets/img/WhatsApp Image 2022-12-20 at 11.30.31.jpeg"),
       alt: ""
     }
-  })])]), _vm._v(" "), _c("div", [_c("ul", [_c("li", [_c("a", {
+  })]), _vm._v(" "), _c("div", [_c("ul", [_c("li", [_c("a", {
     attrs: {
       href: "https://www.decathlon.it/browse/c0-tutti-gli-sport/c1-ciclismo/c2-biciclette/_/N-6pql59"
     }
@@ -2962,7 +2972,7 @@ var staticRenderFns = [function () {
     }
   }, [_vm._v(" Accedi")])]), _vm._v(" "), _c("li", [_c("a", {
     attrs: {
-      href: ""
+      href: "https://deliveroo.it/it/faq"
     }
   }, [_c("i", {
     staticClass: "bi bi-question-circle"
@@ -3153,12 +3163,17 @@ var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
+<<<<<<< HEAD
     staticClass: "container-fluid"
   }, [_c("div", {
+=======
+    staticClass: "container-ac"
+  }, [_c("div", [_c("PictureComponent")], 1), _vm._v(" "), _c("div", {
+>>>>>>> origin/AC_branch
     staticClass: "tt"
   }, [_c("div", {
     staticClass: "my-5 hh"
-  }, [_c("h1", [_vm._v(_vm._s(this.$route.params.restaurant.name))]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("img", {
+  }, [_c("h1", [_vm._v(_vm._s(this.$route.params.restaurant.name))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.$route.params.restaurant.address))]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("img", {
     attrs: {
       src: this.$route.params.restaurant.image,
       alt: this.$route.params.restaurant.name
@@ -3172,14 +3187,25 @@ var render = function render() {
       key: item.id,
       staticClass: "ristorante mb-4 text-left p-3"
     }, [_c("div", {
+<<<<<<< HEAD
       staticClass: "menu-item"
+=======
+      staticClass: "menu d-flex align-items-center justify-content-between"
+    }, [_c("div", {
+      staticClass: "d-flexx"
+>>>>>>> origin/AC_branch
     }, [_c("h2", [_vm._v(_vm._s(item.name))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(item.description))]), _vm._v(" "), _c("p", [_vm._v(" Da " + _vm._s(item.price) + " $")]), _vm._v(" "), _c("button", {
       on: {
         click: function click() {
           return _vm.onSelect(item);
         }
       }
-    }, [_vm._v(" Aggiungi al carrello")])])]);
+    }, [_vm._v(" Aggiungi al carrello")])]), _vm._v(" "), _c("div", [_c("img", {
+      attrs: {
+        src: item.image,
+        alt: ""
+      }
+    })])])]);
   }), 0), _vm._v(" "), _c("div", {
     staticClass: "col-5 flow-area mb-4"
   }, [_c("BasketComponent", {
@@ -7779,7 +7805,11 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
+<<<<<<< HEAD
+exports.push([module.i, ".ac-white[data-v-1614d4d2] {\n  background-color: white;\n  padding: 20px;\n}\nimg[data-v-1614d4d2] {\n  width: 200px;\n}\nul[data-v-1614d4d2] {\n  display: flex;\n  list-style: none;\n  -moz-column-gap: 10px;\n       column-gap: 10px;\n}\na[data-v-1614d4d2] {\n  text-decoration: none;\n  color: black;\n}\ni[data-v-1614d4d2] {\n  color: black;\n}\na[data-v-1614d4d2]:hover {\n  background-color: aliceblue;\n  border: 10px solid aliceblue;\n  border-radius: 15px;\n}", ""]);
+=======
 exports.push([module.i, ".ac-white[data-v-1614d4d2] {\n  background-color: white;\n}\nimg[data-v-1614d4d2] {\n  width: 200px;\n}\nul[data-v-1614d4d2] {\n  display: flex;\n  list-style: none;\n  -moz-column-gap: 10px;\n       column-gap: 10px;\n}\na[data-v-1614d4d2] {\n  text-decoration: none;\n  color: black;\n}\ni[data-v-1614d4d2] {\n  color: black;\n}\nli a[data-v-1614d4d2]:hover {\n  background-color: aliceblue;\n  border: 10px solid aliceblue;\n  border-radius: 15px;\n}", ""]);
+>>>>>>> origin/master
 
 // exports
 
@@ -7856,7 +7886,11 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
+<<<<<<< HEAD
 exports.push([module.i, ".ristorante[data-v-14400205] {\n  box-shadow: 5px 5px 5px 1px black;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.tt[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.hh[data-v-14400205] {\n  width: 400px;\n  height: 400px;\n  background-color: gray;\n  border-radius: 15px;\n  text-align: center;\n}\nbutton[data-v-14400205] {\n  border-radius: 15px;\n  width: 150px;\n  border: 0;\n  background-color: #f36805;\n  color: white;\n}\n.flow-area[data-v-14400205] {\n  flex-grow: 1;\n}\n.cart[data-v-14400205] {\n  position: sticky;\n  top: 50px;\n}\n.checkout-bar[data-v-14400205] {\n  display: none;\n  width: 100vw;\n  background-color: #f36805;\n  color: #fff;\n  font-weight: bolder !important;\n  padding: 10px;\n  margin-top: 10px;\n  cursor: pointer;\n}\n.checkout-bar .bi-cart-check[data-v-14400205] {\n  font-size: xx-large;\n}\n@media only screen and (max-width: 600px) {\n.container-fluid[data-v-14400205] {\n    width: 100vw;\n}\n.flow-area[data-v-14400205] {\n    display: none;\n}\n.checkout-bar[data-v-14400205] {\n    display: flex;\n    position: fixed;\n    bottom: 0;\n    z-index: 100;\n}\n.ristorante[data-v-14400205] {\n    align-items: center;\n}\n}\nimg[data-v-14400205] {\n  width: 50%;\n}", ""]);
+=======
+exports.push([module.i, ".ristorante[data-v-14400205] {\n  box-shadow: 5px 5px 5px 1px black;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.tt[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.hh[data-v-14400205] {\n  width: 400px;\n  height: 400px;\n  border-radius: 15px;\n  text-align: center;\n  box-shadow: 5px 5px 5px 1px black;\n  cursor: pointer;\n  border-radius: 10px;\n  background-color: aliceblue;\n}\nbutton[data-v-14400205] {\n  border-radius: 15px;\n  width: 150px;\n  border: 0;\n  background-color: #f36805;\n  color: white;\n}\nimg[data-v-14400205] {\n  width: 80%;\n  height: 40%;\n  border-radius: 15px;\n}\n.menu[data-v-14400205] {\n  -moz-column-gap: 50px;\n       column-gap: 50px;\n}\n.menu img[data-v-14400205] {\n  width: 100px;\n}\n.d-flexx[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n}", ""]);
+>>>>>>> origin/AC_branch
 
 // exports
 
@@ -56670,7 +56704,15 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 module.exports = __webpack_require__(/*! /Users/Fede/Desktop/Boolean/Progetto/DeliveBoo/resources/js/front.js */"./resources/js/front.js");
+=======
+<<<<<<< HEAD
+module.exports = __webpack_require__(/*! C:\Users\alessandro corviino\Documents\Boolean\DeliveBoo\resources\js\front.js */"./resources/js/front.js");
+=======
+module.exports = __webpack_require__(/*! /Users/alessandromonaco/Desktop/Boolean/Progetto/DeliveBoo/resources/js/front.js */"./resources/js/front.js");
+>>>>>>> origin/master
+>>>>>>> origin/AC_branch
 
 
 /***/ })

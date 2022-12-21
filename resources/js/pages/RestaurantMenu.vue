@@ -1,12 +1,18 @@
 <template>
-    <div class="container-fluid">
-        <div class="tt">
+    <div class="container-ac">
 
+        <div>
+            <PictureComponent />
+        </div>
+
+        <div class="tt">
             <!-- card ristorante -->
             <div class="my-5 hh">
                 <h1>{{ this.$route.params.restaurant.name }}</h1>
+                <p>{{ $route.params.restaurant.address }}</p>
                 <hr>
                 <img :src="this.$route.params.restaurant.image" :alt="this.$route.params.restaurant.name">
+
             </div>
 
             <!-- lista piatti -->
@@ -16,11 +22,22 @@
             <div class="row justify-content-between">
                 <div class="col">
                     <div class="ristorante mb-4 text-left p-3" v-for="item in menu" :key="item.id">
-                        <div class="menu-item">
-                            <h2>{{ item.name }}</h2>
-                            <p>{{ item.description }}</p>
-                            <p> Da {{ item.price }} $</p>
-                            <button @click="() => onSelect(item)"> Aggiungi al carrello</button>
+                        <div class="menu d-flex align-items-center justify-content-between">
+
+                            <div class="d-flexx">
+                                <h2>{{ item.name }}</h2>
+                                <p>{{ item.description }}</p>
+                                <p> Da {{ item.price }} $</p>
+                                <button @click="() => onSelect(item)"> Aggiungi al carrello</button>
+
+                            </div>
+
+
+
+                            <div>
+                                <img :src="item.image" alt="">
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -51,6 +68,10 @@
 
 <script>
 import BasketComponent from "../components/BasketComponent.vue";
+import PictureComponent from "../components/PictureComponent.vue";
+
+
+
 
 export default {
     name: "RestaurantMenu",
@@ -74,13 +95,15 @@ export default {
         },
         onSelect(item) {
             this.clickedItems.push(item);
-        },
+        }
         checkout() {
             this.$refs.form.sendOrder(this.clickedItems);
         },
     },
     components: {
         BasketComponent,
+        PictureComponent
+
     },
 };
 </script>
@@ -93,17 +116,22 @@ export default {
 }
 
 .tt {
+
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .hh {
     width: 400px;
     height: 400px;
-    background-color: gray;
     border-radius: 15px;
     text-align: center;
+    box-shadow: 5px 5px 5px 1px black;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: aliceblue;
 }
 
 button {
@@ -160,6 +188,22 @@ button {
 }
 
 img {
-    width: 50%;
+    width: 80%;
+    height: 40%;
+    border-radius: 15px;
+}
+
+.menu {
+    column-gap: 50px;
+
+    img {
+        width: 100px;
+    }
+}
+
+.d-flexx {
+    display: flex;
+    flex-direction: column;
+
 }
 </style>
