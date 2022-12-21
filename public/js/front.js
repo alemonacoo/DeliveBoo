@@ -2557,7 +2557,7 @@ var render = function render() {
   }, _vm._l(_vm.categories, function (category) {
     return _c("div", {
       key: category.id,
-      staticClass: "col my-3"
+      staticClass: "col-2 my-3"
     }, [_c("div", {
       staticClass: "card",
       "class": {
@@ -3016,12 +3016,12 @@ var render = function render() {
     _c = _vm._self._c;
   return _c("div", {
     staticClass: "container"
-  }, [_c("div", {
-    staticClass: "row"
   }, _vm._l(_vm.list, function (restaurant) {
     return _c("div", {
       key: restaurant.id,
-      staticClass: "col-3 my-3 text-center"
+      staticClass: "row justify-content-center"
+    }, [_c("div", {
+      staticClass: "col-8 my-3 text-center"
     }, [_c("div", {
       staticClass: "card",
       on: {
@@ -3037,8 +3037,8 @@ var render = function render() {
       }
     }), _vm._v(" "), _c("div", {
       staticClass: "card-body"
-    }, [_c("h4", [_vm._v(_vm._s(restaurant.name))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(restaurant.address))])])])]);
-  }), 0)]);
+    }, [_c("h4", [_vm._v(_vm._s(restaurant.name))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(restaurant.address))])])])])]);
+  }), 0);
 };
 var staticRenderFns = [];
 render._withStripped = true;
@@ -3266,12 +3266,12 @@ var render = function render() {
     staticClass: "col"
   }, [_c("CategoriesComponent")], 1)]), _vm._v(" "), _c("div", {
     staticClass: "container mb-4"
-  }, [_c("div", {
-    staticClass: "row"
   }, _vm._l(_vm.restaurants, function (restaurant) {
     return _c("div", {
       key: restaurant.id,
-      staticClass: "col-3 my-3 text-center"
+      staticClass: "row justify-content-center"
+    }, [_c("div", {
+      staticClass: "col-8 my-3 text-center"
     }, [_c("div", {
       staticClass: "card",
       on: {
@@ -3287,8 +3287,8 @@ var render = function render() {
       }
     }), _vm._v(" "), _c("div", {
       staticClass: "card-body"
-    }, [_c("h4", [_vm._v(_vm._s(restaurant.name))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(restaurant.address))])])])]);
-  }), 0)])]);
+    }, [_c("h4", [_vm._v(_vm._s(restaurant.name))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(restaurant.address))])])])])]);
+  }), 0)]);
 };
 var staticRenderFns = [];
 render._withStripped = true;
@@ -7734,7 +7734,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".card[data-v-f7622972] {\n  height: 100%;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.card .card-body[data-v-f7622972] {\n  text-align: center;\n  padding: 0;\n  padding-top: 0.5rem;\n}\n.card .card-body h5[data-v-f7622972] {\n  font-size: 1rem !important;\n}\n.card img[data-v-f7622972] {\n  height: 4rem;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n}\n.active[data-v-f7622972] {\n  filter: drop-shadow(2px 4px 6px grey);\n}\n.card[data-v-f7622972]:hover {\n  position: relative;\n  bottom: 20px;\n}", ""]);
+exports.push([module.i, ".card[data-v-f7622972] {\n  height: 100%;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.card .card-body[data-v-f7622972] {\n  text-align: center;\n  padding: 0;\n  padding-top: 0.5rem;\n}\n.card .card-body h5[data-v-f7622972] {\n  font-size: 1rem !important;\n}\n.card img[data-v-f7622972] {\n  height: 4rem;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n}\n.active[data-v-f7622972] {\n  filter: drop-shadow(2px 4px 6px grey);\n}\n.card[data-v-f7622972]:hover {\n  position: relative;\n  bottom: 5px;\n}", ""]);
 
 // exports
 
@@ -7830,7 +7830,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".card[data-v-b236339c] {\n  height: 100%;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.card .card-body[data-v-b236339c] {\n  text-align: center;\n  padding: 0;\n  padding-top: 0.5rem;\n}\n.card img[data-v-b236339c] {\n  height: 8rem;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n}", ""]);
+exports.push([module.i, ".card[data-v-b236339c] {\n  flex-direction: row;\n  height: 100%;\n  cursor: pointer;\n  border-radius: 10px;\n  border: none;\n}\n.card .card-body[data-v-b236339c] {\n  text-align: left;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  padding: 1rem;\n}\n.card .card-body h4[data-v-b236339c] {\n  font-size: 1.3rem;\n  font-weight: bolder;\n}\n.card img[data-v-b236339c] {\n  height: 100%;\n  width: 30%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n  padding: 0.5rem;\n  border-radius: 13px;\n}", ""]);
 
 // exports
 
@@ -7887,7 +7887,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".card[data-v-48bc361b] {\n  height: 100%;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.card .card-body[data-v-48bc361b] {\n  text-align: center;\n  padding: 0;\n  padding-top: 0.5rem;\n}\n.card img[data-v-48bc361b] {\n  height: 8rem;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n}", ""]);
+exports.push([module.i, ".card[data-v-48bc361b] {\n  flex-direction: row;\n  height: 100%;\n  cursor: pointer;\n  border: none;\n}\n.card .card-body[data-v-48bc361b] {\n  text-align: left;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  padding: 1rem;\n}\n.card .card-body h4[data-v-48bc361b] {\n  font-size: 1.3rem;\n  font-weight: bolder;\n}\n.card img[data-v-48bc361b] {\n  height: 100%;\n  width: 30%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n  padding: 0.5rem;\n  border-radius: 13px;\n}", ""]);
 
 // exports
 

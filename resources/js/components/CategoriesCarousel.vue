@@ -3,7 +3,7 @@
 
         <!-- 'carosello' categorie caricate axios -->
         <div class="row">
-            <div class="col my-3" v-for="category in categories" :key="category.id">
+            <div class="col-2 my-3" v-for="category in categories" :key="category.id">
                 <div class="card" :class="{ active: category.id === activeIndex }"
                     @click="showCategoryRestaurants(category.id)">
                     <img :src="category.image" class="card-img-top" :alt="category.name">
@@ -82,6 +82,6 @@ export default {
 
 .card:hover {
     position: relative;
-    bottom: 20px;
+    bottom: 5px;
 }
 </style>
