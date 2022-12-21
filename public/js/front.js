@@ -3024,7 +3024,7 @@ var render = function render() {
       staticClass: "card",
       on: {
         click: function click($event) {
-          return _vm.showRestaurantMenu(restaurant.slug);
+          return _vm.showRestaurantMenu(restaurant);
         }
       }
     }, [_c("img", {
