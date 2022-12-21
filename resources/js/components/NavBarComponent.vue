@@ -12,7 +12,9 @@
 
             <div>
                 <ul>
-                    <li><a href=""><i class="bi bi-car-front"></i> Diventa un rider</a></li>
+                    <li><a
+                            href="https://www.decathlon.it/browse/c0-tutti-gli-sport/c1-ciclismo/c2-biciclette/_/N-6pql59"><i
+                                class="bi bi-car-front"></i> Diventa un rider</a></li>
 
                     <li> <a href="/login"> Accedi</a></li>
 

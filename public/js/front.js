@@ -2741,7 +2741,7 @@ var staticRenderFns = [function () {
     }
   })])]), _vm._v(" "), _c("div", [_c("ul", [_c("li", [_c("a", {
     attrs: {
-      href: ""
+      href: "https://www.decathlon.it/browse/c0-tutti-gli-sport/c1-ciclismo/c2-biciclette/_/N-6pql59"
     }
   }, [_c("i", {
     staticClass: "bi bi-car-front"
