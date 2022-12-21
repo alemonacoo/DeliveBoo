@@ -1,6 +1,5 @@
 <template>
     <div class="container-ac">
-
         <div>
             <PictureComponent />
         </div>
@@ -10,9 +9,11 @@
             <div class="my-5 hh">
                 <h1>{{ this.$route.params.restaurant.name }}</h1>
                 <p>{{ $route.params.restaurant.address }}</p>
-                <hr>
-                <img :src="this.$route.params.restaurant.image" :alt="this.$route.params.restaurant.name">
-
+                <hr />
+                <img
+                    :src="this.$route.params.restaurant.image"
+                    :alt="this.$route.params.restaurant.name"
+                />
             </div>
 
             <!-- lista piatti -->
@@ -21,23 +22,26 @@
             </div>
             <div class="row justify-content-between">
                 <div class="col">
-                    <div class="ristorante mb-4 text-left p-3" v-for="item in menu" :key="item.id">
-                        <div class="menu d-flex align-items-center justify-content-between">
-
+                    <div
+                        class="ristorante mb-4 text-left p-3"
+                        v-for="item in menu"
+                        :key="item.id"
+                    >
+                        <div
+                            class="menu d-flex align-items-center justify-content-between"
+                        >
                             <div class="d-flexx">
                                 <h2>{{ item.name }}</h2>
                                 <p>{{ item.description }}</p>
-                                <p> Da {{ item.price }} $</p>
-                                <button @click="() => onSelect(item)"> Aggiungi al carrello</button>
-
+                                <p>Da {{ item.price }} $</p>
+                                <button @click="() => onSelect(item)">
+                                    Aggiungi al carrello
+                                </button>
                             </div>
-
-
 
                             <div>
-                                <img :src="item.image" alt="">
+                                <img :src="item.image" alt="" />
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -45,21 +49,26 @@
                 <!-- componente carrello -->
                 <div class="col-4">
                     <BasketComponent :selectedItems="clickedItems" />
-                <div class="col-5 flow-area mb-4">
-                    <BasketComponent :selectedItems="clickedItems" ref="form" class="cart"/>
+                    <div class="col-5 flow-area mb-4">
+                        <BasketComponent
+                            :selectedItems="clickedItems"
+                            ref="form"
+                            class="cart"
+                        />
+                    </div>
                 </div>
-            </div>
-            <div class="row checkout-bar" @click="checkout">
-                <div class="col-2">
-                    <i class="bi bi-cart-check"></i>
-                </div>
-                <div class="col-10">
-                    <div class="row">
-                        <div class="col-10">
-                            <h2>10 $</h2>
-                        </div>
-                        <div class="col-10">
-                            <h5>Vai al pagamento</h5>
+                <div class="row checkout-bar" @click="checkout">
+                    <div class="col-2">
+                        <i class="bi bi-cart-check"></i>
+                    </div>
+                    <div class="col-10">
+                        <div class="row">
+                            <div class="col-10">
+                                <h2>10 $</h2>
+                            </div>
+                            <div class="col-10">
+                                <h5>Vai al pagamento</h5>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -71,9 +80,6 @@
 <script>
 import BasketComponent from "../components/BasketComponent.vue";
 import PictureComponent from "../components/PictureComponent.vue";
-
-
-
 
 export default {
     name: "RestaurantMenu",
@@ -90,22 +96,20 @@ export default {
     },
     methods: {
         loadPage(url) {
-            axios.get(url)
-                .then(({ data }) => {
-                    this.menu = data.results;
-                })
+            axios.get(url).then(({ data }) => {
+                this.menu = data.results;
+            });
         },
         onSelect(item) {
             this.clickedItems.push(item);
-        }
+        },
         checkout() {
             this.$refs.form.sendOrder(this.clickedItems);
         },
     },
     components: {
         BasketComponent,
-        PictureComponent
-
+        PictureComponent,
     },
 };
 </script>
@@ -118,11 +122,9 @@ export default {
 }
 
 .tt {
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .hh {
@@ -143,14 +145,14 @@ button {
     background-color: #f36805;
     color: white;
 }
-.flow-area{
+.flow-area {
     flex-grow: 1;
 }
-.cart{
+.cart {
     position: sticky;
-    top: 50px
+    top: 50px;
 }
-.checkout-bar{
+.checkout-bar {
     display: none;
     width: 100vw;
     background-color: #f36805;
@@ -160,23 +162,25 @@ button {
     margin-top: 10px;
     cursor: pointer;
 
-    .bi-cart-check{
+    .bi-cart-check {
         font-size: xx-large;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    .container-fluid{
+    .container-fluid {
         width: 100vw;
     }
-    .flow-area {display: none;}
+    .flow-area {
+        display: none;
+    }
     .checkout-bar {
         display: flex;
         position: fixed;
         bottom: 0;
         z-index: 100;
     }
-    .ristorante{
+    .ristorante {
         align-items: center;
     }
 }
