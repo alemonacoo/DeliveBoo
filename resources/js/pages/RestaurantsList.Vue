@@ -1,6 +1,5 @@
 <template>
     <div class="container">
-
         <!-- componente categorie -->
         <div class="row" @click="zero()">
             <div class="col">
@@ -11,9 +10,17 @@
         <!-- lista ristoranti appartenenti alla categoria cliccata -->
         <div class="container mb-4">
             <div class="row">
-                <div class="col-3 my-3 text-center" v-for="restaurant in restaurants" :key="restaurant.id">
+                <div
+                    class="col-3 my-3 text-center"
+                    v-for="restaurant in restaurants"
+                    :key="restaurant.id"
+                >
                     <div class="card" @click="showRestaurantMenu(restaurant)">
-                        <img :src="restaurant.image" class="card-img-top" :alt="restaurant.name" />
+                        <img
+                            :src="restaurant.image"
+                            class="card-img-top"
+                            :alt="restaurant.name"
+                        />
                         <div class="card-body">
                             <h4>{{ restaurant.name }}</h4>
                             <p>{{ restaurant.address }}</p>
@@ -48,10 +55,10 @@ export default {
         },
         showRestaurantMenu(restaurant) {
             this.$router.push({
-                name: 'restaurant-menu',
+                name: "restaurant-menu",
                 params: {
                     restaurant: restaurant,
-                    slug: restaurant.slug
+                    slug: restaurant.slug,
                 },
             });
         },
@@ -85,4 +92,3 @@ export default {
     }
 }
 </style>
-
