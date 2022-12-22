@@ -3,8 +3,9 @@
 
         <!-- 'carosello' categorie caricate axios -->
         <!-- <div class="row"> -->
-        <carousel :perPageCustom="[[768, 3], [1024, 6]]" class="mt-3">
-            <slide v-for="category in categories" :key="category.id" class="pt-2 px-1">
+        <carousel :perPageCustom="[[768, 3], [1024, 6]]" :navigationEnabled="true" :paginationActiveColor="'#fd7e00'"
+            :paginationPadding="4" :paginationColor="'#c5c5c5'" class="pb-2">
+            <slide v-for="category in categories" :key="category.id" class="slide pt-2 px-1">
                 <div class="card" :class="{ active: category.id === activeIndex }"
                     @click="showCategoryRestaurants(category.id)">
                     <img :src="category.image" class="card-img-top" :alt="category.name">
