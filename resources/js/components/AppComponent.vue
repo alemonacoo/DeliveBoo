@@ -1,5 +1,5 @@
 <template>
-    <div class="container-ac mt-4">
+    <div class="container-fluid mt-4">
 
         <div class="d-flex justify-content-between align-items-baseline margin-ac">
             <div>
@@ -9,8 +9,8 @@
             <div>
                 <h1>Il bello è prenderci gusto</h1>
                 <p>Scarica l'app di Deliveroo e ordina dove vuoi, qualunque cosa desideri.</p>
-                <button><i class="bi bi-google-play"></i> Disponibile su Google</button>
-                <button><i class="bi bi-apple"></i> Scarica su App Store</button>
+                <button class="my-3"><i class="bi bi-google-play"></i> Disponibile su Google</button>
+                <button class="my-3"><i class="bi bi-apple"></i> Scarica su App Store</button>
             </div>
 
 
@@ -36,9 +36,12 @@ img {
 .margin-ac {
     max-width: 1100px;
     margin: 0 auto;
+    display: flex;
+    padding-bottom: 20px;
+
 }
 
-.container-ac {
+.container-fluid {
     background-color: white;
 }
 
@@ -48,5 +51,11 @@ button {
     color: white;
     width: 200px;
     border-radius: 15px;
+}
+@media only screen and (max-width: 600px) {
+    .margin-ac{
+        display: flex;
+        flex-direction: column;
+    }
 }
 </style>
