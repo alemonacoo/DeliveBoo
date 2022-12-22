@@ -18937,3 +18937,368 @@ a.text-dark:focus {
   content: "\F8CC";
 }
 
+nav {
+  background-color: #f6993f !important;
+  padding-block: 1rem;
+}
+
+main.main-container {
+  width: 80vw;
+  margin: auto;
+  margin-top: 3rem;
+}
+
+main.main-container .orange-link {
+  color: #f6993f !important;
+}
+
+main.main-container .relative-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+main.main-container .relative-container .form-title {
+  color: #f6993f;
+  text-align: center;
+  font-size: 2rem;
+}
+
+main.main-container .relative-container .form-container {
+  background-color: white;
+  border: 1px solid #f6993f;
+  border-radius: 10px;
+  width: 50%;
+  margin: auto;
+  margin-top: 3rem;
+  padding: 2rem 3rem;
+  box-shadow: 2px 5px 10px rgba(52, 52, 52, 0.18);
+}
+
+main.main-container .relative-container .form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+main.main-container .relative-container .form-container form .input-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 35% 65%;
+}
+
+main.main-container .relative-container .form-container form .input-container label {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  color: #f6993f;
+  font-size: 1rem;
+}
+
+main.main-container .relative-container .form-container form .input-container input {
+  background-color: rgba(230, 230, 230, 0.5);
+  padding-block: 0.3rem;
+  padding-inline: 0.2rem;
+  border: 1px solid transparent;
+}
+
+main.main-container .relative-container .form-container form .categories-input {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+main.main-container .relative-container .form-container form .categories-input p {
+  color: #f6993f;
+  font-size: 1rem;
+}
+
+main.main-container .relative-container .form-container form .categories-input .categories-container {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media (max-width: 1000px) {
+  main.main-container .relative-container .form-container {
+    width: 70%;
+  }
+}
+
+@media (max-width: 700px) {
+  main.main-container .relative-container .form-container {
+    width: 90%;
+  }
+}
+
+main.main-container .relative-container .error-container {
+  width: 100%;
+  margin: auto;
+  background-color: rgba(255, 0, 0, 0.2);
+  border: 1px solid red;
+  margin-bottom: 1.5rem;
+}
+
+main.main-container .relative-container .error-container p {
+  color: red;
+  text-align: center;
+  padding-block: 0.3rem;
+  margin: 0 !important;
+}
+
+main.main-container .relative-container .menu-items-container {
+  padding-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+main.main-container .relative-container .menu-items-container .single-menu-item {
+  background-color: white;
+  border: 1px solid #f6993f;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: space-between;
+}
+
+main.main-container .relative-container .menu-items-container .single-menu-item h3 {
+  font-size: 1rem;
+  color: #f6993f;
+  font-weight: 800;
+  padding-bottom: 1rem;
+}
+
+main.main-container .relative-container .menu-items-container .single-menu-item a {
+  color: #f6993f;
+}
+
+main.main-container .relative-container .menu-items-container .single-menu-item.add {
+  justify-content: center;
+  align-items: center;
+}
+
+main.main-container .relative-container .menu-items-container .single-menu-item.add a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main.main-container .relative-container .menu-items-container .single-menu-item.add a p {
+  margin: 0;
+}
+
+main.main-container .relative-container .menu-items-container .single-menu-item.add a p:hover {
+  text-decoration: underline;
+}
+
+main.main-container .relative-container .menu-items-container .single-menu-item.add a:hover {
+  text-decoration: none;
+}
+
+main.main-container .relative-container .menu-items-container .single-menu-item.add .plus-btn {
+  width: 3rem;
+  height: 3rem;
+  border: #f6993f solid 3px;
+  border-radius: 50%;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+main.main-container .relative-container .menu-items-container .single-menu-item.add .plus-btn:hover {
+  background-color: #f6993f;
+  color: white;
+}
+
+main.main-container .relative-container .dish {
+  margin-top: 3rem;
+}
+
+main.main-container .relative-container .piatto-container {
+  padding-top: 3rem;
+  width: 50%;
+  margin: auto;
+}
+
+main.main-container .relative-container .piatto-container div {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  margin-bottom: 1rem;
+}
+
+main.main-container .relative-container .piatto-container div .titolo {
+  font-size: 1rem;
+  color: #f6993f;
+}
+
+main.main-container .relative-container .piatto-container .single-dish-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+@media (max-width: 1000px) {
+  main.main-container .relative-container .piatto-container {
+    width: 70%;
+  }
+}
+
+@media (max-width: 700px) {
+  main.main-container .relative-container .piatto-container {
+    width: 90%;
+  }
+}
+
+main.main-container .back-button {
+  font-size: 2rem;
+  color: #f6993f;
+  border: #f6993f 3px solid;
+  border-radius: 50%;
+  padding: 0.1rem 1.1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+main.main-container .back-button:hover {
+  background-color: #f6993f;
+  color: white;
+  text-decoration: none;
+  border: #f6993f 3px solid;
+  border-radius: 50%;
+  padding: 0.1rem 1.1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+main.main-container a.button-global button {
+  background-color: white;
+  border: #f6993f solid 1px;
+  padding-inline: 1.5rem;
+  padding-block: 0.3rem;
+  color: #f6993f;
+  font-weight: 900;
+  font-size: 0.9rem;
+  border-radius: 5px;
+}
+
+main.main-container a.button-global button:hover {
+  background-color: #f6993f;
+  border: transparent solid 1px;
+  color: white;
+}
+
+main.main-container a.button-global.red button:hover {
+  background-color: rgb(220, 67, 67);
+}
+
+main.main-container .restaurant-cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+main.main-container .my-restaurants-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+main.main-container a.restaurant-card {
+  border: 1px solid #f6993f;
+  color: #f6993f;
+  border-radius: 10px;
+  box-shadow: 2px 8px 20px rgba(49, 49, 49, 0.3137254902);
+  padding-bottom: 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+main.main-container a.restaurant-card .restaurant-class-img {
+  width: 100%;
+  height: 13rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  padding-bottom: 1rem;
+}
+
+main.main-container .single-restaurant-container {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  position: relative;
+  padding-left: 6rem;
+}
+
+main.main-container .single-restaurant-container img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 80vh;
+}
+
+main.main-container .restaurant-info-container {
+  padding-inline: 3rem;
+  padding-block: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main.main-container .restaurant-info-container h1,
+main.main-container .restaurant-info-container h3 {
+  color: #f6993f;
+}
+
+main.main-container .restaurant-info-container .single-restaurant-btn-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+main.main-container .restaurant-info-container .single-restaurant-btn-container a {
+  width: 100%;
+}
+
+main.main-container .restaurant-info-container .single-restaurant-btn-container a button {
+  width: 100%;
+}
+
+main.main-container .orders-container {
+  padding-bottom: 5rem;
+}
+
+main.main-container .orders-container .orange {
+  background-color: #f6993f;
+}
+
+main.main-container .orders-container .orange p {
+  color: white;
+}
+
+main.main-container .orders-container .orders-columns {
+  display: grid;
+  grid-template-columns: 10% 40% 40% 10%;
+  border-bottom: 1px solid #f6993f;
+}
+
+main.main-container .orders-container .orders-columns p {
+  display: flex;
+  font-size: 1rem;
+  margin: 0;
+  padding-block: 0.5rem;
+  padding-left: 1rem;
+}
+

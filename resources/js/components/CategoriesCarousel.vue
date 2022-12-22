@@ -1,6 +1,7 @@
 <template>
-    <div class="container my-5">
+    <div class="container">
 
+        <!-- 'carosello' categorie caricate axios -->
         <div class="row">
             <div class="col my-3" v-for="category in categories" :key="category.id">
                 <div class="card" :class="{ active: category.id === activeIndex }"
@@ -13,6 +14,7 @@
             </div>
         </div>
 
+        <!-- compoenente ristoranti -->
         <div class="row">
             <RestaurantsComponent :list="restaurants" />
         </div>

@@ -1,10 +1,15 @@
 <template>
     <div class="container-fluid">
         <div class="tt">
+
+            <!-- card ristorante -->
             <div class="my-5 hh">
-                <h1>{{ this.$route.params.slug }}</h1>
+                <h1>{{ this.$route.params.restaurant.name }}</h1>
                 <hr>
+                <img :src="this.$route.params.restaurant.image" :alt="this.$route.params.restaurant.name">
             </div>
+
+            <!-- lista piatti -->
             <div class="row mb-3">
                 <h2>Il nostro Menu</h2>
             </div>
@@ -19,8 +24,10 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- componente carrello -->
                 <div class="col-5 flow-area mb-4">
-                    <BasketComponent :selectedItems="clickedItems" ref="form" class="cart"/>
+                    <BasketComponent :selectedItems="clickedItems" ref="form" class="cart" />
                 </div>
             </div>
             <div class="row checkout-bar" @click="checkout">
@@ -55,7 +62,7 @@ export default {
     },
     props: {},
     mounted() {
-        const slug = this.$route.params.slug;
+        const slug = this.$route.params.restaurant.slug;
         this.loadPage("/api/restaurants/" + slug + "/menus");
     },
     methods: {
@@ -106,14 +113,17 @@ button {
     background-color: #f36805;
     color: white;
 }
-.flow-area{
+
+.flow-area {
     flex-grow: 1;
 }
-.cart{
+
+.cart {
     position: sticky;
     top: 50px
 }
-.checkout-bar{
+
+.checkout-bar {
     display: none;
     width: 100vw;
     height: 90px;
@@ -124,24 +134,33 @@ button {
     margin-top: 10px;
     cursor: pointer;
 
-    .bi-cart-check{
+    .bi-cart-check {
         font-size: xx-large;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    .container-fluid{
+    .container-fluid {
         width: 100vw;
     }
-    .flow-area {display: none;}
+
+    .flow-area {
+        display: none;
+    }
+
     .checkout-bar {
         display: flex;
         position: fixed;
         bottom: 0;
         z-index: 100;
     }
-    .ristorante{
+
+    .ristorante {
         align-items: center;
     }
+}
+
+img {
+    width: 50%;
 }
 </style>
