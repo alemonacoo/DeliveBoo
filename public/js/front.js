@@ -3122,11 +3122,17 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("div", [_c("h2", [_vm._v("Page Not Found")]), _vm._v(" "), _c("router-link", {
+  return _c("div", {
+    staticClass: "container"
+  }, [_c("div", {
+    staticClass: "row"
+  }, [_c("div", {
+    staticClass: "col-12 text-center"
+  }, [_c("h2", [_vm._v("Page Not Found")]), _vm._v(" "), _c("router-link", {
     attrs: {
       to: "/"
     }
-  }, [_vm._v("Vai alla Home")])], 1);
+  }, [_vm._v("Vai alla Home")])], 1)])]);
 };
 var staticRenderFns = [];
 render._withStripped = true;
