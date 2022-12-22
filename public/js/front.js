@@ -2632,7 +2632,7 @@ var staticRenderFns = [function () {
   }, [_c("div", {
     staticClass: "row"
   }, [_c("div", {
-    staticClass: "col-4"
+    staticClass: "col"
   }, [_c("h3", [_vm._v("Scarica l'app")]), _vm._v(" "), _c("div", {
     staticClass: "d-flex"
   }, [_c("button", {
@@ -2644,9 +2644,9 @@ var staticRenderFns = [function () {
   }, [_c("i", {
     staticClass: "bi bi-apple"
   }), _vm._v(" Scarica su App Store")])])]), _vm._v(" "), _c("div", {
-    staticClass: "col-4"
+    staticClass: "col"
   }, [_c("h3", [_vm._v("Feedback")]), _vm._v(" "), _c("p", [_vm._v("Aiutaci a migliorare il nostro sito")]), _vm._v(" "), _c("p", [_vm._v("Invia feedback")])]), _vm._v(" "), _c("div", {
-    staticClass: "col-4"
+    staticClass: "col"
   }, [_c("h3", [_vm._v("Seguici su:")]), _vm._v(" "), _c("div", {
     staticClass: "d-flex social"
   }, [_c("p", [_c("i", {
@@ -7734,7 +7734,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".row[data-v-80d9706c] {\n  max-width: 1200px;\n  margin: 0 auto;\n}\n.col-4[data-v-80d9706c] {\n  display: flex;\n  flex-direction: column;\n}\nbutton[data-v-80d9706c] {\n  border: 0;\n  background-color: black;\n  color: white;\n  width: 150px;\n  margin: 5px;\n}\n.social[data-v-80d9706c] {\n  -moz-column-gap: 50px;\n       column-gap: 50px;\n}\n.social i[data-v-80d9706c] {\n  font-size: 30px;\n}", ""]);
+exports.push([module.i, ".row[data-v-80d9706c] {\n  max-width: 1200px;\n  margin: 0 auto;\n}\n.col[data-v-80d9706c] {\n  display: flex;\n  flex-direction: column;\n}\nbutton[data-v-80d9706c] {\n  border: 0;\n  background-color: black;\n  color: white;\n  width: 150px;\n  margin: 5px;\n}\n.social[data-v-80d9706c] {\n  -moz-column-gap: 50px;\n       column-gap: 50px;\n}\n.social i[data-v-80d9706c] {\n  font-size: 30px;\n}\n@media only screen and (max-width: 600px) {\n.container-fluid[data-v-80d9706c] {\n    padding-bottom: 90px;\n}\n.container-fluid .row[data-v-80d9706c] {\n    flex-direction: column !important;\n}\n.container-fluid .row .col[data-v-80d9706c] {\n    flex-direction: column !important;\n    margin-bottom: 10px;\n}\n}\n/* Medium devices (landscape tablets, 768px and up) */\n@media only screen and (max-width: 768px) {\n.row[data-v-80d9706c] {\n    flex-direction: column !important;\n}\n.row .col[data-v-80d9706c] {\n    flex-direction: column !important;\n    margin-bottom: 10px;\n}\n}", ""]);
 
 // exports
 
@@ -7830,7 +7830,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".ristorante[data-v-14400205] {\n  box-shadow: 5px 5px 5px 1px black;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.tt[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.hh[data-v-14400205] {\n  width: 400px;\n  height: 400px;\n  background-color: gray;\n  border-radius: 15px;\n  text-align: center;\n}\nbutton[data-v-14400205] {\n  border-radius: 15px;\n  width: 150px;\n  border: 0;\n  background-color: #f36805;\n  color: white;\n}\n.flow-area[data-v-14400205] {\n  flex-grow: 1;\n}\n.cart[data-v-14400205] {\n  position: sticky;\n  top: 50px;\n}\n.checkout-bar[data-v-14400205] {\n  display: none;\n  width: 100vw;\n  background-color: #f36805;\n  color: #fff;\n  font-weight: bolder !important;\n  padding: 10px;\n  margin-top: 10px;\n  cursor: pointer;\n}\n.checkout-bar .bi-cart-check[data-v-14400205] {\n  font-size: xx-large;\n}\n@media only screen and (max-width: 600px) {\n.container-fluid[data-v-14400205] {\n    width: 100vw;\n}\n.flow-area[data-v-14400205] {\n    display: none;\n}\n.checkout-bar[data-v-14400205] {\n    display: flex;\n    position: fixed;\n    bottom: 0;\n    z-index: 100;\n}\n.ristorante[data-v-14400205] {\n    align-items: center;\n}\n}", ""]);
+exports.push([module.i, ".ristorante[data-v-14400205] {\n  box-shadow: 5px 5px 5px 1px black;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.tt[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.hh[data-v-14400205] {\n  width: 400px;\n  height: 400px;\n  background-color: gray;\n  border-radius: 15px;\n  text-align: center;\n}\nbutton[data-v-14400205] {\n  border-radius: 15px;\n  width: 150px;\n  border: 0;\n  background-color: #f36805;\n  color: white;\n}\n.flow-area[data-v-14400205] {\n  flex-grow: 1;\n}\n.cart[data-v-14400205] {\n  position: sticky;\n  top: 50px;\n}\n.checkout-bar[data-v-14400205] {\n  display: none;\n  width: 100vw;\n  height: 90px;\n  background-color: #f36805;\n  color: #fff;\n  font-weight: bolder !important;\n  padding: 10px;\n  margin-top: 10px;\n  cursor: pointer;\n}\n.checkout-bar .bi-cart-check[data-v-14400205] {\n  font-size: xx-large;\n}\n@media only screen and (max-width: 600px) {\n.container-fluid[data-v-14400205] {\n    width: 100vw;\n}\n.flow-area[data-v-14400205] {\n    display: none;\n}\n.checkout-bar[data-v-14400205] {\n    display: flex;\n    position: fixed;\n    bottom: 0;\n    z-index: 100;\n}\n.ristorante[data-v-14400205] {\n    align-items: center;\n}\n}", ""]);
 
 // exports
 
