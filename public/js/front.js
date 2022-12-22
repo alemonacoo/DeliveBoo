@@ -2363,7 +2363,7 @@ var staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    staticClass: "container-ac mt-4"
+    staticClass: "container-fluid mt-4"
   }, [_c("div", {
     staticClass: "d-flex justify-content-between align-items-baseline margin-ac"
   }, [_c("div", [_c("img", {
@@ -2371,9 +2371,13 @@ var staticRenderFns = [function () {
       src: __webpack_require__(/*! ../assets/img/apps_promo-wide-je.png */ "./resources/js/assets/img/apps_promo-wide-je.png"),
       alt: ""
     }
-  })]), _vm._v(" "), _c("div", [_c("h1", [_vm._v("Il bello è prenderci gusto")]), _vm._v(" "), _c("p", [_vm._v("Scarica l'app di Deliveroo e ordina dove vuoi, qualunque cosa desideri.")]), _vm._v(" "), _c("button", [_c("i", {
+  })]), _vm._v(" "), _c("div", [_c("h1", [_vm._v("Il bello è prenderci gusto")]), _vm._v(" "), _c("p", [_vm._v("Scarica l'app di Deliveroo e ordina dove vuoi, qualunque cosa desideri.")]), _vm._v(" "), _c("button", {
+    staticClass: "my-3"
+  }, [_c("i", {
     staticClass: "bi bi-google-play"
-  }), _vm._v(" Disponibile su Google")]), _vm._v(" "), _c("button", [_c("i", {
+  }), _vm._v(" Disponibile su Google")]), _vm._v(" "), _c("button", {
+    staticClass: "my-3"
+  }, [_c("i", {
     staticClass: "bi bi-apple"
   }), _vm._v(" Scarica su App Store")])])])]);
 }];
@@ -7677,7 +7681,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "img[data-v-cd268472] {\n  width: 400px;\n}\n.margin-ac[data-v-cd268472] {\n  max-width: 1100px;\n  margin: 0 auto;\n}\n.container-ac[data-v-cd268472] {\n  background-color: white;\n}\nbutton[data-v-cd268472] {\n  border: 0;\n  background-color: black;\n  color: white;\n  width: 200px;\n  border-radius: 15px;\n}", ""]);
+exports.push([module.i, "img[data-v-cd268472] {\n  width: 400px;\n}\n.margin-ac[data-v-cd268472] {\n  max-width: 1100px;\n  margin: 0 auto;\n  display: flex;\n  padding-bottom: 20px;\n}\n.container-fluid[data-v-cd268472] {\n  background-color: white;\n}\nbutton[data-v-cd268472] {\n  border: 0;\n  background-color: black;\n  color: white;\n  width: 200px;\n  border-radius: 15px;\n}\n@media only screen and (max-width: 600px) {\n.margin-ac[data-v-cd268472] {\n    display: flex;\n    flex-direction: column;\n}\n}", ""]);
 
 // exports
 
