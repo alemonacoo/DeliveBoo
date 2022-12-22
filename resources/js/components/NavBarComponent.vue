@@ -60,6 +60,8 @@ i {
 }
 
 li {
+    padding: 0 10px;
+
     a:hover {
         background-color: aliceblue;
         border: 10px solid aliceblue;

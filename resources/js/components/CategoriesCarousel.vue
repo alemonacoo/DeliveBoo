@@ -93,4 +93,8 @@ export default {
     position: relative;
     bottom: 5px;
 }
+
+.slide {
+    margin-top: 2.3rem;
+}
 </style>
