@@ -50,7 +50,8 @@
                     {{ selectedItem.name }}
                 </div>
                 <div class="col-4">
-                    {{ selectedItem.price }} $
+                    {{ selectedItem.price }} $ <i class="bi bi-x-circle-fill remove-item"
+                        @click="deleteItem(index)"></i>
                 </div>
                 <hr class="border border-dark w-100">
             </div>
@@ -109,6 +110,9 @@ export default {
             console.log(total);
             return Math.round((total + Number.EPSILON) * 100) / 100;
         },
+        deleteItem(index) {
+            this.selectedItems.splice(index, 1);
+        }
     },
 };
 </script>

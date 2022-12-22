@@ -1992,6 +1992,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }
       console.log(total);
       return Math.round((total + Number.EPSILON) * 100) / 100;
+    },
+    deleteItem: function deleteItem(index) {
+      this.selectedItems.splice(index, 1);
     }
   }
 });
@@ -2522,7 +2525,14 @@ var render = function render() {
       staticClass: "col-8"
     }, [_vm._v("\n                " + _vm._s(selectedItem.name) + "\n            ")]), _vm._v(" "), _c("div", {
       staticClass: "col-4"
-    }, [_vm._v("\n                " + _vm._s(selectedItem.price) + " $\n            ")]), _vm._v(" "), _c("hr", {
+    }, [_vm._v("\n                " + _vm._s(selectedItem.price) + " $ "), _c("i", {
+      staticClass: "bi bi-x-circle-fill remove-item",
+      on: {
+        click: function click($event) {
+          return _vm.deleteItem(index);
+        }
+      }
+    })]), _vm._v(" "), _c("hr", {
       staticClass: "border border-dark w-100"
     })]);
   }), _vm._v(" "), _c("div", {
