@@ -2686,7 +2686,7 @@ var staticRenderFns = [function () {
   }, [_c("div", {
     staticClass: "links-1"
   }, [_c("div", {
-    staticClass: "row"
+    staticClass: "row mx-2 w-100"
   }, [_c("div", {
     staticClass: "col"
   }, [_c("h5", [_vm._v("Servizio Clienti")]), _vm._v(" "), _c("ul", [_c("li", [_vm._v("Domande Frequenti")]), _vm._v(" "), _c("li", [_vm._v("Accedi")]), _vm._v(" "), _c("li", [_vm._v("Registrati")]), _vm._v(" "), _c("li", [_vm._v("Miglior Prezzo Garantito")])])]), _vm._v(" "), _c("div", {
