@@ -4,6 +4,9 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 import router from './router';
+import Vue from 'vue';
+import VueCarousel from 'vue-carousel';
+Vue.use(VueCarousel);
 
 require('./bootstrap');
 

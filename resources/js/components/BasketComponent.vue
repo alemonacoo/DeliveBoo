@@ -20,25 +20,24 @@
         </div>
         <div class="row my-2">
             <div class="col form-group">
-                <input type="text" class="form-control" id="inputAddress" v-model="address" placeholder="Inserisci il tuo indirizzo completo" />
+                <input type="text" class="form-control" id="inputAddress" v-model="address"
+                    placeholder="Inserisci il tuo indirizzo completo" />
             </div>
         </div>
         <div class="row my-4">
             <div class="col my-0">
                 <a href="#" id="btn-checkout" class="btn btn-primary btn-lg btn-block" @click="sendOrder">
                     <i class="bi bi-cart-check"></i>
-                    <span class="btn-txt">Vai al pagamento</span></a>
+                    <span class="btn-txt">Concludi Ordine</span></a>
             </div>
         </div>
         <div class="row my-4">
             <div class="col btn-group btn-group-toggle btn-custom my-0 dh-mx">
-                <button class="btn btn-custom toggle" @click="toggle"
-                    :class="[showDeliveryMethod ? 'active' : '']">
+                <button class="btn btn-custom toggle" @click="toggle" :class="[showDeliveryMethod ? 'active' : '']">
                     <i class="bi bi-bicycle"></i>
                     <span class="btn-txt">Consegna</span>
                 </button>
-                <button class="btn btn-custom toggle" @click="toggle"
-                    :class="[!showDeliveryMethod ? 'active' : '']">
+                <button class="btn btn-custom toggle" @click="toggle" :class="[!showDeliveryMethod ? 'active' : '']">
                     <i class="bi bi-bag"></i>
                     <span class="btn-txt">Ritiro al locale</span>
                 </button>
@@ -108,7 +107,7 @@ export default {
                 total += this.selectedItems[i].price;
             }
             console.log(total);
-            return total;
+            return Math.round((total + Number.EPSILON) * 100) / 100;
         },
     },
 };
@@ -145,7 +144,7 @@ export default {
     font-weight: bolder !important;
 }
 
-.qq{
+.qq {
     justify-content: space-between;
     font-size: larger;
     font-weight: bolder;
@@ -167,7 +166,9 @@ export default {
 }
 
 @media only screen and (max-width: 600px) {
-    .btn-txt {display: none;}
+    .btn-txt {
+        display: none;
+    }
 
 }
 
@@ -175,17 +176,15 @@ export default {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
-    .btn-txt {display: none;}
+    .btn-txt {
+        display: none;
+    }
 
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-}
+@media only screen and (min-width: 992px) {}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
-}
+@media only screen and (min-width: 1200px) {}
 </style>
