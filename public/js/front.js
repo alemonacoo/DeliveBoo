@@ -2377,7 +2377,7 @@ var staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    staticClass: "container-ac pt-4"
+    staticClass: "container-ac mt-4"
   }, [_c("div", {
     staticClass: "d-flex justify-content-between align-items-baseline margin-ac"
   }, [_c("div", [_c("img", {
