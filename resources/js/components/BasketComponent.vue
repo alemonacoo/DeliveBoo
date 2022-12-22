@@ -155,7 +155,8 @@ export default {
 .container {
     // padding: 30px 20px;
     // width: 400px;
-    border: 2px solid #000;
+    border: 2px solid rgb(253, 253, 253);
+    box-shadow: 2px 5px 10px rgba(52, 52, 52, 0.18);
     border-radius: 10px;
     background-color: #fff;
 

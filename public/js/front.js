@@ -2377,15 +2377,19 @@ var staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    staticClass: "container-fluid mt-4"
+    staticClass: "container-fluid pt-4"
   }, [_c("div", {
-    staticClass: "d-flex justify-content-between align-items-baseline margin-ac"
+    staticClass: "d-flex justify-content-around align-items-center margin-ac"
   }, [_c("div", [_c("img", {
     attrs: {
       src: __webpack_require__(/*! ../assets/img/apps_promo-wide-je.png */ "./resources/js/assets/img/apps_promo-wide-je.png"),
       alt: ""
     }
-  })]), _vm._v(" "), _c("div", [_c("h1", [_vm._v("Il bello è prenderci gusto")]), _vm._v(" "), _c("p", [_vm._v("Scarica l'app di Deliveroo e ordina dove vuoi, qualunque cosa desideri.")]), _vm._v(" "), _c("button", {
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "store"
+  }, [_c("h1", [_vm._v("Il bello è prenderci gusto")]), _vm._v(" "), _c("p", [_vm._v("Scarica l'app di Deliveroo e ordina dove vuoi, qualunque cosa desideri.")]), _vm._v(" "), _c("div", {
+    staticClass: "store"
+  }, [_c("button", {
     staticClass: "my-3"
   }, [_c("i", {
     staticClass: "bi bi-google-play"
@@ -2393,7 +2397,7 @@ var staticRenderFns = [function () {
     staticClass: "my-3"
   }, [_c("i", {
     staticClass: "bi bi-apple"
-  }), _vm._v(" Scarica su App Store")])])])]);
+  }), _vm._v(" Scarica su App Store")])])])])]);
 }];
 render._withStripped = true;
 
@@ -2718,9 +2722,9 @@ var staticRenderFns = [function () {
     staticClass: "col"
   }, [_c("h5", [_vm._v("Cucine")]), _vm._v(" "), _c("ul", [_c("li", [_vm._v("Vegetariano")]), _vm._v(" "), _c("li", [_vm._v("Messicano")]), _vm._v(" "), _c("li", [_vm._v("Cinese")]), _vm._v(" "), _c("li", [_vm._v("Indiano")]), _vm._v(" "), _c("li", [_vm._v("Greco")]), _vm._v(" "), _c("li", [_vm._v("Giapponese")]), _vm._v(" "), _c("li", [_vm._v("Italiano")]), _vm._v(" "), _c("li", [_vm._v("Thai")]), _vm._v(" "), _c("li", [_vm._v("Pizza")]), _vm._v(" "), _c("li", [_vm._v("Americano")])])]), _vm._v(" "), _c("div", {
     staticClass: "col"
-  }, [_c("h5", [_vm._v("Catene")]), _vm._v(" "), _c("ul", [_c("li", [_vm._v("Alice Pizza")]), _vm._v(" "), _c("li", [_vm._v("Burger King")]), _vm._v(" "), _c("li", [_vm._v("Zushi")]), _vm._v(" "), _c("li", [_vm._v("Old Wild West")]), _vm._v(" "), _c("li", [_vm._v("Poke House")]), _vm._v(" "), _c("li", [_vm._v("RoadHouse")]), _vm._v(" "), _c("li", [_vm._v("Sushiko")]), _vm._v(" "), _c("li", [_vm._v("KFC")]), _vm._v(" "), _c("li", [_vm._v("Fratelli La Bufala")]), _vm._v(" "), _c("li", [_vm._v("McDonald's")])])]), _vm._v(" "), _c("div", {
-    staticClass: "col"
   }, [_c("h5", [_vm._v("Città")]), _vm._v(" "), _c("ul", [_c("li", [_vm._v("Milano")]), _vm._v(" "), _c("li", [_vm._v("Roma")]), _vm._v(" "), _c("li", [_vm._v("Firenze")]), _vm._v(" "), _c("li", [_vm._v("Salerno")]), _vm._v(" "), _c("li", [_vm._v("Padova")]), _vm._v(" "), _c("li", [_vm._v("Parma")]), _vm._v(" "), _c("li", [_vm._v("Ferrara")]), _vm._v(" "), _c("li", [_vm._v("Napoli")]), _vm._v(" "), _c("li", [_vm._v("Udine")]), _vm._v(" "), _c("li", [_vm._v("Campobasso")]), _vm._v(" "), _c("li", [_vm._v("Varese")])])]), _vm._v(" "), _c("div", {
+    staticClass: "col"
+  }, [_c("h5", [_vm._v("Catene")]), _vm._v(" "), _c("ul", [_c("li", [_vm._v("Alice Pizza")]), _vm._v(" "), _c("li", [_vm._v("Burger King")]), _vm._v(" "), _c("li", [_vm._v("Zushi")]), _vm._v(" "), _c("li", [_vm._v("Old Wild West")]), _vm._v(" "), _c("li", [_vm._v("Poke House")]), _vm._v(" "), _c("li", [_vm._v("RoadHouse")]), _vm._v(" "), _c("li", [_vm._v("Sushiko")]), _vm._v(" "), _c("li", [_vm._v("KFC")]), _vm._v(" "), _c("li", [_vm._v("Fratelli La Bufala")]), _vm._v(" "), _c("li", [_vm._v("McDonald's")])])]), _vm._v(" "), _c("div", {
     staticClass: "col"
   }, [_c("h5", [_vm._v("Chi Siamo")]), _vm._v(" "), _c("ul", [_c("li", [_vm._v("Informazioni su Deliveroo")]), _vm._v(" "), _c("li", [_vm._v("Diventa partner di Deliveroo")]), _vm._v(" "), _c("li", [_vm._v("Programma Bug Bounty")]), _vm._v(" "), _c("li", [_vm._v("Partner Center")])])])])]), _vm._v(" "), _c("div", {
     staticClass: "links-2"
@@ -2969,7 +2973,9 @@ var staticRenderFns = [function () {
       src: __webpack_require__(/*! ../assets/img/WhatsApp Image 2022-12-20 at 11.30.31.jpeg */ "./resources/js/assets/img/WhatsApp Image 2022-12-20 at 11.30.31.jpeg"),
       alt: ""
     }
-  })])]), _vm._v(" "), _c("div", [_c("ul", [_c("li", [_c("a", {
+  })])]), _vm._v(" "), _c("div", [_c("ul", [_c("li", {
+    staticClass: "invisible1"
+  }, [_c("a", {
     attrs: {
       href: "https://www.decathlon.it/browse/c0-tutti-gli-sport/c1-ciclismo/c2-biciclette/_/N-6pql59"
     }
@@ -2979,7 +2985,9 @@ var staticRenderFns = [function () {
     attrs: {
       href: "/login"
     }
-  }, [_vm._v(" Accedi")])]), _vm._v(" "), _c("li", [_c("a", {
+  }, [_vm._v(" Accedi")])]), _vm._v(" "), _c("li", {
+    staticClass: "invisible1"
+  }, [_c("a", {
     attrs: {
       href: ""
     }
@@ -3181,7 +3189,7 @@ var render = function render() {
     staticClass: "tt"
   }, [_c("div", {
     staticClass: "my-5 hh"
-  }, [_c("h1", [_vm._v(_vm._s(this.$route.params.restaurant.name))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.$route.params.restaurant.address))]), _vm._v(" "), _c("hr"), _vm._v(" "), _c("div", {
+  }, [_c("h1", [_vm._v(_vm._s(this.$route.params.restaurant.name))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.$route.params.restaurant.address))]), _vm._v(" "), _c("div", {
     staticClass: "restaurant-img"
   }, [_c("img", {
     attrs: {
@@ -7716,7 +7724,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "img[data-v-cd268472] {\n  width: 400px;\n}\n.margin-ac[data-v-cd268472] {\n  max-width: 1100px;\n  margin: 0 auto;\n  display: flex;\n  padding-bottom: 20px;\n}\n.container-fluid[data-v-cd268472] {\n  background-color: white;\n}\nbutton[data-v-cd268472] {\n  border: 0;\n  background-color: black;\n  color: white;\n  width: 200px;\n  border-radius: 15px;\n}\n@media only screen and (max-width: 600px) {\n.margin-ac[data-v-cd268472] {\n    display: flex;\n    flex-direction: column;\n}\n}", ""]);
+exports.push([module.i, "img[data-v-cd268472] {\n  width: 400px;\n}\n.margin-ac[data-v-cd268472] {\n  max-width: 1100px;\n  margin: 0 auto;\n  display: flex;\n  padding-bottom: 20px;\n}\n.container-fluid[data-v-cd268472] {\n  background-color: white;\n}\nbutton[data-v-cd268472] {\n  border: 0;\n  background-color: black;\n  color: white;\n  width: 200px;\n  border-radius: 15px;\n}\n@media only screen and (max-width: 600px) {\n.margin-ac[data-v-cd268472] {\n    display: flex;\n    flex-direction: column;\n    align-items: center !important;\n}\n.store[data-v-cd268472] {\n    text-align: center;\n}\n}\n@media only screen and (max-width: 768px) {\n.margin-ac[data-v-cd268472] {\n    display: flex;\n    flex-direction: column;\n    align-items: center !important;\n}\n.store[data-v-cd268472] {\n    text-align: center;\n}\n}", ""]);
 
 // exports
 
@@ -7735,7 +7743,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".dh-mx[data-v-68bf2a88] {\n  margin-inline: 15px !important;\n}\n.btn-custom[data-v-68bf2a88],\n#btn-checkout[data-v-68bf2a88] {\n  border-radius: 2rem;\n  border: none;\n}\n.btn-custom[data-v-68bf2a88] {\n  background-color: rgb(60, 60, 60);\n  color: rgb(205, 205, 205);\n}\n#btn-checkout[data-v-68bf2a88] {\n  background-color: #f36805;\n  font-weight: bolder !important;\n}\n.btn-custom.active[data-v-68bf2a88] {\n  border-radius: 2rem !important;\n  background-color: #fff !important;\n  color: #000 !important;\n  font-weight: bolder !important;\n}\n.qq[data-v-68bf2a88] {\n  justify-content: space-between;\n  font-size: larger;\n  font-weight: bolder;\n}\n.container[data-v-68bf2a88] {\n  border: 2px solid #000;\n  border-radius: 10px;\n  background-color: #fff;\n}\n.container .btn-group[data-v-68bf2a88] {\n  padding: 2px !important;\n  background-color: rgb(60, 60, 60);\n}\n@media only screen and (max-width: 600px) {\n.btn-txt[data-v-68bf2a88] {\n    display: none;\n}\n}\n/* Medium devices (landscape tablets, 768px and up) */\n@media only screen and (max-width: 768px) {\n.btn-txt[data-v-68bf2a88] {\n    display: none;\n}\n}\n/* Large devices (laptops/desktops, 992px and up) */\n/* Extra large devices (large laptops and desktops, 1200px and up) */", ""]);
+exports.push([module.i, ".dh-mx[data-v-68bf2a88] {\n  margin-inline: 15px !important;\n}\n.btn-custom[data-v-68bf2a88],\n#btn-checkout[data-v-68bf2a88] {\n  border-radius: 2rem;\n  border: none;\n}\n.btn-custom[data-v-68bf2a88] {\n  background-color: rgb(60, 60, 60);\n  color: rgb(205, 205, 205);\n}\n#btn-checkout[data-v-68bf2a88] {\n  background-color: #f36805;\n  font-weight: bolder !important;\n}\n.btn-custom.active[data-v-68bf2a88] {\n  border-radius: 2rem !important;\n  background-color: #fff !important;\n  color: #000 !important;\n  font-weight: bolder !important;\n}\n.qq[data-v-68bf2a88] {\n  justify-content: space-between;\n  font-size: larger;\n  font-weight: bolder;\n}\n.container[data-v-68bf2a88] {\n  border: 2px solid rgb(253, 253, 253);\n  box-shadow: 2px 5px 10px rgba(52, 52, 52, 0.18);\n  border-radius: 10px;\n  background-color: #fff;\n}\n.container .btn-group[data-v-68bf2a88] {\n  padding: 2px !important;\n  background-color: rgb(60, 60, 60);\n}\n@media only screen and (max-width: 600px) {\n.btn-txt[data-v-68bf2a88] {\n    display: none;\n}\n}\n/* Medium devices (landscape tablets, 768px and up) */\n@media only screen and (max-width: 768px) {\n.btn-txt[data-v-68bf2a88] {\n    display: none;\n}\n}\n/* Large devices (laptops/desktops, 992px and up) */\n/* Extra large devices (large laptops and desktops, 1200px and up) */", ""]);
 
 // exports
 
@@ -7773,7 +7781,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".row[data-v-80d9706c] {\n  max-width: 1200px;\n  margin: 0 auto;\n}\n.col[data-v-80d9706c] {\n  display: flex;\n  flex-direction: column;\n}\nbutton[data-v-80d9706c] {\n  border: 0;\n  background-color: black;\n  color: white;\n  width: 150px;\n  margin: 5px;\n}\n.social[data-v-80d9706c] {\n  -moz-column-gap: 50px;\n       column-gap: 50px;\n}\n.social i[data-v-80d9706c] {\n  font-size: 30px;\n}\n@media only screen and (max-width: 600px) {\n.container-fluid[data-v-80d9706c] {\n    padding-bottom: 90px;\n}\n.container-fluid .row[data-v-80d9706c] {\n    flex-direction: column !important;\n}\n.container-fluid .row .col[data-v-80d9706c] {\n    flex-direction: column !important;\n    margin-bottom: 10px;\n}\n}\n/* Medium devices (landscape tablets, 768px and up) */\n@media only screen and (max-width: 768px) {\n.row[data-v-80d9706c] {\n    flex-direction: column !important;\n}\n.row .col[data-v-80d9706c] {\n    flex-direction: column !important;\n    margin-bottom: 10px;\n}\n}", ""]);
+exports.push([module.i, ".row[data-v-80d9706c] {\n  max-width: 1200px;\n  margin: 0 auto;\n}\n.col[data-v-80d9706c] {\n  display: flex;\n  flex-direction: column;\n}\nbutton[data-v-80d9706c] {\n  border: 0;\n  background-color: black;\n  color: white;\n  width: 150px;\n  margin: 5px;\n}\n.social[data-v-80d9706c] {\n  -moz-column-gap: 50px;\n       column-gap: 50px;\n}\n.social i[data-v-80d9706c] {\n  font-size: 30px;\n}\n@media only screen and (max-width: 600px) {\n.container-fluid[data-v-80d9706c] {\n    padding-bottom: 90px;\n}\n.container-fluid .row[data-v-80d9706c] {\n    flex-direction: column !important;\n}\n.container-fluid .row .col[data-v-80d9706c] {\n    flex-direction: column !important;\n    margin-bottom: 10px;\n    align-items: center;\n}\n}\n/* Medium devices (landscape tablets, 768px and up) */\n@media only screen and (max-width: 768px) {\n.row[data-v-80d9706c] {\n    flex-direction: column !important;\n}\n.row .col[data-v-80d9706c] {\n    flex-direction: column !important;\n    margin-bottom: 10px;\n    align-items: center;\n}\n}", ""]);
 
 // exports
 
@@ -7792,7 +7800,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".container-fluid[data-v-abfbddf2] {\n  padding: 20px;\n  background: black;\n  color: #efedea;\n}\n.container-fluid .links-1 .row[data-v-abfbddf2] {\n  max-width: 1200px;\n  margin: 0 auto;\n}\n.container-fluid .links-1 .row .col[data-v-abfbddf2] {\n  margin-top: 20px;\n}\n.container-fluid .links-1 .row .col h5[data-v-abfbddf2] {\n  margin-bottom: 20px;\n}\n.container-fluid .links-1 .row .col ul[data-v-abfbddf2] {\n  list-style: none;\n  padding-left: 0px;\n}\n.container-fluid .links-1 .row .col ul li[data-v-abfbddf2] {\n  margin-bottom: 10px;\n}\n.container-fluid .links-2[data-v-abfbddf2] {\n  display: none;\n}\n.container-fluid .links-2 .pos-f-t .navbar .arrow-toggler[data-v-abfbddf2] {\n  padding: 0 !important;\n  cursor: pointer;\n  width: -moz-fit-content;\n  width: fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n.container-fluid .links-2 .pos-f-t .navbar .arrow-toggler .bi-arrow-right-circle[data-v-abfbddf2] {\n  font-size: 30px;\n  color: white;\n}\n@media only screen and (max-width: 600px) {\n.links-1[data-v-abfbddf2] {\n    display: none !important;\n}\n.links-2[data-v-abfbddf2] {\n    display: flex !important;\n    flex-direction: column !important;\n}\n}\n/* Medium devices (landscape tablets, 768px and up) */\n/* Large devices (laptops/desktops, 992px and up) */\n/* Extra large devices (large laptops and desktops, 1200px and up) */", ""]);
+exports.push([module.i, ".container-fluid[data-v-abfbddf2] {\n  padding: 20px;\n  background: black;\n  color: #efedea;\n}\n.container-fluid .links-1[data-v-abfbddf2] {\n  display: flex;\n  justify-content: center;\n}\n.container-fluid .links-1 .row[data-v-abfbddf2] {\n  max-width: 1200px;\n  margin: 0 auto;\n}\n.container-fluid .links-1 .row .col[data-v-abfbddf2] {\n  margin-top: 20px;\n}\n.container-fluid .links-1 .row .col h5[data-v-abfbddf2] {\n  margin-bottom: 20px;\n  font-size: 1.3rem;\n}\n.container-fluid .links-1 .row .col ul[data-v-abfbddf2] {\n  list-style: none;\n  padding-left: 0px;\n}\n.container-fluid .links-1 .row .col ul li[data-v-abfbddf2] {\n  margin-bottom: 10px;\n}\n.container-fluid .links-2[data-v-abfbddf2] {\n  display: none;\n}\n.container-fluid .links-2 .pos-f-t .navbar[data-v-abfbddf2] {\n  background-color: black !important;\n}\n.container-fluid .links-2 .pos-f-t .navbar .arrow-toggler[data-v-abfbddf2] {\n  padding: 0 !important;\n  cursor: pointer;\n  width: -moz-fit-content;\n  width: fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n.container-fluid .links-2 .pos-f-t .navbar .arrow-toggler .bi-arrow-right-circle[data-v-abfbddf2] {\n  font-size: 30px;\n  color: white;\n}\n@media only screen and (max-width: 600px) {\n.links-1[data-v-abfbddf2] {\n    display: none !important;\n}\n.links-2[data-v-abfbddf2] {\n    display: flex !important;\n    flex-direction: column !important;\n}\n}\n/* Medium devices (landscape tablets, 768px and up) */\n/* Large devices (laptops/desktops, 992px and up) */\n/* Extra large devices (large laptops and desktops, 1200px and up) */", ""]);
 
 // exports
 
@@ -7811,7 +7819,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".ac-white[data-v-1614d4d2] {\n  background-color: white;\n  padding: 20px;\n}\nimg[data-v-1614d4d2] {\n  width: 200px;\n}\nul[data-v-1614d4d2] {\n  display: flex;\n  list-style: none;\n  -moz-column-gap: 10px;\n       column-gap: 10px;\n}\na[data-v-1614d4d2] {\n  text-decoration: none;\n  color: black;\n}\ni[data-v-1614d4d2] {\n  color: black;\n}\nli[data-v-1614d4d2] {\n  padding: 0 10px;\n}\nli a[data-v-1614d4d2]:hover {\n  background-color: aliceblue;\n  border: 10px solid aliceblue;\n  border-radius: 15px;\n}", ""]);
+exports.push([module.i, ".ac-white[data-v-1614d4d2] {\n  background-color: white;\n  padding: 20px 0;\n}\nimg[data-v-1614d4d2] {\n  width: 200px;\n}\nul[data-v-1614d4d2] {\n  display: flex;\n  list-style: none;\n  -moz-column-gap: 10px;\n       column-gap: 10px;\n  margin: 0;\n}\na[data-v-1614d4d2] {\n  font-size: 1rem;\n  text-decoration: none;\n  color: black;\n  font-weight: bolder;\n  padding: 12px 12px;\n}\ni[data-v-1614d4d2] {\n  color: black;\n}\nli a[data-v-1614d4d2]:hover {\n  background-color: #f5f3f1;\n  border-radius: 20px;\n}\n@media only screen and (max-width: 620px) {\n.invisible1[data-v-1614d4d2] {\n    display: none;\n}\n}", ""]);
 
 // exports
 
@@ -7850,7 +7858,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".card[data-v-b236339c] {\n  flex-direction: row;\n  height: 100%;\n  cursor: pointer;\n  border-radius: 10px;\n  border: none;\n}\n.card .card-body[data-v-b236339c] {\n  text-align: left;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  padding: 1rem;\n}\n.card .card-body h4[data-v-b236339c] {\n  font-size: 1.3rem;\n  font-weight: bolder;\n}\n.card img[data-v-b236339c] {\n  height: 100%;\n  width: 30%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n  padding: 0.5rem;\n  border-radius: 13px;\n}", ""]);
+exports.push([module.i, ".card[data-v-b236339c] {\n  flex-direction: row;\n  height: 100%;\n  cursor: pointer;\n  border-radius: 10px;\n  border: none;\n  box-shadow: 2px 5px 10px rgba(52, 52, 52, 0.18);\n}\n.card .card-body[data-v-b236339c] {\n  text-align: left;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  padding: 1rem;\n}\n.card .card-body h4[data-v-b236339c] {\n  font-size: 1.3rem;\n  font-weight: bolder;\n}\n.card img[data-v-b236339c] {\n  height: 100%;\n  width: 30%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n  padding: 0.5rem;\n  border-radius: 13px;\n}", ""]);
 
 // exports
 
@@ -7908,7 +7916,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".ristorante[data-v-14400205] {\n  box-shadow: 5px 5px 5px 1px black;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.tt[data-v-14400205] {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.tt .restaurant-img[data-v-14400205] {\n  height: 220px;\n}\n.tt h1[data-v-14400205] {\n  padding: 1rem 0.4rem 0rem;\n}\n.tt img[data-v-14400205] {\n  width: 92%;\n  height: 100%;\n  border-radius: 15px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.tt .menu-text[data-v-14400205] {\n  padding-top: 18rem;\n}\n.hh[data-v-14400205] {\n  position: absolute;\n  transform: translateY(-48%);\n  width: 400px;\n  height: 400px;\n  border-radius: 15px;\n  text-align: center;\n  box-shadow: 5px 5px 5px 1px black;\n  cursor: pointer;\n  border-radius: 10px;\n  background-color: aliceblue;\n}\nbutton[data-v-14400205] {\n  border-radius: 15px;\n  width: 150px;\n  border: 0;\n  background-color: #f36805;\n  color: white;\n}\n.flow-area[data-v-14400205] {\n  flex-grow: 1;\n}\n.cart[data-v-14400205] {\n  position: sticky;\n  top: 50px;\n}\n.checkout-bar[data-v-14400205] {\n  display: none;\n  width: 100vw;\n  height: 90px;\n  background-color: #f36805;\n  color: #fff;\n  font-weight: bolder !important;\n  padding: 10px;\n  margin-top: 10px;\n  cursor: pointer;\n}\n.checkout-bar .bi-cart-check[data-v-14400205] {\n  font-size: xx-large;\n}\n@media only screen and (max-width: 600px) {\n.container-fluid[data-v-14400205] {\n    width: 100vw;\n}\n.flow-area[data-v-14400205] {\n    display: none;\n}\n.checkout-bar[data-v-14400205] {\n    display: flex;\n    position: fixed;\n    bottom: 0;\n    z-index: 100;\n}\n.ristorante[data-v-14400205] {\n    align-items: center;\n}\n}\nimg[data-v-14400205] {\n  width: 80%;\n  height: 40%;\n  border-radius: 15px;\n}\n.menu[data-v-14400205] {\n  -moz-column-gap: 50px;\n       column-gap: 50px;\n}\n.menu img[data-v-14400205] {\n  width: 100px;\n}\n.d-flexx[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n}", ""]);
+exports.push([module.i, ".ristorante[data-v-14400205] {\n  box-shadow: 2px 5px 10px rgba(52, 52, 52, 0.18);\n  cursor: pointer;\n  border-radius: 10px;\n}\n.tt[data-v-14400205] {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.tt .restaurant-img[data-v-14400205] {\n  height: 220px;\n}\n.tt h1[data-v-14400205] {\n  padding: 1rem 0.4rem 0rem;\n}\n.tt img[data-v-14400205] {\n  width: 92%;\n  height: 100%;\n  border-radius: 15px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.tt .menu-text[data-v-14400205] {\n  padding-top: 18rem;\n}\n.hh[data-v-14400205] {\n  position: absolute;\n  transform: translateY(-48%);\n  width: 400px;\n  height: 400px;\n  border-radius: 15px;\n  text-align: center;\n  box-shadow: 2px 5px 10px rgba(52, 52, 52, 0.18);\n  cursor: pointer;\n  border-radius: 10px;\n  background-color: white;\n}\nbutton[data-v-14400205] {\n  border-radius: 15px;\n  width: 150px;\n  border: 0;\n  background-color: #f36805;\n  color: white;\n}\n.flow-area[data-v-14400205] {\n  flex-grow: 1;\n}\n.cart[data-v-14400205] {\n  position: sticky;\n  top: 50px;\n}\n.checkout-bar[data-v-14400205] {\n  display: none;\n  width: 100vw;\n  height: 90px;\n  background-color: #f36805;\n  color: #fff;\n  font-weight: bolder !important;\n  padding: 10px;\n  margin-top: 10px;\n  cursor: pointer;\n}\n.checkout-bar .bi-cart-check[data-v-14400205] {\n  font-size: xx-large;\n}\n@media only screen and (max-width: 600px) {\n.container-fluid[data-v-14400205] {\n    width: 100vw;\n}\n.flow-area[data-v-14400205] {\n    display: none;\n}\n.checkout-bar[data-v-14400205] {\n    display: flex;\n    position: fixed;\n    bottom: 0;\n    z-index: 100;\n}\n.ristorante[data-v-14400205] {\n    align-items: center;\n}\n}\nimg[data-v-14400205] {\n  width: 80%;\n  height: 40%;\n  border-radius: 15px;\n}\n.menu[data-v-14400205] {\n  -moz-column-gap: 50px;\n       column-gap: 50px;\n}\n.menu img[data-v-14400205] {\n  width: 100px;\n}\n.d-flexx[data-v-14400205] {\n  display: flex;\n  flex-direction: column;\n}", ""]);
 
 // exports
 
@@ -7927,7 +7935,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".card[data-v-48bc361b] {\n  flex-direction: row;\n  height: 100%;\n  cursor: pointer;\n  border: none;\n}\n.card .card-body[data-v-48bc361b] {\n  text-align: left;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  padding: 1rem;\n}\n.card .card-body h4[data-v-48bc361b] {\n  font-size: 1.3rem;\n  font-weight: bolder;\n}\n.card img[data-v-48bc361b] {\n  height: 100%;\n  width: 30%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n  padding: 0.5rem;\n  border-radius: 13px;\n}", ""]);
+exports.push([module.i, ".card[data-v-48bc361b] {\n  flex-direction: row;\n  height: 100%;\n  cursor: pointer;\n  border: none;\n  box-shadow: 2px 5px 10px rgba(52, 52, 52, 0.18);\n}\n.card .card-body[data-v-48bc361b] {\n  text-align: left;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  padding: 1rem;\n}\n.card .card-body h4[data-v-48bc361b] {\n  font-size: 1.3rem;\n  font-weight: bolder;\n}\n.card img[data-v-48bc361b] {\n  height: 100%;\n  width: 30%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n  padding: 0.5rem;\n  border-radius: 13px;\n}", ""]);
 
 // exports
 

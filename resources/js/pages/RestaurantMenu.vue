@@ -10,7 +10,6 @@
             <div class="my-5 hh">
                 <h1>{{ this.$route.params.restaurant.name }}</h1>
                 <p>{{ $route.params.restaurant.address }}</p>
-                <hr>
                 <div class="restaurant-img">
                     <img :src="this.$route.params.restaurant.image" :alt="this.$route.params.restaurant.name">
                 </div>
@@ -111,7 +110,7 @@ export default {
 
 <style lang="scss" scoped>
 .ristorante {
-    box-shadow: 5px 5px 5px 1px black;
+    box-shadow: 2px 5px 10px rgba(52, 52, 52, 0.18);
     cursor: pointer;
     border-radius: 10px;
 }
@@ -150,10 +149,10 @@ export default {
     height: 400px;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 5px 5px 5px 1px black;
+    box-shadow: 2px 5px 10px rgba(52, 52, 52, 0.18);
     cursor: pointer;
     border-radius: 10px;
-    background-color: aliceblue;
+    background-color: white;
 }
 
 button {

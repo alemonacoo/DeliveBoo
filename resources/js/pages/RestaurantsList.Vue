@@ -71,6 +71,8 @@ export default {
     height: 100%;
     cursor: pointer;
     border: none;
+    box-shadow: 2px 5px 10px rgba(52, 52, 52, 0.18);
+
 
     .card-body {
         text-align: left;
