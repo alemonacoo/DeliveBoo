@@ -2661,8 +2661,10 @@ var staticRenderFns = [function () {
   }, [_c("div", {
     staticClass: "row"
   }, [_c("div", {
-    staticClass: "col"
-  }, [_c("h3", [_vm._v("Scarica l'app")]), _vm._v(" "), _c("div", {
+    staticClass: "col align-items-center"
+  }, [_c("h3", {
+    staticClass: "text-center"
+  }, [_vm._v("Scarica l'app")]), _vm._v(" "), _c("div", {
     staticClass: "d-flex"
   }, [_c("button", {
     staticClass: "d-flex align-items-center"
@@ -2673,9 +2675,9 @@ var staticRenderFns = [function () {
   }, [_c("i", {
     staticClass: "bi bi-apple"
   }), _vm._v(" Scarica su App Store")])])]), _vm._v(" "), _c("div", {
-    staticClass: "col"
+    staticClass: "col align-items-center"
   }, [_c("h3", [_vm._v("Feedback")]), _vm._v(" "), _c("p", [_vm._v("Aiutaci a migliorare il nostro sito")]), _vm._v(" "), _c("p", [_vm._v("Invia feedback")])]), _vm._v(" "), _c("div", {
-    staticClass: "col"
+    staticClass: "col align-items-center"
   }, [_c("h3", [_vm._v("Seguici su:")]), _vm._v(" "), _c("div", {
     staticClass: "d-flex social"
   }, [_c("p", [_c("i", {
@@ -7762,7 +7764,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".card[data-v-f7622972] {\n  height: 100%;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.card .card-body[data-v-f7622972] {\n  text-align: center;\n  padding: 0;\n  padding-top: 0.5rem;\n}\n.card .card-body h5[data-v-f7622972] {\n  font-size: 1rem !important;\n}\n.card img[data-v-f7622972] {\n  height: 5rem;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n}\n.active[data-v-f7622972] {\n  filter: drop-shadow(2px 4px 6px grey);\n  color: #ef9b6b;\n}\n.card[data-v-f7622972]:hover {\n  position: relative;\n  bottom: 5px;\n}\n.slide[data-v-f7622972] {\n  margin-top: 2.3rem;\n}", ""]);
+exports.push([module.i, ".card[data-v-f7622972] {\n  height: 100%;\n  cursor: pointer;\n  border-radius: 10px;\n}\n.card .card-body[data-v-f7622972] {\n  text-align: center;\n  padding: 0;\n  padding-top: 0.5rem;\n}\n.card .card-body h5[data-v-f7622972] {\n  font-size: 1rem !important;\n}\n.card img[data-v-f7622972] {\n  height: 5rem;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-top-left-radius: 10px;\n  border-top-right-radius: 10px;\n}\n.active[data-v-f7622972] {\n  filter: drop-shadow(2px 4px 6px grey);\n  color: #ef9b6b;\n}\n.card[data-v-f7622972]:hover {\n  position: relative;\n  box-shadow: 2px 5px 10px rgba(52, 52, 52, 0.18);\n  bottom: 2px;\n}\n.slide[data-v-f7622972] {\n  margin-top: 2.3rem;\n}", ""]);
 
 // exports
 
@@ -7781,7 +7783,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".row[data-v-80d9706c] {\n  max-width: 1200px;\n  margin: 0 auto;\n}\n.col[data-v-80d9706c] {\n  display: flex;\n  flex-direction: column;\n}\nbutton[data-v-80d9706c] {\n  border: 0;\n  background-color: black;\n  color: white;\n  width: 150px;\n  margin: 5px;\n}\n.social[data-v-80d9706c] {\n  -moz-column-gap: 50px;\n       column-gap: 50px;\n}\n.social i[data-v-80d9706c] {\n  font-size: 30px;\n}\n@media only screen and (max-width: 600px) {\n.container-fluid[data-v-80d9706c] {\n    padding-bottom: 90px;\n}\n.container-fluid .row[data-v-80d9706c] {\n    flex-direction: column !important;\n}\n.container-fluid .row .col[data-v-80d9706c] {\n    flex-direction: column !important;\n    margin-bottom: 10px;\n    align-items: center;\n}\n}\n/* Medium devices (landscape tablets, 768px and up) */\n@media only screen and (max-width: 768px) {\n.row[data-v-80d9706c] {\n    flex-direction: column !important;\n}\n.row .col[data-v-80d9706c] {\n    flex-direction: column !important;\n    margin-bottom: 10px;\n    align-items: center;\n}\n}", ""]);
+exports.push([module.i, ".row[data-v-80d9706c] {\n  max-width: 1200px;\n  margin: 0 auto;\n}\n.col[data-v-80d9706c] {\n  display: flex;\n  flex-direction: column;\n}\nbutton[data-v-80d9706c] {\n  border: 0;\n  background-color: black;\n  color: white;\n  width: 150px;\n  margin: 5px;\n  border-radius: 10px;\n}\n.social[data-v-80d9706c] {\n  -moz-column-gap: 50px;\n       column-gap: 50px;\n}\n.social i[data-v-80d9706c] {\n  font-size: 30px;\n}\n@media only screen and (max-width: 600px) {\n.container-fluid[data-v-80d9706c] {\n    padding-bottom: 90px;\n}\n.container-fluid .row[data-v-80d9706c] {\n    flex-direction: column !important;\n}\n.container-fluid .row .col[data-v-80d9706c] {\n    flex-direction: column !important;\n    margin-bottom: 10px;\n    align-items: center;\n}\n}\n/* Medium devices (landscape tablets, 768px and up) */\n@media only screen and (max-width: 768px) {\n.row[data-v-80d9706c] {\n    flex-direction: column !important;\n}\n.row .col[data-v-80d9706c] {\n    flex-direction: column !important;\n    margin-bottom: 10px;\n    align-items: center;\n}\n}", ""]);
 
 // exports
 

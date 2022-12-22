@@ -91,7 +91,8 @@ export default {
 
 .card:hover {
     position: relative;
-    bottom: 5px;
+    box-shadow: 2px 5px 10px rgba(52, 52, 52, 0.18);
+    bottom: 2px;
 }
 
 .slide {
