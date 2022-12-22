@@ -28,7 +28,7 @@
             <div class="col my-0">
                 <a href="#" id="btn-checkout" class="btn btn-primary btn-lg btn-block" @click="sendOrder">
                     <i class="bi bi-cart-check"></i>
-                    <span class="btn-txt">Vai al pagamento</span></a>
+                    <span class="btn-txt">Concludi Ordine</span></a>
             </div>
         </div>
         <div class="row my-4">

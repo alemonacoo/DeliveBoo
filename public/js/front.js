@@ -2480,7 +2480,7 @@ var render = function render() {
     staticClass: "bi bi-cart-check"
   }), _vm._v(" "), _c("span", {
     staticClass: "btn-txt"
-  }, [_vm._v("Vai al pagamento")])])])]), _vm._v(" "), _c("div", {
+  }, [_vm._v("Concludi Ordine")])])])]), _vm._v(" "), _c("div", {
     staticClass: "row my-4"
   }, [_c("div", {
     staticClass: "col btn-group btn-group-toggle btn-custom my-0 dh-mx"
