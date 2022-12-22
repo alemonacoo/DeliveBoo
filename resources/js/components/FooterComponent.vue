@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid">
         <div class="links-1">
-            <div class="row">
+            <div class="row mx-2 w-100">
                 <div class="col">
                     <h5>Servizio Clienti</h5>
                     <ul>

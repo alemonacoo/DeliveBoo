@@ -176,6 +176,7 @@ button {
 .checkout-bar {
     display: none;
     width: 100vw;
+    height: 90px;
     background-color: #f36805;
     color: #fff;
     font-weight: bolder !important;
