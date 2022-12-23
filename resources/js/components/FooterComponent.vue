@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid">
         <div class="links-1">
-            <div class="row">
+            <div class="row mx-2 w-100">
                 <div class="col">
                     <h5>Servizio Clienti</h5>
                     <ul>
@@ -27,21 +27,6 @@
                     </ul>
                 </div>
                 <div class="col">
-                    <h5>Catene</h5>
-                    <ul>
-                        <li>Alice Pizza</li>
-                        <li>Burger King</li>
-                        <li>Zushi</li>
-                        <li>Old Wild West</li>
-                        <li>Poke House</li>
-                        <li>RoadHouse</li>
-                        <li>Sushiko</li>
-                        <li>KFC</li>
-                        <li>Fratelli La Bufala</li>
-                        <li>McDonald's</li>
-                    </ul>
-                </div>
-                <div class="col">
                     <h5>Città</h5>
                     <ul>
                         <li>Milano</li>
@@ -55,6 +40,21 @@
                         <li>Udine</li>
                         <li>Campobasso</li>
                         <li>Varese</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h5>Catene</h5>
+                    <ul>
+                        <li>Alice Pizza</li>
+                        <li>Burger King</li>
+                        <li>Zushi</li>
+                        <li>Old Wild West</li>
+                        <li>Poke House</li>
+                        <li>RoadHouse</li>
+                        <li>Sushiko</li>
+                        <li>KFC</li>
+                        <li>Fratelli La Bufala</li>
+                        <li>McDonald's</li>
                     </ul>
                 </div>
                 <div class="col">
@@ -72,7 +72,9 @@
             <div class="pos-f-t">
                 <nav class="navbar">
                     <h5>Servizio Clienti</h5>
-                    <span class="arrow-toggler" data-toggle="collapse" data-target="#navbarToggleExternalContent1" aria-controls="navbarToggleExternalContent1" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="arrow-toggler" data-toggle="collapse" data-target="#navbarToggleExternalContent1"
+                        aria-controls="navbarToggleExternalContent1" aria-expanded="false"
+                        aria-label="Toggle navigation">
                         <i class="bi bi-arrow-right-circle"></i>
                     </span>
                 </nav>
@@ -91,7 +93,9 @@
             <div class="pos-f-t">
                 <nav class="navbar">
                     <h5>Cucine</h5>
-                    <span class="arrow-toggler" data-toggle="collapse" data-target="#navbarToggleExternalContent2" aria-controls="navbarToggleExternalContent2" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="arrow-toggler" data-toggle="collapse" data-target="#navbarToggleExternalContent2"
+                        aria-controls="navbarToggleExternalContent2" aria-expanded="false"
+                        aria-label="Toggle navigation">
                         <i class="bi bi-arrow-right-circle"></i>
                     </span>
                 </nav>
@@ -116,7 +120,9 @@
             <div class="pos-f-t">
                 <nav class="navbar">
                     <h5>Catene</h5>
-                    <span class="arrow-toggler" data-toggle="collapse" data-target="#navbarToggleExternalContent3" aria-controls="navbarToggleExternalContent3" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="arrow-toggler" data-toggle="collapse" data-target="#navbarToggleExternalContent3"
+                        aria-controls="navbarToggleExternalContent3" aria-expanded="false"
+                        aria-label="Toggle navigation">
                         <i class="bi bi-arrow-right-circle"></i>
                     </span>
                 </nav>
@@ -141,7 +147,9 @@
             <div class="pos-f-t">
                 <nav class="navbar">
                     <h5>Città</h5>
-                    <span class="arrow-toggler" data-toggle="collapse" data-target="#navbarToggleExternalContent4" aria-controls="navbarToggleExternalContent4" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="arrow-toggler" data-toggle="collapse" data-target="#navbarToggleExternalContent4"
+                        aria-controls="navbarToggleExternalContent4" aria-expanded="false"
+                        aria-label="Toggle navigation">
                         <i class="bi bi-arrow-right-circle"></i>
                     </span>
                 </nav>
@@ -167,7 +175,9 @@
             <div class="pos-f-t">
                 <nav class="navbar">
                     <h5>Chi Siamo</h5>
-                    <span class="arrow-toggler" data-toggle="collapse" data-target="#navbarToggleExternalContent5" aria-controls="navbarToggleExternalContent5" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="arrow-toggler" data-toggle="collapse" data-target="#navbarToggleExternalContent5"
+                        aria-controls="navbarToggleExternalContent5" aria-expanded="false"
+                        aria-label="Toggle navigation">
                         <i class="bi bi-arrow-right-circle"></i>
                     </span>
                 </nav>
@@ -203,19 +213,26 @@ export default {
     background: black;
     color: #efedea;
 
-    .links-1{
+    .links-1 {
         display: flex;
+        justify-content: center;
+
         .row {
             max-width: 1200px;
             margin: 0 auto;
+
             .col {
                 margin-top: 20px;
+
                 h5 {
                     margin-bottom: 20px;
+                    font-size: 1.3rem;
                 }
+
                 ul {
                     list-style: none;
                     padding-left: 0px;
+
                     li {
                         margin-bottom: 10px;
                     }
@@ -223,35 +240,40 @@ export default {
             }
         }
     }
-    .links-2{
+
+    .links-2 {
         display: none;
-        .pos-f-t{
-            .navbar{
-                .arrow-toggler{
+
+        .pos-f-t {
+            .navbar {
+                background-color: black !important;
+
+                .arrow-toggler {
                     padding: 0 !important;
                     cursor: pointer;
                     width: fit-content;
                     height: fit-content;
-                    .bi-arrow-right-circle{
+
+                    .bi-arrow-right-circle {
                         font-size: 30px;
                         color: white;
                     }
                 }
             }
-            .collapse{
-                .drop-list{
 
-                }
+            .collapse {
+                .drop-list {}
             }
         }
     }
 }
 
 @media only screen and (max-width: 600px) {
-    .links-1{
+    .links-1 {
         display: none !important;
     }
-    .links-2{
+
+    .links-2 {
         display: flex !important;
         flex-direction: column !important;
     }
@@ -259,17 +281,11 @@ export default {
 
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
-
-}
+@media only screen and (max-width: 768px) {}
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-}
+@media only screen and (min-width: 992px) {}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
-}
+@media only screen and (min-width: 1200px) {}
 </style>

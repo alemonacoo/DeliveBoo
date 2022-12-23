@@ -9,18 +9,10 @@
 
         <!-- lista ristoranti appartenenti alla categoria cliccata -->
         <div class="container mb-4">
-            <div class="row">
-                <div
-                    class="col-3 my-3 text-center"
-                    v-for="restaurant in restaurants"
-                    :key="restaurant.id"
-                >
+            <div class="row justify-content-center" v-for="restaurant in restaurants" :key="restaurant.id">
+                <div class="col-8 my-3 text-center">
                     <div class="card" @click="showRestaurantMenu(restaurant)">
-                        <img
-                            :src="restaurant.image"
-                            class="card-img-top"
-                            :alt="restaurant.name"
-                        />
+                        <img :src="restaurant.image" class="card-img-top" :alt="restaurant.name" />
                         <div class="card-body">
                             <h4>{{ restaurant.name }}</h4>
                             <p>{{ restaurant.address }}</p>
@@ -74,21 +66,35 @@ export default {
 
 <style lang="scss" scoped>
 .card {
+    flex-direction: row;
     height: 100%;
     cursor: pointer;
-    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 5px 10px rgba(52, 52, 52, 0.18);
+
 
     .card-body {
-        text-align: center;
-        padding: 0;
-        padding-top: 0.5rem;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+
+        h4 {
+            font-size: 1.3rem;
+            font-weight: bolder;
+        }
     }
 
     img {
-        height: 8rem;
+        height: 100%;
+        width: 30%;
         object-fit: cover;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
+        padding: 0.5rem;
+        border-radius: 13px;
     }
 }
 </style>
+
