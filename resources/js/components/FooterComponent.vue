@@ -27,21 +27,6 @@
                     </ul>
                 </div>
                 <div class="col">
-                    <h5>Catene</h5>
-                    <ul>
-                        <li>Alice Pizza</li>
-                        <li>Burger King</li>
-                        <li>Zushi</li>
-                        <li>Old Wild West</li>
-                        <li>Poke House</li>
-                        <li>RoadHouse</li>
-                        <li>Sushiko</li>
-                        <li>KFC</li>
-                        <li>Fratelli La Bufala</li>
-                        <li>McDonald's</li>
-                    </ul>
-                </div>
-                <div class="col">
                     <h5>Città</h5>
                     <ul>
                         <li>Milano</li>
@@ -55,6 +40,21 @@
                         <li>Udine</li>
                         <li>Campobasso</li>
                         <li>Varese</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h5>Catene</h5>
+                    <ul>
+                        <li>Alice Pizza</li>
+                        <li>Burger King</li>
+                        <li>Zushi</li>
+                        <li>Old Wild West</li>
+                        <li>Poke House</li>
+                        <li>RoadHouse</li>
+                        <li>Sushiko</li>
+                        <li>KFC</li>
+                        <li>Fratelli La Bufala</li>
+                        <li>McDonald's</li>
                     </ul>
                 </div>
                 <div class="col">
@@ -214,6 +214,8 @@ export default {
     color: #efedea;
 
     .links-1 {
+        display: flex;
+        justify-content: center;
 
         .row {
             max-width: 1200px;
@@ -224,6 +226,7 @@ export default {
 
                 h5 {
                     margin-bottom: 20px;
+                    font-size: 1.3rem;
                 }
 
                 ul {
@@ -243,6 +246,8 @@ export default {
 
         .pos-f-t {
             .navbar {
+                background-color: black !important;
+
                 .arrow-toggler {
                     padding: 0 !important;
                     cursor: pointer;

@@ -15,5 +15,3 @@
         @endforeach
 </div>
 @endsection
-
-{{-- // TODO : cambia immagini dei ristoranti  --}}

@@ -1,9 +1,9 @@
 <template>
     <div class="container-fluid mt-5 ">
         <div class="row">
-            <div class="col">
+            <div class="col align-items-center">
 
-                <h3>Scarica l'app</h3>
+                <h3 class="text-center">Scarica l'app</h3>
                 <div class="d-flex">
                     <button class="d-flex align-items-center"><i class="bi bi-google-play"></i> Disponibile su
                         Google</button>
@@ -11,9 +11,8 @@
 
                 </div>
 
-
             </div>
-            <div class="col">
+            <div class="col align-items-center">
 
                 <h3>Feedback</h3>
                 <p>Aiutaci a migliorare il nostro sito</p>
@@ -21,7 +20,7 @@
 
             </div>
 
-            <div class="col">
+            <div class="col align-items-center">
 
                 <h3>Seguici su:</h3>
                 <div class="d-flex social">
@@ -51,7 +50,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .row {
     max-width: 1200px;
     margin: 0 auto;
@@ -68,6 +66,7 @@ button {
     color: white;
     width: 150px;
     margin: 5px;
+    border-radius: 10px;
 }
 
 .social {
@@ -81,24 +80,29 @@ button {
 @media only screen and (max-width: 600px) {
     .container-fluid {
         padding-bottom: 90px;
+
         .row {
-        flex-direction: column !important;
-            .col{
+            flex-direction: column !important;
+
+            .col {
                 flex-direction: column !important;
                 margin-bottom: 10px;
+                align-items: center;
             }
         }
     }
 
 }
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
-    .row{
+    .row {
         flex-direction: column !important;
-        .col{
+
+        .col {
             flex-direction: column !important;
             margin-bottom: 10px;
-
+            align-items: center;
         }
     }
 }

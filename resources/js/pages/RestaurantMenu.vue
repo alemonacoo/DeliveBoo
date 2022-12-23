@@ -1,6 +1,5 @@
 <template>
     <div class="container-ac">
-
         <div>
             <PictureComponent />
         </div>
@@ -10,7 +9,6 @@
             <div class="my-5 hh">
                 <h1>{{ this.$route.params.restaurant.name }}</h1>
                 <p>{{ $route.params.restaurant.address }}</p>
-                <hr>
                 <div class="restaurant-img">
                     <img :src="this.$route.params.restaurant.image" :alt="this.$route.params.restaurant.name">
                 </div>
@@ -28,17 +26,15 @@
                             <div class="d-flexx">
                                 <h2>{{ item.name }}</h2>
                                 <p>{{ item.description }}</p>
-                                <p> Da {{ item.price }} $</p>
-                                <button @click="() => onSelect(item)"> Aggiungi al carrello</button>
-
+                                <p>Da {{ item.price }} $</p>
+                                <button @click="() => onSelect(item)">
+                                    Aggiungi al carrello
+                                </button>
                             </div>
-
-
 
                             <div>
-                                <img :src="item.image" alt="">
+                                <img :src="item.image" alt="" />
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -71,9 +67,6 @@
 import BasketComponent from "../components/BasketComponent.vue";
 import PictureComponent from "../components/PictureComponent.vue";
 
-
-
-
 export default {
     name: "RestaurantMenu",
     data() {
@@ -89,10 +82,9 @@ export default {
     },
     methods: {
         loadPage(url) {
-            axios.get(url)
-                .then(({ data }) => {
-                    this.menu = data.results;
-                })
+            axios.get(url).then(({ data }) => {
+                this.menu = data.results;
+            });
         },
         onSelect(item) {
             this.clickedItems.push(item);
@@ -103,15 +95,14 @@ export default {
     },
     components: {
         BasketComponent,
-        PictureComponent
-
+        PictureComponent,
     },
 };
 </script>
 
 <style lang="scss" scoped>
 .ristorante {
-    box-shadow: 5px 5px 5px 1px black;
+    box-shadow: 2px 5px 10px rgba(52, 52, 52, 0.18);
     cursor: pointer;
     border-radius: 10px;
 }
@@ -150,10 +141,10 @@ export default {
     height: 400px;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 5px 5px 5px 1px black;
+    box-shadow: 2px 5px 10px rgba(52, 52, 52, 0.18);
     cursor: pointer;
     border-radius: 10px;
-    background-color: aliceblue;
+    background-color: white;
 }
 
 button {
@@ -170,7 +161,7 @@ button {
 
 .cart {
     position: sticky;
-    top: 50px
+    top: 50px;
 }
 
 .checkout-bar {

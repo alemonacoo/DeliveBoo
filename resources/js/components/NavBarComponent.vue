@@ -9,7 +9,7 @@
             </div>
             <div>
                 <ul>
-                    <li>
+                    <li class="invisible1">
                         <a
                             href="https://www.decathlon.it/browse/c0-tutti-gli-sport/c1-ciclismo/c2-biciclette/_/N-6pql59"><i
                                 class="bi bi-car-front"></i> Diventa un rider</a>
@@ -19,7 +19,7 @@
                         <a href="/login"> Accedi</a>
                     </li>
 
-                    <li>
+                    <li class="invisible1">
                         <a href=""><i class="bi bi-question-circle"></i> Aiuto?</a>
                     </li>
                 </ul>
@@ -37,7 +37,7 @@ export default {
 <style lang="scss" scoped>
 .ac-white {
     background-color: white;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 img {
@@ -48,11 +48,16 @@ ul {
     display: flex;
     list-style: none;
     column-gap: 10px;
+    margin: 0;
 }
 
 a {
+    font-size: 1rem;
     text-decoration: none;
     color: black;
+    font-weight: bolder;
+    padding: 12px 12px;
+
 }
 
 i {
@@ -60,12 +65,20 @@ i {
 }
 
 li {
-    padding: 0 10px;
 
     a:hover {
-        background-color: aliceblue;
-        border: 10px solid aliceblue;
-        border-radius: 15px;
+        background-color: #f5f3f1;
+        border-radius: 20px;
+    }
+}
+
+// .invisible {
+//     display: block !important;
+// }
+
+@media only screen and (max-width: 620px) {
+    .invisible1 {
+        display: none;
     }
 }
 </style>

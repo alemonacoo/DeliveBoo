@@ -1,6 +1,5 @@
 <template>
     <div class="container">
-
         <!-- componente categorie -->
         <div class="row" @click="zero()">
             <div class="col">
@@ -48,10 +47,10 @@ export default {
         },
         showRestaurantMenu(restaurant) {
             this.$router.push({
-                name: 'restaurant-menu',
+                name: "restaurant-menu",
                 params: {
                     restaurant: restaurant,
-                    slug: restaurant.slug
+                    slug: restaurant.slug,
                 },
             });
         },
@@ -71,6 +70,8 @@ export default {
     height: 100%;
     cursor: pointer;
     border: none;
+    box-shadow: 2px 5px 10px rgba(52, 52, 52, 0.18);
+
 
     .card-body {
         text-align: left;
